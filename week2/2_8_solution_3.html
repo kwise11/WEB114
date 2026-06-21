@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    
+<html>
+        
+    <body>
+
+        <script>
+
+            'use strict';
+
+            "" + 1 + 0      // "" is treated as string, "" + 1 makes "1"+0 makes result"10"
+            "" - 1 + 0      // "" is treated as string, - turns 1 to a number, 1-0 makes result 1
+            true + false    // true = 1 false = 0, result is 1
+            6 / "3"         // 3 becomes number, result is 2
+            "2" * "3"       // 2 and 3 become number, result is 6
+            4 + 5 + "px"    // px concat string, result 9px
+            "$" + 4 + 5     // $ concat string, "$"+4 makes "$4" makes "$4"+5 result to "$45"
+            "4" - 2         // 4 becomes number, result 2
+            "4px" - 2       // 4px is treated as string, result NaN
+            "  -9  " + 5    // -9 treated as string, result "  -9  5"
+            "  -9  " - 5    // -9 string becomes number with - 5 makes -9 - 5 results in -14
+            null + 1        // null treated as number, result 1
+            undefined + 1   // undefined is NaN so that makes result NaN
+            " \t \n" - 2    // string number full of spaces, makes 0 - 2 so result is -2
+        
+        </script>
+
+    </body>
+    
+</html>
