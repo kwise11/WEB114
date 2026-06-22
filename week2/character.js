@@ -20,7 +20,7 @@ const myName = `Kate`;
 //Create initial unchanging variables, my name and the location of the adventure.
 
 //Question 4 Welcome message with setting and my name.
-alert(`Welcome to the wonderful ${adventureSetting} named Volans.
+alert(`1Welcome to the wonderful ${adventureSetting} named Volans.
 
     Governor ${myName} is ready to fund your explorations, but first we need to get your adventurer ready.
     
