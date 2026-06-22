@@ -20,10 +20,9 @@ const myName = `Kate`;
 //Create initial unchanging variables, my name and the location of the adventure.
 
 //Question 4 Welcome message with setting and my name.
-alert(
-`Welcome to the wonderful ${adventureSetting} named Volans. 
-Governor ${myName} is ready to fund your explorations, but first we need to get your adventurer ready.  
-I hope you are ready to chose your starting stats.`);
+alert(`Welcome to the wonderful ${adventureSetting} named Volans.
+    Governor ${myName} is ready to fund your explorations, but first we need to get your adventurer ready.
+    I hope you are ready to chose your starting stats.`);
 
 //Question 5 Prompt for character name
 const charName = prompt(`What would you like to name your adventurer?`,`Nora the Nomad`);
@@ -55,7 +54,7 @@ console.log(likesFighting, typeof likesFighting);
 //Add console log to view datatype.
 
 //Question 10 Loading/Preparing message
-alert(`Gather magic for ${charName}...almost ready!`);
+alert(`Gathering magic for ${charName}...almost ready!`);
 
 //Question 11 Final Character screen
 alert(`===========================================
@@ -63,7 +62,7 @@ alert(`===========================================
     Pet: ${pet}
     Superpower: ${superpower}
     Power Level: ${powerLevel}
-    Monster fighter? ${likesFighting}
+    Monster fighter? ${likesFighting ? "Yes" : "No"}
 
 Welcome great adventurer ${charName} to Volans, the ${adventureSetting}!  
 You are ready to begin exploring! Governor ${myName} looks foward to hearing about all you discover as you travel with your brave companion ${pet}.  
