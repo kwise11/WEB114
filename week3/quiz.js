@@ -53,7 +53,7 @@ console.log("===Compare Final===");
 console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase());
 
 //Question 2: 
-const howManySibsPrompt = prompt(`How many siblings does Kate have?`,99));
+const howManySibsPrompt = prompt(`How many siblings does Kate have?`,99);
 const howManySibsPromptTypeConvert = parseInt(howManySibsPrompt)
 const howManySibsCorrect = 2;
 
