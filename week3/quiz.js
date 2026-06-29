@@ -65,7 +65,7 @@ console.log("===Q2 Siblings Original Answers===");
 console.log(howManySibsPrompt, typeof howManySibsPrompt);
 console.log(howManySibsCorrect, typeof howManySibsCorrect);
 console.log("===Auto Score 0 Evaluation===")
-console.log((howManySibsPrompt === `null`) || (howManySibsPrompt && howManySibsPrompt === ``) || (howManySibsPrompt === NaN))
+console.log((howManySibsPrompt === `null`) || (howManySibsPrompt === ``) || (howManySibsPrompt === NaN))
 console.log("===Compare Final===")
 console.log(howManySibsPrompt.trim() === howManySibsCorrect)
 
