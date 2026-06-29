@@ -4,13 +4,14 @@
 1. Variable: score - number
 2. Variable Q1 Prompt: favHobbyPrompt - string
 3. Variable Q1 Correct: favHobbyCorrect - string
-4. Variable Q2 Prompt: howManySibsPrompt - number
-5. Variable Q2 Correct: howManySibsCorrect - number
-6. Variable Q3 Prompt: favActivityPrompt - string
-7. Variable Q3 Correct: favActivityCorrect - string
-8. Variable Q4 Prompt: doYogaPrompt - boolean
-9. Variable Q4 Correct: doYogaCorrect - boolean
-10. Variable: percentCorrect - number
+4. Variable Q2 Prompt: howManySibsPrompt - string
+5. Variable Q2 Prompt: howManySibsPromptTypeConvert - number
+6. Variable Q2 Correct: howManySibsCorrect - number
+7. Variable Q3 Prompt: favActivityPrompt - string
+8. Variable Q3 Correct: favActivityCorrect - string
+9. Variable Q4 Prompt: doYogaPrompt - boolean
+10. Variable Q4 Correct: doYogaCorrect - boolean
+11. Variable: percentCorrect - number
 */
 
 "use strict";
@@ -32,7 +33,7 @@ const favHobbyCorrect = `Crochet`;
 
 if ((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
-   } else if (favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase) {
+   } else if (favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase()) {
    score+=1;
    } else {
    (``);
@@ -49,16 +50,17 @@ console.log(favHobbyCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===");
 console.log((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``));
 console.log("===Compare Final===");
-console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase);
+console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase());
 
 //Question 2: 
-const howManySibsPrompt = parseInt(prompt(`How many siblings does Kate have?`,99).trim());
+const howManySibsPrompt = prompt(`How many siblings does Kate have?`,99));
+const howManySibsPromptTypeConvert = parseInt(howManySibsPrompt)
 const howManySibsCorrect = 2;
 
-if ((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howManySibsPrompt))) {
+if ((howManySibsPrompt === null) || (howManySibsPrompt.trim() === ``) || (isNaN(howManySibsPromptTypeConvert))) {
    alert('Your answer is not valid and you will receive a 0 for this question');
-   } else if (howManySibsPrompt === howManySibsCorrect) {
-      ++score;
+   } else if (howManySibsPromptTypeConvert === howManySibsCorrect) {
+   ++score;
    } else {
    (``);
    }
@@ -67,9 +69,10 @@ if ((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howMany
 
 console.log("===Q2 Siblings Original Answers===");
 console.log(howManySibsPrompt, typeof howManySibsPrompt);
+console.log(howManySibsPromptTypeConvert, typeof howManySibsPromptTypeConvert);
 console.log(howManySibsCorrect, typeof howManySibsCorrect);
 console.log("===Auto Score 0 Evaluation===");
-console.log((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howManySibsPrompt)));
+console.log((howManySibsPrompt === null) || (howManySibsPrompt.trim() === ``) || (isNaN(howManySibsPromptTypeConvert)));
 console.log("===Compare Final===");
 console.log(howManySibsPrompt === howManySibsCorrect);
 
@@ -79,8 +82,8 @@ const favActivityCorrect = `Movies`;
 
 if ((favActivityPrompt === null) || (favActivityPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
-   } else if (favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase) {
-      score+=1;
+   } else if (favActivityPrompt.trim().toLowerCase() === favActivityCorrect.trim().toLowerCase()) {
+   score+=1;
    } else {
    (``);
    }
@@ -96,7 +99,7 @@ console.log(favActivityCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===");
 console.log((favActivityPrompt === null) || (favActivityPrompt.trim() === ``));
 console.log("===Compare Final===");
-console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase);
+console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.trim().toLowerCase());
 
 //Question 4: 
 const doYogaPrompt = confirm(`Does Kate like doing yoga?
@@ -128,7 +131,7 @@ console.log("===Percentage Calculation Result===");
 console.log(percentCorrect, typeof percentCorrect);
 
 //Requirement 7. Final summary logic- Feedback to user on how well they know Kate.
-if (score = 0) {
+if (score === 0) {
    alert(`You don't know Kate at all! 0%, No answers correct. Maybe are thinking of another Kate?`);
    } else if ((score < 3) && (percentCorrect <= 50)) {
    alert(`You are familiar with Kate but not best friends. You got ${percentCorrect}% of the questions right. Maybe spend some more time together, like at the movies!`);
