@@ -131,7 +131,7 @@ console.log("===Percentage Calculation Result===");
 console.log(percentCorrect, typeof percentCorrect);
 
 //Requirement 7. Final summary logic- Feedback to user on how well they know Kate.
-if (score = 0) {
+if (score === 0) {
    alert(`You don't know Kate at all! 0%, No answers correct. Maybe are thinking of another Kate?`);
    } else if ((score < 3) && (percentCorrect <= 50)) {
    alert(`You are familiar with Kate but not best friends. You got ${percentCorrect}% of the questions right. Maybe spend some more time together, like at the movies!`);
