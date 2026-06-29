@@ -54,7 +54,11 @@ console.log(favHobbyCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===");
 console.log((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``));
 console.log("===Compare Final===");
-console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase());
+if ((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``)) {
+   console.log(favHobbyPrompt === favHobbyCorrect.trim().toLowerCase());
+   } else {
+   console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase());
+   }
 
 //Question 2: 
 const howManySibsPrompt = prompt(`How many siblings does Kate have?`,99);
@@ -107,7 +111,11 @@ console.log(favActivityCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===");
 console.log((favActivityPrompt === null) || (favActivityPrompt.trim() === ``));
 console.log("===Compare Final===");
-console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.trim().toLowerCase());
+if ((favActivityPrompt === null) || (favActivityPrompt.trim() === ``)) {
+   console.log(favActivityPrompt === favActivityCorrect.trim().toLowerCase());
+   } else {
+   console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.trim().toLowerCase());
+   }
 
 //Question 4: 
 const doYogaPrompt = confirm(`Does Kate like doing yoga?
