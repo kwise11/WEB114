@@ -67,7 +67,7 @@ console.log(howManySibsCorrect, typeof howManySibsCorrect);
 console.log("===Auto Score 0 Evaluation===")
 console.log((howManySibsPrompt === `null`) || (howManySibsPrompt === ``) || (howManySibsPrompt === NaN))
 console.log("===Compare Final===")
-console.log(howManySibsPrompt.trim() === howManySibsCorrect)
+console.log(howManySibsPrompt. === howManySibsCorrect)
 
 //Question 3: 
 const favActivityPrompt = prompt(`What is Kate's favorite activity to do with friends?`,`Rock Climbing`);
