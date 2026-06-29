@@ -138,7 +138,21 @@ const percentCorrect = (score/4)*100;
 //I will divide the number correct by the total number of questions then multiply by 100, use () to make sure math
 //occurs in the right order.
 
-//Updated Score
+//Updated Score- Give feedback with an if statement
+if (score === 0) {
+   alert(`You didn't increase your score- ${score} out of 4.`);
+   } else if (score < 3) {
+   alert(`Your score increased a little- ${score} out of 4.`);
+   } else if (score < 4) {
+   alert(`Your score is passing- ${score} out of 4.`);
+   } else if (score === 4) {
+   alert(`Your score is perfect- ${score} out of 4.`);
+   } else {
+   alert(`Ok, something weird is going on here. Check your score and logic and figure this out!`);
+   }
+//This if statement starts if someone got 0 answers right and moves up to 2 or less, 3, 4, or none of the
+//above with appropriate messages.
+
 console.log("===Ending Score===");
 console.log(score, typeof score);
 
@@ -158,5 +172,5 @@ if (score === 0) {
    } else {
    alert(`Ok, something weird is going on here. Check your score and % correct to figure this out!`);
    }
-//This if statement starts if someone got 0 answers right and moves up to 2 or less, 3, 4, or none of the
+//This if statement starts if someone got % score and number of answers correct, 0 then moves up to 2 or less, 3, 4, or none of the
 //above with appropriate messages.
