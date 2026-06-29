@@ -4,13 +4,14 @@
 1. Variable: score - number
 2. Variable Q1 Prompt: favHobbyPrompt - string
 3. Variable Q1 Correct: favHobbyCorrect - string
-4. Variable Q2 Prompt: howManySibsPrompt - number
-5. Variable Q2 Correct: howManySibsCorrect - number
-6. Variable Q3 Prompt: favActivityPrompt - string
-7. Variable Q3 Correct: favActivityCorrect - string
-8. Variable Q4 Prompt: doYogaPrompt - boolean
-9. Variable Q4 Correct: doYogaCorrect - boolean
-10. Variable: percentCorrect - number
+4. Variable Q2 Prompt: howManySibsPrompt - string
+5. Variable Q2 Prompt: howManySibsPromptTypeConvert - number
+6. Variable Q2 Correct: howManySibsCorrect - number
+7. Variable Q3 Prompt: favActivityPrompt - string
+8. Variable Q3 Correct: favActivityCorrect - string
+9. Variable Q4 Prompt: doYogaPrompt - boolean
+10. Variable Q4 Correct: doYogaCorrect - boolean
+11. Variable: percentCorrect - number
 */
 
 "use strict";
@@ -52,10 +53,11 @@ console.log("===Compare Final===");
 console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase());
 
 //Question 2: 
-const howManySibsPrompt = parseInt(prompt(`How many siblings does Kate have?`,99).trim());
+const howManySibsPrompt = prompt(`How many siblings does Kate have?`,99));
+const howManySibsPromptTypeConvert = parseInt(howManySibsPrompt)
 const howManySibsCorrect = 2;
 
-if ((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howManySibsPrompt))) {
+if ((howManySibsPrompt === null) || (howManySibsPrompt.trim() === ``) || (isNaN(howManySibsPromptTypeConvert))) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (howManySibsPrompt === howManySibsCorrect) {
    ++score;
@@ -67,9 +69,10 @@ if ((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howMany
 
 console.log("===Q2 Siblings Original Answers===");
 console.log(howManySibsPrompt, typeof howManySibsPrompt);
+console.log(howManySibsPromptTypeConvert, typeof howManySibsPromptTypeConvert);
 console.log(howManySibsCorrect, typeof howManySibsCorrect);
 console.log("===Auto Score 0 Evaluation===");
-console.log((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howManySibsPrompt)));
+console.log((howManySibsPrompt === null) || (howManySibsPrompt.trim() === ``) || (isNaN(howManySibsPromptTypeConvert)));
 console.log("===Compare Final===");
 console.log(howManySibsPrompt === howManySibsCorrect);
 
