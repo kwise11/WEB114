@@ -59,7 +59,8 @@ if ((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howMany
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (howManySibsPrompt === howManySibsCorrect) {
       ++score;
-   } else {(``);
+   } else {
+   (``);
    }
 //Give error for invalid answer, trim before parse int to get rid of spaces (trim strings only), 
 //use a comparison else if statement, add to score if correct, no action for false.
