@@ -30,10 +30,11 @@ console.log(score, typeof score);
 const favHobbyPrompt = prompt(`What is Kate's favorite hobby?`,`Swimming`);
 const favHobbyCorrect = `Crochet`;
 
-if ((favHobbyPrompt === `null`) || (favHobbyPrompt && favHobbyPrompt.trim() === ``) || (favHobbyPrompt === NaN)) {
+if ((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
-   } else if (favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase) {
-   ++score;
+   } else if (favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase) {
+   score+=1;
+   } else (``);
    }
 //Give error for invalid answer, trim and lower case to match the answers, 
 //use a comparison else if statement, increment score if correct, no action for false.
@@ -45,7 +46,7 @@ console.log("===Q1 Hobby Trim, Cased Answers===");
 console.log(favHobbyPrompt.trim().toLowerCase());
 console.log(favHobbyCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===")
-console.log((favHobbyPrompt === `null`) || (favHobbyPrompt && favHobbyPrompt.trim() === ``) || (favHobbyPrompt === NaN))
+console.log((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``))
 console.log("===Compare Final===")
 console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase)
 
@@ -53,10 +54,11 @@ console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase)
 const howManySibsPrompt = parseInt(prompt(`How many siblings does Kate have?`,99).trim());
 const howManySibsCorrect = 2;
 
-if ((howManySibsPrompt === `null`) || (howManySibsPrompt === ``) || (howManySibsPrompt === NaN)) {
+if ((howManySibsPrompt === null) || (howManySibsPrompt === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (howManySibsPrompt === howManySibsCorrect) {
-   ++score;
+      ++score;
+   } else (``);
    }
 //Give error for invalid answer, trim before parse int to get rid of spaces (trim strings only), 
 //use a comparison else if statement, add to score if correct, no action for false.
@@ -65,18 +67,19 @@ console.log("===Q2 Siblings Original Answers===");
 console.log(howManySibsPrompt, typeof howManySibsPrompt);
 console.log(howManySibsCorrect, typeof howManySibsCorrect);
 console.log("===Auto Score 0 Evaluation===")
-console.log((howManySibsPrompt === `null`) || (howManySibsPrompt === ``) || (howManySibsPrompt === NaN))
+console.log((howManySibsPrompt === null) || (howManySibsPrompt === ``))
 console.log("===Compare Final===")
-console.log(howManySibsPrompt. === howManySibsCorrect)
+console.log(howManySibsPrompt === howManySibsCorrect)
 
 //Question 3: 
 const favActivityPrompt = prompt(`What is Kate's favorite activity to do with friends?`,`Rock Climbing`);
 const favActivityCorrect = `Movies`;
 
-if ((favActivityPrompt === `null`) || (favActivityPrompt && favActivityPrompt.trim() === ``) || (favActivityPrompt === NaN)) {
+if ((favActivityPrompt === null) || (favActivityPrompt && favActivityPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase) {
-   ++score;
+      score+=1;
+   } else (``);
    }
 //Give error for invalid answer, trim and lower case to match the answers, 
 //use a comparison else if statement, increment score if correct, no action for false.
@@ -88,7 +91,7 @@ console.log("===Q3 Activity Trim, Cased Answers===");
 console.log(favActivityPrompt.trim().toLowerCase());
 console.log(favActivityCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===")
-console.log((favActivityPrompt === `null`) || (favActivityPrompt && favActivityPrompt.trim() === ``) || (favActivityPrompt === NaN))
+console.log((favActivityPrompt === null) || (favActivityPrompt.trim() === ``))
 console.log("===Compare Final===")
 console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase)
 
@@ -98,7 +101,7 @@ const doYogaPrompt = confirm(`Does Kate like doing yoga?
     Click Cancel for NO`);
 const doYogaCorrect = true;
 
-(doYogaPrompt != doYogaCorrect) ? `` : ++score ;
+(doYogaPrompt !== doYogaCorrect) ? `` : ++score ;
 //Since boolean is default formatted no need to trim or lowercase, use comparison ?, 
 //this time with not equal statement, if they do not match no action, if they do match increment.
 
@@ -123,11 +126,11 @@ console.log(percentCorrect, typeof percentCorrect);
 
 //Requirement 7. Final summary logic- Feedback to user on how well they know Kate.
 if (score = 0) {
-   alert(`You don't know Kate at all! 0%, No answers correct. Maybe you cancelled and didn't answer the questions... try again!`);
+   alert(`You don't know Kate at all! 0%, No answers correct. Maybe are thinking of another Kate?`);
    } else if ((score < 3) && (percentCorrect <= 50)) {
    alert(`You are familiar with Kate but not best friends. You got ${percentCorrect}% of the questions right. Maybe spend some more time together, like at the movies!`);
    } else if ((score < 4) && (percentCorrect === 75)) {
-   alert(`You and Kate are pretty close! You got ${percentCorrect}% of the questions right. Kate still has stuff for you to find out...`);
+   alert(`You and Kate are pretty close! You got ${percentCorrect}% of the questions right. Kate still has more mysteries for you to find out...`);
    } else if ((score === 4) && (percentCorrect === 100)) {
    alert(`You and Kate are BFFs! You got all the questions right! Such a good listener...`);
    } else {
