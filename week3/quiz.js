@@ -20,7 +20,8 @@ console.log("=== My Quiz Game ===");
 alert(`How well do you know Kate? Here are some questions about to find out how much you know!`);
 
 //Requirement 1. Initialize score = 0
-const score = 0;
+let score = 0;
+//Use let instead of const so that I can increment when answers are correct.
 
 console.log("===Starting Score===");
 console.log(score, typeof score);
