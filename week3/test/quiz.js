@@ -45,7 +45,11 @@ console.log("===Q1 Hobby Original Answers===");
 console.log(favHobbyPrompt, typeof favHobbyPrompt);
 console.log(favHobbyCorrect, typeof favHobbyCorrect);
 console.log("===Q1 Hobby Trim, Cased Answers===");
-console.log(favHobbyPrompt.trim().toLowerCase());
+if ((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``)) {
+   console.log(favHobbyPrompt);
+   } else {
+   console.log(favHobbyPrompt.trim().toLowerCase());
+   }
 console.log(favHobbyCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===");
 console.log((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``));
@@ -94,7 +98,11 @@ console.log("===Q3 Activity Original Answers===");
 console.log(favActivityPrompt, typeof favActivityPrompt);
 console.log(favActivityCorrect, typeof favActivityCorrect);
 console.log("===Q3 Activity Trim, Cased Answers===");
-console.log(favActivityPrompt.trim().toLowerCase());
+if ((favActivityPrompt === null) || (favActivityPrompt.trim() === ``)) {
+   console.log(favActivityPrompt);
+   } else {
+   console.log(favActivityPrompt.trim().toLowerCase());
+   }
 console.log(favActivityCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===");
 console.log((favActivityPrompt === null) || (favActivityPrompt.trim() === ``));
