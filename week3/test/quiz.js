@@ -30,7 +30,7 @@ console.log(score, typeof score);
 const favHobbyPrompt = prompt(`What is Kate's favorite hobby?`,`Swimming`);
 const favHobbyCorrect = `Crochet`;
 
-if ((favHobbyPrompt === null) || (favHobbyPrompt && favHobbyPrompt.trim() === ``) {
+if ((favHobbyPrompt === null) || (favHobbyPrompt && favHobbyPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase) {
    score+=1;
@@ -54,7 +54,7 @@ console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase)
 const howManySibsPrompt = parseInt(prompt(`How many siblings does Kate have?`,99).trim());
 const howManySibsCorrect = 2;
 
-if ((howManySibsPrompt === null) || (howManySibsPrompt === ``) {
+if ((howManySibsPrompt === null) || (howManySibsPrompt === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (howManySibsPrompt === howManySibsCorrect) {
       ++score;
@@ -75,7 +75,7 @@ console.log(howManySibsPrompt === howManySibsCorrect)
 const favActivityPrompt = prompt(`What is Kate's favorite activity to do with friends?`,`Rock Climbing`);
 const favActivityCorrect = `Movies`;
 
-if ((favActivityPrompt === null) || (favActivityPrompt && favActivityPrompt.trim() === ``) {
+if ((favActivityPrompt === null) || (favActivityPrompt && favActivityPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase) {
       score+=1;
