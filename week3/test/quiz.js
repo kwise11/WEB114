@@ -55,7 +55,7 @@ console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase)
 const howManySibsPrompt = parseInt(prompt(`How many siblings does Kate have?`,99).trim());
 const howManySibsCorrect = 2;
 
-if ((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howManySibsPrompt)) {
+if ((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howManySibsPrompt))) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (howManySibsPrompt === howManySibsCorrect) {
    ++score;
@@ -69,7 +69,7 @@ console.log("===Q2 Siblings Original Answers===");
 console.log(howManySibsPrompt, typeof howManySibsPrompt);
 console.log(howManySibsCorrect, typeof howManySibsCorrect);
 console.log("===Auto Score 0 Evaluation===");
-console.log((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howManySibsPrompt));
+console.log((howManySibsPrompt === null) || (howManySibsPrompt === ``) || (isNaN(howManySibsPrompt)));
 console.log("===Compare Final===");
 console.log(howManySibsPrompt === howManySibsCorrect);
 
