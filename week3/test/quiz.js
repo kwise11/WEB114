@@ -34,7 +34,8 @@ if ((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase) {
    score+=1;
-   } else (``);
+   } else {
+   (``);
    }
 //Give error for invalid answer, trim and lower case to match the answers, 
 //use a comparison else if statement, increment score if correct, no action for false.
@@ -45,10 +46,10 @@ console.log(favHobbyCorrect, typeof favHobbyCorrect);
 console.log("===Q1 Hobby Trim, Cased Answers===");
 console.log(favHobbyPrompt.trim().toLowerCase());
 console.log(favHobbyCorrect.toLowerCase());
-console.log("===Auto Score 0 Evaluation===")
-console.log((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``))
-console.log("===Compare Final===")
-console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase)
+console.log("===Auto Score 0 Evaluation===");
+console.log((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``));
+console.log("===Compare Final===");
+console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase);
 
 //Question 2: 
 const howManySibsPrompt = parseInt(prompt(`How many siblings does Kate have?`,99).trim());
@@ -57,8 +58,9 @@ const howManySibsCorrect = 2;
 if ((howManySibsPrompt === null) || (howManySibsPrompt === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (howManySibsPrompt === howManySibsCorrect) {
-      ++score;
-   } else (``);
+   ++score;
+   } else {
+   (``);
    }
 //Give error for invalid answer, trim before parse int to get rid of spaces (trim strings only), 
 //use a comparison else if statement, add to score if correct, no action for false.
@@ -66,10 +68,10 @@ if ((howManySibsPrompt === null) || (howManySibsPrompt === ``)) {
 console.log("===Q2 Siblings Original Answers===");
 console.log(howManySibsPrompt, typeof howManySibsPrompt);
 console.log(howManySibsCorrect, typeof howManySibsCorrect);
-console.log("===Auto Score 0 Evaluation===")
-console.log((howManySibsPrompt === null) || (howManySibsPrompt === ``))
-console.log("===Compare Final===")
-console.log(howManySibsPrompt === howManySibsCorrect)
+console.log("===Auto Score 0 Evaluation===");
+console.log((howManySibsPrompt === null) || (howManySibsPrompt === ``));
+console.log("===Compare Final===");
+console.log(howManySibsPrompt === howManySibsCorrect);
 
 //Question 3: 
 const favActivityPrompt = prompt(`What is Kate's favorite activity to do with friends?`,`Rock Climbing`);
@@ -78,8 +80,9 @@ const favActivityCorrect = `Movies`;
 if ((favActivityPrompt === null) || (favActivityPrompt && favActivityPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase) {
-      score+=1;
-   } else (``);
+   score+=1;
+   } else {
+   (``);
    }
 //Give error for invalid answer, trim and lower case to match the answers, 
 //use a comparison else if statement, increment score if correct, no action for false.
@@ -90,10 +93,10 @@ console.log(favActivityCorrect, typeof favActivityCorrect);
 console.log("===Q3 Activity Trim, Cased Answers===");
 console.log(favActivityPrompt.trim().toLowerCase());
 console.log(favActivityCorrect.toLowerCase());
-console.log("===Auto Score 0 Evaluation===")
-console.log((favActivityPrompt === null) || (favActivityPrompt.trim() === ``))
-console.log("===Compare Final===")
-console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase)
+console.log("===Auto Score 0 Evaluation===");
+console.log((favActivityPrompt === null) || (favActivityPrompt.trim() === ``));
+console.log("===Compare Final===");
+console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase);
 
 //Question 4: 
 const doYogaPrompt = confirm(`Does Kate like doing yoga?
@@ -105,11 +108,11 @@ const doYogaCorrect = true;
 //Since boolean is default formatted no need to trim or lowercase, use comparison ?, 
 //this time with not equal statement, if they do not match no action, if they do match increment.
 
-console.log("===Q4 Yoga Original Answers===")
+console.log("===Q4 Yoga Original Answers===");
 console.log(doYogaPrompt, typeof doYogaPrompt);
 console.log(doYogaCorrect, typeof doYogaCorrect);
-console.log("===Compare Final===")
-console.log(doYogaPrompt != doYogaCorrect)
+console.log("===Compare Final===");
+console.log(doYogaPrompt != doYogaCorrect);
 
 //Requirement 6. Calculate the percentage correct
 const percentCorrect = (score/4)*100;
@@ -121,7 +124,7 @@ console.log("===Ending Score===");
 console.log(score, typeof score);
 
 //Percentage calc
-console.log("===Percentage Calculation Result===")
+console.log("===Percentage Calculation Result===");
 console.log(percentCorrect, typeof percentCorrect);
 
 //Requirement 7. Final summary logic- Feedback to user on how well they know Kate.
