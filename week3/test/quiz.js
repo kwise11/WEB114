@@ -30,7 +30,7 @@ console.log(score, typeof score);
 const favHobbyPrompt = prompt(`What is Kate's favorite hobby?`,`Swimming`);
 const favHobbyCorrect = `Crochet`;
 
-if ((favHobbyPrompt === null) || (favHobbyPrompt && favHobbyPrompt.trim() === ``)) {
+if ((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase) {
    score+=1;
@@ -46,7 +46,7 @@ console.log("===Q1 Hobby Trim, Cased Answers===");
 console.log(favHobbyPrompt.trim().toLowerCase());
 console.log(favHobbyCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===")
-console.log((favHobbyPrompt === `null`) || (favHobbyPrompt && favHobbyPrompt.trim() === ``) || (favHobbyPrompt === NaN))
+console.log((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``))
 console.log("===Compare Final===")
 console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase)
 
@@ -67,7 +67,7 @@ console.log("===Q2 Siblings Original Answers===");
 console.log(howManySibsPrompt, typeof howManySibsPrompt);
 console.log(howManySibsCorrect, typeof howManySibsCorrect);
 console.log("===Auto Score 0 Evaluation===")
-console.log((howManySibsPrompt === `null`) || (howManySibsPrompt === ``) || (howManySibsPrompt === NaN))
+console.log((howManySibsPrompt === null) || (howManySibsPrompt === ``))
 console.log("===Compare Final===")
 console.log(howManySibsPrompt === howManySibsCorrect)
 
@@ -91,7 +91,7 @@ console.log("===Q3 Activity Trim, Cased Answers===");
 console.log(favActivityPrompt.trim().toLowerCase());
 console.log(favActivityCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===")
-console.log((favActivityPrompt === `null`) || (favActivityPrompt && favActivityPrompt.trim() === ``) || (favActivityPrompt === NaN))
+console.log((favActivityPrompt === null) || (favActivityPrompt.trim() === ``))
 console.log("===Compare Final===")
 console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase)
 
