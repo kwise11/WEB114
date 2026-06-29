@@ -140,9 +140,9 @@ const percentCorrect = (score/4)*100;
 
 //Updated Score- Give feedback with an if statement
 if (score === 0) {
-   alert(`You didn't increase your score- ${score} out of 4.`);
+   alert(`You didn't score at all- ${score} out of 4.`);
    } else if (score < 3) {
-   alert(`Your score increased a little- ${score} out of 4.`);
+   alert(`Your score is minimal- ${score} out of 4.`);
    } else if (score < 4) {
    alert(`Your score is passing- ${score} out of 4.`);
    } else if (score === 4) {
