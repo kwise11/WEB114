@@ -45,12 +45,20 @@ console.log("===Q1 Hobby Original Answers===");
 console.log(favHobbyPrompt, typeof favHobbyPrompt);
 console.log(favHobbyCorrect, typeof favHobbyCorrect);
 console.log("===Q1 Hobby Trim, Cased Answers===");
-console.log(favHobbyPrompt.trim().toLowerCase());
+if ((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``)) {
+   console.log(favHobbyPrompt);
+   } else {
+   console.log(favHobbyPrompt.trim().toLowerCase());
+   }
 console.log(favHobbyCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===");
 console.log((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``));
 console.log("===Compare Final===");
-console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase());
+if ((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``)) {
+   console.log(favHobbyPrompt === favHobbyCorrect.trim().toLowerCase());
+   } else {
+   console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase());
+   }
 
 //Question 2: 
 const howManySibsPrompt = prompt(`How many siblings does Kate have?`,99);
@@ -94,12 +102,20 @@ console.log("===Q3 Activity Original Answers===");
 console.log(favActivityPrompt, typeof favActivityPrompt);
 console.log(favActivityCorrect, typeof favActivityCorrect);
 console.log("===Q3 Activity Trim, Cased Answers===");
-console.log(favActivityPrompt.trim().toLowerCase());
+if ((favActivityPrompt === null) || (favActivityPrompt.trim() === ``)) {
+   console.log(favActivityPrompt);
+   } else {
+   console.log(favActivityPrompt.trim().toLowerCase());
+   }
 console.log(favActivityCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===");
 console.log((favActivityPrompt === null) || (favActivityPrompt.trim() === ``));
 console.log("===Compare Final===");
-console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.trim().toLowerCase());
+if ((favActivityPrompt === null) || (favActivityPrompt.trim() === ``)) {
+   console.log(favActivityPrompt === favActivityCorrect.trim().toLowerCase());
+   } else {
+   console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.trim().toLowerCase());
+   }
 
 //Question 4: 
 const doYogaPrompt = confirm(`Does Kate like doing yoga?
@@ -132,7 +148,7 @@ console.log(percentCorrect, typeof percentCorrect);
 
 //Requirement 7. Final summary logic- Feedback to user on how well they know Kate.
 if (score === 0) {
-   alert(`You don't know Kate at all! 0%, No answers correct. Maybe are thinking of another Kate?`);
+   alert(`You don't know Kate at all! 0%, No answers correct. Maybe you are thinking of another Kate?`);
    } else if ((score < 3) && (percentCorrect <= 50)) {
    alert(`You are familiar with Kate but not best friends. You got ${percentCorrect}% of the questions right. Maybe spend some more time together, like at the movies!`);
    } else if ((score < 4) && (percentCorrect === 75)) {
@@ -144,4 +160,3 @@ if (score === 0) {
    }
 //This if statement starts if someone got 0 answers right and moves up to 2 or less, 3, 4, or none of the
 //above with appropriate messages.
-
