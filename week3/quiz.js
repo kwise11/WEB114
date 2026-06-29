@@ -21,7 +21,6 @@ alert(`How well do you know Kate? Here are some questions about to find out how 
 
 //Requirement 1. Initialize score = 0
 let score = 0;
-//Use let instead of const so that I can increment when answers are correct.
 
 console.log("===Starting Score===");
 console.log(score, typeof score);
@@ -34,7 +33,7 @@ const favHobbyCorrect = `Crochet`;
 if ((favHobbyPrompt === `null`) || (favHobbyPrompt && favHobbyPrompt.trim() === ``) || (favHobbyPrompt === NaN)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase) {
-      ++score;
+   ++score;
    }
 //Give error for invalid answer, trim and lower case to match the answers, 
 //use a comparison else if statement, increment score if correct, no action for false.
@@ -57,16 +56,16 @@ const howManySibsCorrect = 2;
 if ((howManySibsPrompt === `null`) || (howManySibsPrompt === ``) || (howManySibsPrompt === NaN)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (howManySibsPrompt === howManySibsCorrect) {
-      ++score;
+   ++score;
    }
-//Give error for invalid answer, trim before parseInt to get rid of spaces (trim strings only), 
+//Give error for invalid answer, trim before parse int to get rid of spaces (trim strings only), 
 //use a comparison else if statement, add to score if correct, no action for false.
 
 console.log("===Q2 Siblings Original Answers===");
 console.log(howManySibsPrompt, typeof howManySibsPrompt);
 console.log(howManySibsCorrect, typeof howManySibsCorrect);
 console.log("===Auto Score 0 Evaluation===")
-console.log((howManySibsPrompt === `null`) || (howManySibsPrompt && howManySibsPrompt.trim() === ``) || (howManySibsPrompt === NaN))
+console.log((howManySibsPrompt === `null`) || (howManySibsPrompt && howManySibsPrompt === ``) || (howManySibsPrompt === NaN))
 console.log("===Compare Final===")
 console.log(howManySibsPrompt.trim() === howManySibsCorrect)
 
@@ -77,7 +76,7 @@ const favActivityCorrect = `Movies`;
 if ((favActivityPrompt === `null`) || (favActivityPrompt && favActivityPrompt.trim() === ``) || (favActivityPrompt === NaN)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase) {
-      ++score;
+   ++score;
    }
 //Give error for invalid answer, trim and lower case to match the answers, 
 //use a comparison else if statement, increment score if correct, no action for false.
@@ -136,3 +135,4 @@ if (score = 0) {
    }
 //This if statement starts if someone got 0 answers right and moves up to 2 or less, 3, 4, or none of the
 //above with appropriate messages.
+
