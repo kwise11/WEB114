@@ -32,7 +32,7 @@ const favHobbyCorrect = `Crochet`;
 
 if ((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
-   } else if (favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase) {
+   } else if (favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase()) {
    score+=1;
    } else {
    (``);
@@ -49,7 +49,7 @@ console.log(favHobbyCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===");
 console.log((favHobbyPrompt === null) || (favHobbyPrompt.trim() === ``));
 console.log("===Compare Final===");
-console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.toLowerCase);
+console.log(favHobbyPrompt.trim().toLowerCase() === favHobbyCorrect.trim().toLowerCase());
 
 //Question 2: 
 const howManySibsPrompt = parseInt(prompt(`How many siblings does Kate have?`,99).trim());
@@ -79,7 +79,7 @@ const favActivityCorrect = `Movies`;
 
 if ((favActivityPrompt === null) || (favActivityPrompt && favActivityPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
-   } else if (favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase) {
+   } else if (favActivityPrompt.trim().toLowerCase() === favActivityCorrect.trim().toLowerCase()) {
    score+=1;
    } else {
    (``);
@@ -96,7 +96,7 @@ console.log(favActivityCorrect.toLowerCase());
 console.log("===Auto Score 0 Evaluation===");
 console.log((favActivityPrompt === null) || (favActivityPrompt.trim() === ``));
 console.log("===Compare Final===");
-console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.toLowerCase);
+console.log(favActivityPrompt.trim().toLowerCase() === favActivityCorrect.trim().toLowerCase());
 
 //Question 4: 
 const doYogaPrompt = confirm(`Does Kate like doing yoga?
