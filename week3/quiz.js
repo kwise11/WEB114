@@ -58,7 +58,7 @@ if ((howManySibsPrompt === `null`) || (howManySibsPrompt === ``) || (howManySibs
    } else if (howManySibsPrompt === howManySibsCorrect) {
       ++score;
    }
-//Give error for invalid answer, trim before parse int to get rid of spaces (trim strings only), 
+//Give error for invalid answer, trim before parseInt to get rid of spaces (trim strings only), 
 //use a comparison else if statement, add to score if correct, no action for false.
 
 console.log("===Q2 Siblings Original Answers===");
