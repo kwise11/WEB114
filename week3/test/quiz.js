@@ -59,7 +59,7 @@ const howManySibsCorrect = 2;
 
 if ((howManySibsPrompt === null) || (howManySibsPrompt.trim() === ``) || (isNaN(howManySibsPromptTypeConvert))) {
    alert('Your answer is not valid and you will receive a 0 for this question');
-   } else if (howManySibsPrompt === howManySibsCorrect) {
+   } else if (howManySibsPromptTypeConvert === howManySibsCorrect) {
    ++score;
    } else {
    (``);
