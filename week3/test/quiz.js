@@ -80,7 +80,7 @@ console.log(howManySibsPrompt === howManySibsCorrect);
 const favActivityPrompt = prompt(`What is Kate's favorite activity to do with friends?`,`Rock Climbing`);
 const favActivityCorrect = `Movies`;
 
-if ((favActivityPrompt === null) || (favActivityPrompt && favActivityPrompt.trim() === ``)) {
+if ((favActivityPrompt === null) || (favActivityPrompt.trim() === ``)) {
    alert('Your answer is not valid and you will receive a 0 for this question');
    } else if (favActivityPrompt.trim().toLowerCase() === favActivityCorrect.trim().toLowerCase()) {
    score+=1;
