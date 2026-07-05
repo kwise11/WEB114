@@ -12,7 +12,7 @@ let favMonth = prompt(`What is your favorite Month?`,`January`);
 console.log("===Favorite Month Original Entry===");
 console.log(favMonth, typeof favMonth);
 
-if (favMonth.trim() === '' || favMonth === null) {
+if (favMonth === null || favMonth.trim() === '') {
    alert(`You didn't enter anything! Don't you have a favorite month?`)
    favMonth = null
    } else {
