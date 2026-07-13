@@ -83,7 +83,7 @@ switch (userName) {
    case userName === null:
       alert(`You cancelled the name prompt.`);
       console.log(`You cancelled the name prompt.`);
-   case userName.trim() === ``:
+   case userName.trim() === ``|| userName === undefined:
       alert(`You must type a name.`);
       console.log(`You must type a name.`);
    default:
