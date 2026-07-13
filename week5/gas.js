@@ -26,30 +26,38 @@ let avgGasPaid;
 //Use let on both of these as their values change/may change
 
 console.log(`===Global Variables===`);
+console.log(`===userName===`);
 console.log(userName, typeof userName);
+console.log(`===totalGas===`);
 console.log(totalGas, typeof totalGas);
+console.log(`===countGasEntries===`);
 console.log(countGasEntries, typeof countGasEntries);
+console.log(`===avgGasPaid===`);
 console.log(avgGasPaid, typeof avgGasPaid);
 
 //Requirement 3. Create Function 
 function calcGasAvg() {
    let thisWeek = prompt(`Enter your first week's gas total. Enter -1 when done.`,``);
    console.log(`===calcGasAvg Function Variables===`);
+   console.log(`===thisWeek===`);
    console.log(thisWeek, typeof thisWeek);
    while (thisWeek !== null && thisWeek !== `-1`) {
       if (isNaN(parseInt(thisWeek))) {
          thisWeek = prompt(`Please enter a valid number. Enter -1 when done.`,``);
-         console.log(`===NaN reprompt entry===`);
+         console.log(`===NaN reprompt thisWeek entry===`);
          console.log(thisWeek,typeof thisWeek);
       } else {
          let thisWeekNumb = parseInt(thisWeek);
+         console.log(`===parseInt thisWeek===`);
          console.log(thisWeekNumb, typeof thisWeekNumb);
          totalGas = (totalGas + thisWeekNumb);
+         console.log(`===totalGas===`);
          console.log(totalGas);
          countGasEntries += 1;
+         console.log(`===countGasEntries===`);
          console.log(countGasEntries);
          thisWeek = prompt(`Enter your next week's gas total. Enter -1 when done.`,``);
-         console.log(`===Next total entry===`);
+         console.log(`===New thisWeek entry===`);
          console.log(thisWeek, typeof thisWeek);
       }
    }
@@ -87,14 +95,13 @@ switch (userName) {
 console.log(`===Final Summary===`);
 
 calcGasAvg()
+console.log(`===calcGasAvg function return value===`);
 console.log(calcGasAvg);
 
 if (avgGasPaid === null) {
    alert(`You cancelled entering gas totals.`);
    console.log(`You cancelled entering gas totals.`);
-}
-
-if (avgGasPaid !== null) {
+} else {
    if (countGasEntries === 0) {
       alert(`No gas totals were entered.`);
       console.log(`No gas totals were entered.`);
