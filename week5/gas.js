@@ -64,11 +64,11 @@ function calcGasAvg() {
    if (thisWeek === null) {
       avgGasPaid = null;
    } else if (countGasEntries === 0) {
-      avgGasPaid = (0).toFixed(2)
+      avgGasPaid = parseFloat((0).toFixed(2))
    } else {
-      avgGasPaid = (totalGas/countGasEntries).toFixed(2)
+      avgGasPaid = parseFloat((totalGas/countGasEntries).toFixed(2))
    }
-   console.log(`===Avg Gas Use to Return by function===`);
+   console.log(`===parseFloat Avg Gas Use to Return by function===`);
    console.log(avgGasPaid, typeof avgGasPaid);
    return avgGasPaid;
 }
