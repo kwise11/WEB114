@@ -68,10 +68,12 @@ function calcGasAvg() {
    } else {
       avgGasPaid = (totalGas/countGasEntries).toFixed(2)
    }
-   console.log(`===Avg Gas Use as updated by function===`);
+   console.log(`===Avg Gas Use to Return by function===`);
    console.log(avgGasPaid, typeof avgGasPaid);
    return avgGasPaid;
 }
+//Per instructions create a function that will handle no entry, cancel and iterate thru multiple entries.
+//Return from the function the average created by iteration.
 
 // Requirement 2. Main Program
 userName = prompt(`Enter your name: `, ``); 
@@ -90,7 +92,8 @@ if (userName === null) {
    console.log(`===Trimmed Name Entry===`);
    console.log(userName, typeof userName);   
 }
-// Instructions say to stop if no name is entered either by blank or null. Following logic applies that.
+//Per instructions stop if no name is entered either by blank or null. Previous and following logic
+//applies that.
 
 if (userName === null || userName.trim() === ``) {
    alert(`You did not enter a name so we could not proceed.`);
@@ -98,11 +101,10 @@ if (userName === null || userName.trim() === ``) {
 } else { 
    calcGasAvg();
    console.log(`===calcGasAvg function return value===`);
-   console.log(calcGasAvg);
+   console.log(calcGasAvg, typeof calcGasAvg);
 }
+//Error message for why we stopped based on name, with a valid name run the function.
 
-
-console.log(`===Final Summary===`);
 
 if ((userName !== null && userName.trim() !== ``) && avgGasPaid === null) {
    alert(`You cancelled entering gas totals.`);
@@ -134,3 +136,5 @@ if ((userName !== null && userName.trim() !== ``) && avgGasPaid === null) {
       console.log(`There were ${countGasEntries} entries.`);
    }
 }
+//Maintaining response only for a valid name, generate the required messages based on updated values
+//from the function that was run.  Account for null, no entries, a single entry and multiple entries.
