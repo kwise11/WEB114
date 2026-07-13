@@ -114,8 +114,6 @@ if ((userName !== null && userName.trim() !== ``) && avgGasPaid === null) {
    alert(`You cancelled entering gas totals.`);
    console.log(`===Final Summary===`);
    console.log(`You cancelled entering gas totals.`);
-   alert(entryMessage);
-   console.log(entryMessage);
 } else if (userName !== null && userName.trim() !== ``) {
    if (countGasEntries === 0) {
       alert(`No gas totals were entered.`);
