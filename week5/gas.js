@@ -131,7 +131,7 @@ if ((userName !== null && userName.trim() !== ``) && avgGasPaid === null) {
 }
 //Final result population based on function interations.
 
-if (userName !== null && userName.trim() !== ``) {
+if (userName !== null && userName.trim() !== `` && avgGasPaid !== null) {
    if (countGasEntries === 0) {
       entryMessage = (`No gas totals were entered.`);
       alert(entryMessage);
