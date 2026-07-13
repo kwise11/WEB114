@@ -110,19 +110,6 @@ if (userName === null || userName.trim() === ``) {
 }
 //Error message for why we stopped based on name, with a valid name run the function.
 
-if ((userName !== null && userName.trim() !== ``) && countGasEntries === 0) {
-      entryMessage = alert(`No gas totals were entered.`);
-   } else if ((userName !== null && userName.trim() !== ``) && countGasEntries === 1) {
-      entryMessage = alert(`There was only 1 entry.`);
-   } else if ((userName !== null && userName.trim() !== ``) && countGasEntries > 1) {
-      entryMessage = alert(`There were ${countGasEntries} entries.`);
-   } else {
-      entryMessage = null
-   }
-console.log(`===Create entryMessage Variable content===`);
-console.log(entryMessage, typeof entryMessage);
-//Used an if statement to set entryMessage value
-
 if ((userName !== null && userName.trim() !== ``) && avgGasPaid === null) {
    alert(`You cancelled entering gas totals.`);
    console.log(`===Final Summary===`);
@@ -134,21 +121,37 @@ if ((userName !== null && userName.trim() !== ``) && avgGasPaid === null) {
       alert(`No gas totals were entered.`);
       console.log(`===Final Summary===`);
       console.log(`No gas totals were entered.`);
-      alert(entryMessage);
-      console.log(entryMessage);
    } else if (countGasEntries === 1) {
       alert(`${userName} had a total gas bill of $${totalGas.toFixed(2)}.`);
       console.log(`===Final Summary===`);
       console.log(`${userName} had a weekly average gas bill of $${totalGas.toFixed(2)}.`);
-      alert(entryMessage);
-      console.log(entryMessage);
    } else if (countGasEntries > 1) {
       alert(`${userName} had an average gas bill of $${avgGasPaid}.`);
       console.log(`===Final Summary===`);
       console.log(`${userName} had an average gas bill of $${avgGasPaid}.`);
+   }
+}
+//Final result population based on function interations.
+
+if (userName !== null && userName.trim() !== ``) {
+   if (countGasEntries === 0) {
+      entryMessage = (`No gas totals were entered.`);
       alert(entryMessage);
+      console.log(`===Create entryMessage Variable content===`);
+      console.log(entryMessage);
+   } else if (countGasEntries === 1) {
+      entryMessage = (`There was only 1 entry.`);
+      alert(entryMessage);
+      console.log(`===Create entryMessage Variable content===`);
+      console.log(entryMessage);
+   } else if (countGasEntries > 1) {
+      entryMessage = (`There were ${countGasEntries} entries.`);
+      alert(entryMessage);
+      console.log(`===Create entryMessage Variable content===`);
       console.log(entryMessage);
    }
 }
+
+//Used an if statement to set entryMessage value as instructed.
 //Maintaining response only for a valid name, generate the required messages based on updated values
 //from the function that was run.  Account for null, no entries, a single entry and multiple entries.
