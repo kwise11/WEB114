@@ -12,7 +12,7 @@
 There are multiple times in the instructions where it says if someone enters a incorrect entry to give 
 them a particular message and 'stop'.  I am interpreting that as stopping the whole process and not just
 prompting them to re-enter.  As there are some instructions specifically say to prompt them to re-enter 
-I am following those instructions and interpreting 'stop' differently  
+I am following those instructions and interpreting 'stop' differently.  
 */
 
 "use strict";
@@ -90,17 +90,22 @@ if (userName === null) {
    console.log(`===Trimmed Name Entry===`);
    console.log(userName, typeof userName);   
 }
-
+// Instructions say to stop if no name is entered either by blank or null. Following logic applies that.
 console.log(`===Final Summary===`);
 
-calcGasAvg()
+if (userName === null || userName === undefined || userName.trim() === ``) {
+   alert(`You did not enter a name so we could not proceed.`);
+   console.log(`You did not enter a name so we could not proceed.`);
+} else { 
+   calcGasAvg();
+}
 console.log(`===calcGasAvg function return value===`);
 console.log(calcGasAvg);
 
-if (avgGasPaid === null) {
+if ((userName !== null || userName !== undefined || userName.trim() !== ``) && avgGasPaid === null) {
    alert(`You cancelled entering gas totals.`);
    console.log(`You cancelled entering gas totals.`);
-} else {
+} else if (userName !== null || userName !== undefined || userName.trim() !== ``){
    if (countGasEntries === 0) {
       alert(`No gas totals were entered.`);
       console.log(`No gas totals were entered.`);
