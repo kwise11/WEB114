@@ -86,23 +86,25 @@ switch (userName) {
 
 console.log(`===Final Summary===`);
 
-if (calcGasAvg() === null) {
+calcGasAvg()
+console.log(calcGasAvg);
+
+if (avgGasUse === null) {
    alert(`You cancelled entering gas totals.`);
-   console.log(calcGasAvg);
-   if (countGasEntries === 0) {
+   console.log(`You cancelled entering gas totals.`);}
+
+if (countGasEntries === 0) {
       alert(`No gas totals were entered.`);
-      console.log(calcGasAvg);
       console.log(`No gas totals were entered.`);
    } else if (countGasEntries === 1) {
       alert(`${userName} had an average gas bill of $${totalGas}.`);
-      console.log(calcGasAvg);
       console.log(`${userName} had an average gas bill of $${totalGas}.`);
    } else {
       alert(`${userName} had an average gas bill of $${avgGasPaid}.`);
-      console.log(calcGasAvg);
       console.log(`${userName} had an average gas bill of $${avgGasPaid}.`);
    }
-   if (countGasEntries === 0) {
+
+if (countGasEntries === 0) {
       alert(`No gas totals were entered.`);
       console.log(`No gas totals were entered.`);
    } else if (countGasEntries === 1) {
