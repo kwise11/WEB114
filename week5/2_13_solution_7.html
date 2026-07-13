@@ -1,0 +1,28 @@
+<html>
+        
+    <body>
+
+        <script>
+
+            'use strict';
+
+            let n = 10;
+
+            nextPrime:
+            for (let i = 2; i <= n; i++) { // for each i...
+
+            for (let j = 2; j < i; j++) { // look for a divisor..
+                if (i % j == 0) continue nextPrime; // not a prime, go next i
+            }
+             alert( i ); // a prime
+            }
+
+            //Set the starting number (n)
+            //Create something that will start from 2 (since all prime have 1) and find each number to test (i) up to n
+            //Test each i to see if anything else goes into it, if nothing goes into it but i and n it is prime
+        
+        </script>
+
+    </body>
+    
+</html>

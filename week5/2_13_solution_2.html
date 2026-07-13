@@ -1,0 +1,22 @@
+<html>
+        
+    <body>
+
+        <script>
+
+            'use strict';
+
+            let i = 0;
+            while (++i < 5) alert( i );
+            // before does addition before comparison, so starts 1 < 5 runs 4 times to reach 5, last alert i is 4
+
+            let i = 0;
+            while (i++ < 5) alert( i );
+            // after does addition after comparison, so starts at 0 < 5 runs 5 times to reach 5, last alert i is 5
+
+        
+        </script>
+
+    </body>
+    
+</html>

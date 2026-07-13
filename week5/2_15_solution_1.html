@@ -1,0 +1,32 @@
+<html>
+        
+    <body>
+
+        <script>
+
+            'use strict';
+
+            function checkAge(age) {
+            if (age > 18) {
+                return true;
+            } else {
+                // ...
+                return confirm('Did parents allow you?');
+            }
+            }
+
+            function checkAge(age) {
+            if (age > 18) {
+                return true;
+            }
+            // ...
+            return confirm('Did parents allow you?');
+            }
+
+            // without else will run both commands for age 18, only run the second for >=18, so same for false
+        
+        </script>
+
+    </body>
+    
+</html>

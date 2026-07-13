@@ -1,0 +1,31 @@
+<html>
+        
+    <body>
+
+        <script>
+
+            'use strict';
+
+            function checkAge(age) {
+            if (age > 18) {
+                return true;
+            } else {
+                return confirm('Did parents allow you?');
+            }
+            }
+
+            function checkAge(age) {
+            return (age > 18) ? true : confirm('Did parents allow you?');
+            }
+            // ? shortcut for if else, if previous statement is true gives first (true) else gives second (confirm)
+
+            function checkAge(age) {
+            return (age > 18) || confirm('Did parents allow you?');
+            }
+            // if true does not run the next step, if false gives the message
+        
+        </script>
+
+    </body>
+    
+</html>
