@@ -79,18 +79,17 @@ userName = prompt(`Enter your name: `, ``);
 console.log(`===Prompted Name Entry===`);
 console.log(userName, typeof userName);
 
-switch (userName) {
-   case userName === null:
-      alert(`You cancelled the name prompt.`);
-      console.log(`You cancelled the name prompt.`);
-   case userName.trim() === ``|| userName === undefined:
-      alert(`You must type a name.`);
-      console.log(`You must type a name.`);
-   default:
-      userName = userName.trim();
-      console.log(`===Trimmed Name Entry===`);
-      console.log(userName, typeof userName);
-} 
+if (userName === null) {
+   alert(`You cancelled the name prompt.`);
+   console.log(`You cancelled the name prompt.`);   
+} else if (userName === undefined || userName.trim() === ``) {
+   alert(`You must type a name.`);
+   console.log(`You must type a name.`);
+} else {
+   userName = userName.trim();
+   console.log(`===Trimmed Name Entry===`);
+   console.log(userName, typeof userName);   
+}
 
 console.log(`===Final Summary===`);
 
