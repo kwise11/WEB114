@@ -42,13 +42,13 @@ function calcGasAvg() {
    console.log(`===thisWeek===`);
    console.log(thisWeek, typeof thisWeek);
    while (thisWeek !== null && thisWeek !== `-1`) {
-      if (isNaN(parseInt(thisWeek))) {
+      if (isNaN(parseFloat(thisWeek))) {
          thisWeek = prompt(`Please enter a valid number. Enter -1 when done.`,``);
          console.log(`===NaN reprompt thisWeek entry===`);
          console.log(thisWeek,typeof thisWeek);
       } else {
-         let thisWeekNumb = parseInt(thisWeek);
-         console.log(`===parseInt thisWeek===`);
+         let thisWeekNumb = parseFloat(thisWeek);
+         console.log(`===parseFloat thisWeek===`);
          console.log(thisWeekNumb, typeof thisWeekNumb);
          totalGas = (totalGas + thisWeekNumb);
          console.log(`===totalGas===`);
