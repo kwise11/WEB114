@@ -20,7 +20,7 @@ I am following those instructions and interpreting 'stop' differently.
 //Requirement 1. Global Variables
 let userName;
 let totalGas = 0;
-let countGasEntries = null;
+let countGasEntries = 0;
 let avgGasPaid;
 
 //Use let on both of these as their values change/may change
