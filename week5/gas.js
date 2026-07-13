@@ -4,7 +4,7 @@
 1. Global Variable: userName - string
 2. Global Variable: totalGas - number
 3. Global Variable: countGasEntries - number
-4. Global Variable: avgGasUse - number, dollar amount so limit to 2 decimals
+4. Global Variable: avgGasPaid - number, dollar amount so limit to 2 decimals
 5. Local Variable: thisWeek - string 
 6. Local Variable: thisWeekNumb - number
 
@@ -29,7 +29,7 @@ console.log(`===Global Variables===`);
 console.log(userName, typeof userName);
 console.log(totalGas, typeof totalGas);
 console.log(countGasEntries, typeof countGasEntries);
-console.log(avgGasUse, typeof avgGasUse);
+console.log(avgGasPaid, typeof avgGasPaid);
 
 //Requirement 3. Create Function 
 function calcGasAvg() {
@@ -89,12 +89,12 @@ console.log(`===Final Summary===`);
 calcGasAvg()
 console.log(calcGasAvg);
 
-if (avgGasUse === null) {
+if (avgGasPaid === null) {
    alert(`You cancelled entering gas totals.`);
    console.log(`You cancelled entering gas totals.`);
 }
 
-if (avgGasUse !== null) {
+if (avgGasPaid !== null) {
    if (countGasEntries === 0) {
       alert(`No gas totals were entered.`);
       console.log(`No gas totals were entered.`);
@@ -117,4 +117,3 @@ if (avgGasUse !== null) {
       console.log(`There were ${countGasEntries} entries.`);
    }
 }
-
