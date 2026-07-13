@@ -5,6 +5,7 @@
 2. Global Variable: totalGas - number
 3. Global Variable: countGasEntries - number
 4. Global Variable: avgGasPaid - number, dollar amount so limit to 2 decimals
+5. Global Variable: entryMessage - string
 5. Local Variable: thisWeek - string 
 6. Local Variable: thisWeekNumb - number
 
@@ -12,7 +13,10 @@
 There are multiple times in the instructions where it says if someone enters a incorrect entry to give 
 them a particular message and 'stop'.  I am interpreting that as stopping the whole process and not just
 prompting them to re-enter.  As there are some instructions specifically say to prompt them to re-enter 
-I am following those instructions and interpreting 'stop' differently.  
+I am following those instructions and interpreting 'stop' differently. While instruction 2 specifically 
+asked for 2 Global Variables I found I needed more to support the later instructions- such as to have a 
+variable to hold the person's name, to hold the average and to support the entry message (instructions 1, 
+3 and 5).
 */
 
 "use strict";
@@ -22,6 +26,7 @@ let userName;
 let totalGas = 0;
 let countGasEntries = 0;
 let avgGasPaid;
+let entryMessage;
 
 //Use let on both of these as their values change/may change
 
@@ -105,35 +110,44 @@ if (userName === null || userName.trim() === ``) {
 }
 //Error message for why we stopped based on name, with a valid name run the function.
 
+if ((userName !== null && userName.trim() !== ``) && countGasEntries === 0) {
+      entryMessage = alert(`No gas totals were entered.`);
+   } else if ((userName !== null && userName.trim() !== ``) && countGasEntries === 1) {
+      entryMessage = alert(`There was only 1 entry.`);
+   } else if ((userName !== null && userName.trim() !== ``) && countGasEntries > 1) {
+      entryMessage = alert(`There were ${countGasEntries} entries.`);
+   } else {
+      entryMessage = null
+   }
+console.log(`===Create entryMessage Variable content===`);
+console.log(entryMessage, typeof entryMessage);
+//Used an if statement to set entryMessage value
 
 if ((userName !== null && userName.trim() !== ``) && avgGasPaid === null) {
    alert(`You cancelled entering gas totals.`);
    console.log(`===Final Summary===`);
    console.log(`You cancelled entering gas totals.`);
+   alert(entryMessage);
+   console.log(entryMessage);
 } else if (userName !== null && userName.trim() !== ``) {
    if (countGasEntries === 0) {
       alert(`No gas totals were entered.`);
       console.log(`===Final Summary===`);
       console.log(`No gas totals were entered.`);
+      alert(entryMessage);
+      console.log(entryMessage);
    } else if (countGasEntries === 1) {
-      alert(`${userName} had an average gas bill of $${totalGas.toFixed(2)}.`);
+      alert(`${userName} had a total gas bill of $${totalGas.toFixed(2)}.`);
       console.log(`===Final Summary===`);
-      console.log(`${userName} had an average gas bill of $${totalGas.toFixed(2)}.`);
+      console.log(`${userName} had a weekly average gas bill of $${totalGas.toFixed(2)}.`);
+      alert(entryMessage);
+      console.log(entryMessage);
    } else if (countGasEntries > 1) {
       alert(`${userName} had an average gas bill of $${avgGasPaid}.`);
       console.log(`===Final Summary===`);
       console.log(`${userName} had an average gas bill of $${avgGasPaid}.`);
-   }
-
-   if (countGasEntries === 0) {
-      alert(`No gas totals were entered.`);
-      console.log(`No gas totals were entered.`);
-   } else if (countGasEntries === 1) {
-      alert(`There was only 1 entry.`);
-      console.log(`There was only 1 entry.`);
-   } else if (countGasEntries > 1) {
-      alert(`There were ${countGasEntries} entries.`);
-      console.log(`There were ${countGasEntries} entries.`);
+      alert(entryMessage);
+      console.log(entryMessage);
    }
 }
 //Maintaining response only for a valid name, generate the required messages based on updated values
