@@ -82,7 +82,7 @@ console.log(userName, typeof userName);
 if (userName === null) {
    alert(`You cancelled the name prompt.`);
    console.log(`You cancelled the name prompt.`);   
-} else if (userName === undefined || userName.trim() === ``) {
+} else if (userName.trim() === ``) {
    alert(`You must type a name.`);
    console.log(`You must type a name.`);
 } else {
@@ -91,29 +91,35 @@ if (userName === null) {
    console.log(userName, typeof userName);   
 }
 // Instructions say to stop if no name is entered either by blank or null. Following logic applies that.
-console.log(`===Final Summary===`);
 
-if (userName === null || userName === undefined || userName.trim() === ``) {
+if (userName === null || userName.trim() === ``) {
    alert(`You did not enter a name so we could not proceed.`);
    console.log(`You did not enter a name so we could not proceed.`);
 } else { 
    calcGasAvg();
+   console.log(`===calcGasAvg function return value===`);
+   console.log(calcGasAvg);
 }
-console.log(`===calcGasAvg function return value===`);
-console.log(calcGasAvg);
 
-if ((userName !== null && userName !== undefined && userName.trim() !== ``) && avgGasPaid === null) {
+
+console.log(`===Final Summary===`);
+
+if ((userName !== null && userName.trim() !== ``) && avgGasPaid === null) {
    alert(`You cancelled entering gas totals.`);
+   console.log(`===Final Summary===`);
    console.log(`You cancelled entering gas totals.`);
-} else if (userName !== null && userName !== undefined && userName.trim() !== ``) {
+} else if (userName !== null && userName.trim() !== ``) {
    if (countGasEntries === 0) {
       alert(`No gas totals were entered.`);
+      console.log(`===Final Summary===`);
       console.log(`No gas totals were entered.`);
    } else if (countGasEntries === 1) {
-      alert(`${userName} had an average gas bill of $${totalGas}.`);
-      console.log(`${userName} had an average gas bill of $${totalGas}.`);
+      alert(`${userName} had an average gas bill of $${totalGas.toFixed(2)}.`);
+      console.log(`===Final Summary===`);
+      console.log(`${userName} had an average gas bill of $${totalGas.toFixed(2)}.`);
    } else if (countGasEntries > 1) {
       alert(`${userName} had an average gas bill of $${avgGasPaid}.`);
+      console.log(`===Final Summary===`);
       console.log(`${userName} had an average gas bill of $${avgGasPaid}.`);
    }
 
