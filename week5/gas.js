@@ -21,7 +21,7 @@ I am following those instructions and interpreting 'stop' differently
 let userName;
 let totalGas = 0;
 let countGasEntries = null;
-let avgGasUse;
+let avgGasPaid;
 
 //Use let on both of these as their values change/may change
 
@@ -54,15 +54,15 @@ function calcGasAvg() {
       }
    }
    if (thisWeek === null) {
-      avgGasUse = null;
+      avgGasPaid = null;
    } else if (countGasEntries === 0) {
-      avgGasUse = (0).toFixed(2)
+      avgGasPaid = (0).toFixed(2)
    } else {
-      avgGasUse = (totalGas/countGasEntries).toFixed(2)
+      avgGasPaid = (totalGas/countGasEntries).toFixed(2)
    }
    console.log(`===Avg Gas Use as updated by function===`);
-   console.log(avgGasUse, typeof avgGasUse);
-   return avgGasUse;
+   console.log(avgGasPaid, typeof avgGasPaid);
+   return avgGasPaid;
 }
 
 // Requirement 2. Main Program
@@ -117,3 +117,4 @@ if (avgGasUse !== null) {
       console.log(`There were ${countGasEntries} entries.`);
    }
 }
+
