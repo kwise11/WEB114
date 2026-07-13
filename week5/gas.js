@@ -105,25 +105,25 @@ console.log(calcGasAvg);
 if ((userName !== null || userName !== undefined || userName.trim() !== ``) && avgGasPaid === null) {
    alert(`You cancelled entering gas totals.`);
    console.log(`You cancelled entering gas totals.`);
-} else if (userName !== null || userName !== undefined || userName.trim() !== ``){
-   if (countGasEntries === 0) {
+} else {
+   if ((userName !== null || userName !== undefined || userName.trim() !== ``) && countGasEntries === 0) {
       alert(`No gas totals were entered.`);
       console.log(`No gas totals were entered.`);
-   } else if (countGasEntries === 1) {
+   } else if ((userName !== null || userName !== undefined || userName.trim() !== ``) && countGasEntries === 1) {
       alert(`${userName} had an average gas bill of $${totalGas}.`);
       console.log(`${userName} had an average gas bill of $${totalGas}.`);
-   } else {
+   } else if ((userName !== null || userName !== undefined || userName.trim() !== ``) && countGasEntries > 1) {
       alert(`${userName} had an average gas bill of $${avgGasPaid}.`);
       console.log(`${userName} had an average gas bill of $${avgGasPaid}.`);
    }
 
-   if (countGasEntries === 0) {
+   if ((userName !== null || userName !== undefined || userName.trim() !== ``) && countGasEntries === 0) {
       alert(`No gas totals were entered.`);
       console.log(`No gas totals were entered.`);
-   } else if (countGasEntries === 1) {
+   } else if ((userName !== null || userName !== undefined || userName.trim() !== ``) && countGasEntries === 1) {
       alert(`There was only 1 entry.`);
       console.log(`There was only 1 entry.`);
-   } else {
+   } else if ((userName !== null || userName !== undefined || userName.trim() !== ``) && countGasEntries > 1) {
       alert(`There were ${countGasEntries} entries.`);
       console.log(`There were ${countGasEntries} entries.`);
    }
