@@ -124,9 +124,9 @@ if ((userName !== null && userName.trim() !== ``) && avgGasPaid === null) {
       console.log(`===Final Summary===`);
       console.log(`${userName} had a weekly average gas bill of $${totalGas.toFixed(2)}.`);
    } else if (countGasEntries > 1) {
-      alert(`${userName} had an average gas bill of $${avgGasPaid}.`);
+      alert(`${userName} had an average gas bill of $${avgGasPaid.toFixed(2)}.`);
       console.log(`===Final Summary===`);
-      console.log(`${userName} had an average gas bill of $${avgGasPaid}.`);
+      console.log(`${userName} had an average gas bill of $${avgGasPaid.toFixed(2)}.`);
    }
 }
 //Final result population based on function interations.
@@ -152,4 +152,6 @@ if (userName !== null && userName.trim() !== `` && avgGasPaid !== null) {
 
 //Used an if statement to set entryMessage value as instructed.
 //Maintaining response only for a valid name, generate the required messages based on updated values
-//from the function that was run.  Account for null, no entries, a single entry and multiple entries.
+//from the function that was run.  Exclude cancelled function like invalid names as the error message 
+//for that was already included above in the average total if statements.  Include no entries, a single 
+//entry and multiple entries.
