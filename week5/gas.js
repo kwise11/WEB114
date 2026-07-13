@@ -91,9 +91,11 @@ console.log(calcGasAvg);
 
 if (avgGasUse === null) {
    alert(`You cancelled entering gas totals.`);
-   console.log(`You cancelled entering gas totals.`);}
+   console.log(`You cancelled entering gas totals.`);
+}
 
-if (countGasEntries === 0) {
+if (avgGasUse !== null) {
+   if (countGasEntries === 0) {
       alert(`No gas totals were entered.`);
       console.log(`No gas totals were entered.`);
    } else if (countGasEntries === 1) {
@@ -104,7 +106,7 @@ if (countGasEntries === 0) {
       console.log(`${userName} had an average gas bill of $${avgGasPaid}.`);
    }
 
-if (countGasEntries === 0) {
+   if (countGasEntries === 0) {
       alert(`No gas totals were entered.`);
       console.log(`No gas totals were entered.`);
    } else if (countGasEntries === 1) {
