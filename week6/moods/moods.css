@@ -1,0 +1,62 @@
+/* Kate Wise 07/19/2026- Mood Changer Project  */
+
+
+/* Allison Hanna provided CSS for Project 7 -- Mood Switcher Project */
+
+/* Additions made for better formatting of questions & answers and to accomodate
+differences in my HTML. Also added some best practice CSS learned from my Web110 class. */
+
+* 
+	{
+	box-sizing: border-box;
+	}
+
+.answer 
+    {
+    margin-bottom: 14px;
+    }
+
+body 
+    {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    transition: all 0.6s ease;
+    min-height: 100vh;
+    margin: 0;
+    }
+
+h1 
+    {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    }
+
+.mood-button 
+    {
+    padding: 14px 24px;
+    margin: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    }
+
+#mood-quote 
+    {
+    margin-top: 40px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    }
+
+ol 
+    {
+    list-style-type: circle;
+    text-align: left;
+    }
+
+section
+    {
+    border-bottom: 4px solid #000;;
+    }
