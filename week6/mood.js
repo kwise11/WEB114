@@ -76,7 +76,7 @@ const moods = {
     angry:      { name: `Angry`, background: `#E82100`, textcolor: `#2100E8`, quote: `When angry count to ten before you speak. If very angry, count to one hundred. -Thomas Jefferson`},
     hungry:     { name: `Hungry`, background: `#4E3F60`, textcolor: `#3F604E`, quote: `I think you've got to keep it simple, keep it fresh. Stay away from all that processed stuff, read the labels. -Emeril Lagasse`},
     tired:      { name: `Tired`, background: `#636150`, textcolor: `#F5F0EB`, quote: `Big jobs usually go to the men who prove their ability to outgrow small ones. -Theodore Roosevelt`},
-    reset:      { name: `Choose Again`, background: `#FFFFFF`, textcolor: `#000000`, quote: `Choose a new mood!`}
+    reset:      { name: `Choose Again`, background: `#FFFFFF`, textcolor: `#000000`, quote: `You need a mood to be inspired!`}
 };
 
 //3. Create the function that applies the theme
