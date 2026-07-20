@@ -71,10 +71,10 @@ console.log(resetButton);
 const moods = {
     happy:      { name: `Happy`, background: `#FFFD37`, textcolor: `#A52A2A`, quote: `The Constitution only gives people the right to pursue happiness. You have to catch it yourself. -Benjamin Franklin`},
     excited:    { name: `Excited`, background: `#FF75E4`, textcolor: `#300028`, quote: `People criticised me for using too many exclamation marks and the word "awesome" too much, but that's just me. -Ella Woodward`},
-    curious:    { name: `Curious`, background: `#3BA3A9`, textcolor: `#A9603B`, quote: `Scientists have become the bearers of the torch of discovery in our quest for knowledge. -Stephen Hawking`},        
-    sad:        { name: `Sad`, background: `#4F666A`, textcolor: `#AA604F`, quote: `For all sad words of tongue and pen, the saddest are these "It might have been". -John Greenleaf Wittier`},
+    curious:    { name: `Curious`, background: `#3BA3A9`, textcolor: `#A9413B`, quote: `Scientists have become the bearers of the torch of discovery in our quest for knowledge. -Stephen Hawking`},        
+    sad:        { name: `Sad`, background: `#4F666A`, textcolor: `#C86A46`, quote: `For all sad words of tongue and pen, the saddest are these "It might have been". -John Greenleaf Wittier`},
     angry:      { name: `Angry`, background: `#E82100`, textcolor: `#2100E8`, quote: `When angry count to ten before you speak. If very angry, count to one hundred. -Thomas Jefferson`},
-    hungry:     { name: `Hungry`, background: `#4E3F60`, textcolor: `#3F604E`, quote: `I think you've got to keep it simple, keep it fresh. Stay away from all that processed stuff, read the labels. -Emeril Lagasse`},
+    hungry:     { name: `Hungry`, background: `#4E3F60`, textcolor: `#9B9D66`, quote: `I think you've got to keep it simple, keep it fresh. Stay away from all that processed stuff, read the labels. -Emeril Lagasse`},
     tired:      { name: `Tired`, background: `#636150`, textcolor: `#F5F0EB`, quote: `Big jobs usually go to the men who prove their ability to outgrow small ones. -Theodore Roosevelt`},
     reset:      { name: `Choose Again`, background: `#FFFFFF`, textcolor: `#000000`, quote: `You need a mood to be inspired!`}
 };
