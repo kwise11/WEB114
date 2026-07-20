@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<!--Author Kate Wise 07/19/2026 Web 114 JavaScripting-->
+
+	
+	<head>
+
+		<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--These elements are standard for all pages.-->
+
+		<title>Mood Changer Project</title>
+
+		<!--This is searchable and viewable in the URL, but does not show in the web page.-->
+
+		<link rel="stylesheet" href="moods.css" type="text/css">
+       
+		<script src="mood.js" defer></script>
+
+        <!--Connect to CSS and JS files.-->
+		
+		<!--Original CSS file content provided by instructor, updates made for my HTML content and readability.-->
+
+    </head>    
+	
+	<body>
+
+		<header>
+
+			<h1>Project 7--DOM and JS</h1>
+
+		</header>
+
+			<!--<nav>
+				
+				<ul>
+					<li>Navigation Placeholder</li>
+				</ul>
+				
+			</nav> -->
+
+		<main>
+
+			<h2>JavaScript Questions</h2>
+
+            <ol>
+
+                <li class="question">1. Why is textContent safer than innerHTML?</li>
+                <li class="answer">Answer: textContent only handles the text within and not the HTML itself.  When using innerHTML
+                    changes occur to the HTML tags as well.  If entering information from the user it is more logical to expect them
+                    to provide the text they want to change without the HTML.  Security wise it is also better as it presents
+                    fewer vulnerablities to exploit if only text can change.</li>
+                <li class="question">2. How are HTML elements connected to JavaScript variables using DOM selection?</li>
+                <li class="answer">Answer: In the DOM there are 12 node types. In the head of the HTML we can call a JavaScript
+                    document that contains our JavaScript (.js).  Within that document, nodes can be called with the document
+                    object that you want to target. You can use tags, ids, labels and other identifiers to call specific items.
+                    The most common ways we will be using to reference these elements in JavaScript to make changes is using 
+                    document.querySelector, document.querySelectorAll, and document.getElementById.</li>
+                <li class="question">What would happen to the text box with id="text" if I added this line to the code above it: 
+                    text.textContent = "Hello!"</li>
+                <li class="answer">Answer: The text within the tag with the id of text would be replaced or populated with Hello! .</li>
+           
+            </ol>
+
+			<p>Click F12 to see the console messages.</p>
+
+            <hr>
+
+            <h2 id="you-feel">Choose a Mood</h2>
+
+            <p>Click a mood to change the theme!</p>
+
+            <div id="buttons">
+
+                <button class="mood-button" data-mood="happy">Happy</button>
+                <button class="mood-button" data-mood="excited">Excited</button>
+                <button class="mood-button" data-mood="curious">Curious</button>                
+                <button class="mood-button" data-mood="sad">Sad</button>
+                <button class="mood-button" data-mood="angry">Angry</button>
+                <button class="mood-button" data-mood="hungry">Hungry</button>
+                <button class="mood-button" data-mood="tired">Tired</button>
+                <button class="mood-button" data-mood="reset">Start Over</button>
+
+            </div>
+
+            <p id="mood-quote">You haven't told me your mood yet...</p>
+
+		</main>
+
+		<footer>
+
+			<small>Quotes all sourced from <a href="https://www.brainyquote.com/" target="_blank">www.brainyquote.com</a>. </small>
+
+		</footer>
+
+	</body>
+
+</html>
