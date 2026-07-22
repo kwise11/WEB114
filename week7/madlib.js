@@ -30,7 +30,7 @@ Steps-
 
 `use strict`;
 
-//1. Select the elements from the HTML.
+//1. Select the elements from the HTML. Buttons, sections, forms.
 const buttons = document.querySelector(`#buttons`);
 const dcButton = buttons.querySelector(`.universe-button[data-uni='dc']`);
 const marvelButton = buttons.querySelector(`.universe-button[data-uni='marvel']`);
@@ -43,7 +43,26 @@ const kamartajButton = buttons.querySelector(`.marvel-button[data-loc='kamartaj'
 const villainButton = buttons.querySelector(`.kind-button[data-theme='villain']`);
 const disasterButton = buttons.querySelector(`.kind-button[data-theme='disaster']`);
 const adventureButton = buttons.querySelector(`.kind-button[data-theme='adventure']`);
+const submitAdvButton = buttons.querySelector(`.submit-button[data-ent='adventure']`);
+const submitVilButton = buttons.querySelector(`.submit-button[data-ent='villain']`);
+const submitDisButton = buttons.querySelector(`.submit-button[data-ent='disaster']`);
 const resetButton = buttons.querySelector(`.reset-button[data-theme='clearall']`);
+
+const universeSection = document.querySelector(`#universe`);
+const themeSection = document.querySelector(`#kind-of-story`);
+const settingSection = document.querySelector(`#setting`);
+const entriesSection = document.querySelector(`#madlib-entries`);
+const madlibSection = document.querySelector(`#generated-madlib`);
+const resetSection = document.querySelector(`#begin-again`);
+
+const villainForm = document.querySelector(`#villain-form`);
+const disasterForm = document.querySelector(`#disaster-form`);
+const adventureForm = document.querySelector(`#adventure-form`);
+
+let universeChosen;
+let themeChosen;
+let locationChosen;
+
 
 
 console.log(`===Global Variables===`);
@@ -72,10 +91,27 @@ console.log(resetButton);
 
 //2. Create my mood themes; names, colors that contrast and valid quotes.
 const universeSettings = {
-    dc:     {background: `#FF75E4`, textcolor: `#300028`},
-    marvel: {background: `#4E3F60`, textcolor: `#9B9D66`},
-    reset:  {background: `#FFFFFF`, textcolor: `#000000`}
+    dc:     {name: `DC`, background: `#FF75E4`, textcolor: `#300028`},
+    marvel: {name: `Marvel`, background: `#4E3F60`, textcolor: `#9B9D66`},
+    reset:  {name: ``, background: `#FFFFFF`, textcolor: `#000000`}
 };
+
+const themeSettings = {
+    adventure:  {name: `Adventure`, storyBackground: `#FFFD37`, font: `Georgia`},
+    villain:    {name: `Villain`, storyBackground: `#E82100`, font: `Monaco`},
+    disaster:   {name: `Disaster`, storyBackground: `#4F666A`, font: `Helvetica`},
+    reset:      {name: ``, storyBackground: ``, font: `Arial`}
+}
+
+const locationSettings = {
+    gotham:         {name: `Gotham`, cityImg: `Georgia`},
+    metropolis:     {name: `Metropolis`, cityImg: `Georgia`},
+    fawcett:        {name: `Fawcett City`, cityImg: `Georgia`},
+    ny:             {name: `New York`, cityImg: `Georgia`},
+    asgard:         {name: `Asgard`, cityImg: `Georgia`},
+    kamartaj:       {name: `Kamar-Taj`, cityImg: `Georgia`},
+    reset:          {name: ``, cityImg: ``}
+}
 
 const moods = {
     happy:      { name: `Happy`, background: `#FFFD37`, textcolor: `#A52A2A`, quote: `The Constitution only gives people the right to pursue happiness. You have to catch it yourself. -Benjamin Franklin`},
@@ -97,8 +133,15 @@ function marvelUniverseSelect(universe) {
     nyButton.style.display = `block`;
     asgardButton.style.display = `block`;
     kamartajButton.style.display = `block`;
-    document.body.style.backgroundColor = mood.background;
-    document.body.style.color = mood.textcolor;
+    document.body.style.backgroundColor = univ.background;
+    document.body.style.color = univ.textcolor;
+    universeSection.style.display = `none`;
+    themeSection.style.display = `block`;
+    settingSection.style.display = `none`;
+    entriesSection.style.display = `none`;
+    madlibSection.style.display = `none`;
+    resetSection.style.display = `block`;
+    universeChosen = univ.name;
 }
 
 function dcUniverseSelect(universe) {
@@ -111,10 +154,53 @@ function dcUniverseSelect(universe) {
     kamartajButton.style.display = `none`;
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = univ.textcolor;
+    universeSection.style.display = `none`;
+    themeSection.style.display = `block`;
+    settingSection.style.display = `none`;
+    entriesSection.style.display = `none`;
+    madlibSection.style.display = `none`;
+    resetSection.style.display = `block`;
+    universeChosen = univ.name;
 }
 
-function resetUniverseSelect(universe) {
+function themeSelect(theme) {
+    const them = themeSettings[theme];
+    madlibSection.style.backgroundColor = them.storyBackground;
+    madlibSection.body.style.font = them.font;
+    universeSection.style.display = `none`;
+    themeSection.style.display = `none`;
+    settingSection.style.display = `block`;
+    entriesSection.style.display = `none`;
+    madlibSection.style.display = `none`;
+    resetSection.style.display = `block`;
+    themeChosen = them.name;  
+}
+
+function locationSelect(location) {
+    const loc = locationSettings[location];
+    document.body.style.backgroundImage = loc.cityImg;
+    universeSection.style.display = `none`;
+    themeSection.style.display = `none`;
+    settingSection.style.display = `none`;
+    entriesSection.style.display = `block`;
+    madlibSection.style.display = `none`;
+    resetSection.style.display = `block`;
+    locationChosen = loc.name;
+}
+
+function submitSelect() {
+    universeSection.style.display = `none`;
+    themeSection.style.display = `none`;
+    settingSection.style.display = `none`;
+    entriesSection.style.display = `none`;
+    madlibSection.style.display = `block`;
+    resetSection.style.display = `block`;
+}
+
+function resetSelect(universe, theme, location){
     const univ = universeSettings[universe];
+    const them = themeSettings[theme];
+    const loc = locationSettings[location];
     gothamButton.style.display = `none`;
     metropolisButton.style.display = `none`;
     fawcettButton.style.display = `none`;
@@ -123,7 +209,20 @@ function resetUniverseSelect(universe) {
     kamartajButton.style.display = `none`;
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = univ.textcolor;
+    madlibSection.style.backgroundColor = them.storyBackground;
+    madlibSection.body.style.font = them.font;
+    document.body.style.backgroundImage = loc.cityImg;
+    universeSection.style.display = `block`;
+    themeSection.style.display = `none`;
+    settingSection.style.display = `none`;
+    entriesSection.style.display = `none`;
+    madlibSection.style.display = `none`;
+    resetSection.style.display = `none`;
+    universeChosen = univ.name;
+    themeChosen = them.name;
+    locationChosen = loc.name;
 }
+
 
 
 function changeMood(moodName) {
@@ -157,8 +256,56 @@ function handlerDCClick() {
     dcUniverseSelect(`dc`);
 }
 
+function handlerGothamClick() {
+    locationSelect(`gotham`);
+}
+
+function handlerMetropolisClick() {
+    locationSelect(`metropolis`);
+}
+
+function handlerFawcettClick() {
+    locationSelect(`fawcett`);
+}
+
+function handlerNYClick() {
+    locationSelect(`ny`);
+}
+
+function handlerAsgardClick() {
+    locationSelect(`asgard`);
+}
+
+function handlerKamarTajClick() {
+    locationSelect(`kamartaj`);
+}
+
+function handlerVillainClick() {
+    themeSelect(`villain`);
+}
+
+function handlerDisasterClick() {
+    themeSelect(`disaster`);
+}
+
+function handlerAdventureClick() {
+    themeSelect(`adventure`);
+}
+
+function handlerSubmitAdvClick() {
+    submitSelect();
+}
+
+function handlerSubmitVilClick() {
+    submitSelect();
+}
+
+function handlerSubmitDisClick() {
+    submitSelect();
+}
+
 function handlerResetClick() {
-    resetUniverseSelect(`reset`);
+    resetUniverseSelect(`reset`,`reset`,`reset`);
 }
 
 //6. Create Event Listeners for each mood that calls the handler upon a click.
@@ -166,8 +313,29 @@ dcButton.addEventListener('click', handlerDCClick);
 
 marvelButton.addEventListener('click', handlerMarvelClick);
 
+gothamButton.addEventListener('click', handlerGothamClick);
+
+metropolisButton.addEventListener('click', handlerMetropolisClick);
+
+fawcettButton.addEventListener('click', handlerFawcettClick);
+
+nyButton.addEventListener('click', handlerNYClick);
+
+asgardButton.addEventListener('click', handlerAsgardClick);
+
+kamartajButton.addEventListener('click', handlerKamarTajClick);
+
+adventureButton.addEventListener('click', handlerAdventureClick);
+
+villainButton.addEventListener('click', handlerVillainClick);
+
+disasterButton.addEventListener('click', handlerDisasterClick);
+
+submitAdvButton.addEventListener('click', handlerSubmitAdvClick);
+
+submitVilButton.addEventListener('click', handlerSubmitVilClick);
+
+submitDisButton.addEventListener('click', handlerSubmitDisClick);
+
 resetButton.addEventListener('click', handlerResetClick);
-
-
-
 
