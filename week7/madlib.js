@@ -137,6 +137,13 @@ function themeSelect(theme) {
     madlibSection.style.display = `none`;
     resetSection.style.display = `block`;
     themeChosen = them.name;  
+    if (theme === `villain`) {
+        villainForm.style.display = `block`;
+    } else if (theme === `adventure`) {
+        adventureForm.style.display = `block`;
+    } else if (theme === `disaster`) {
+        disasterForm.style.display = `block`;
+    }
 }
 
 function locationSelect(location) {
@@ -151,7 +158,7 @@ function locationSelect(location) {
     locationChosen = loc.name;
 }
 
-function submitSelect() {
+function submitSelect(formSubmitted) {
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `none`;
@@ -181,6 +188,9 @@ function resetSelect(universe, theme, location){
     entriesSection.style.display = `none`;
     madlibSection.style.display = `none`;
     resetSection.style.display = `none`;
+    villainForm.style.display = `none`;
+    adventureForm.style.display = `none`;
+    disasterForm.style.display = `none`;
     universeChosen = univ.name;
     themeChosen = them.name;
     locationChosen = loc.name;
@@ -235,15 +245,15 @@ function handlerAdventureClick() {
 }
 
 function handlerSubmitAdvClick() {
-    submitSelect();
+    submitSelect(`adventure`);
 }
 
 function handlerSubmitVilClick() {
-    submitSelect();
+    submitSelect(`villain`);
 }
 
 function handlerSubmitDisClick() {
-    submitSelect();
+    submitSelect(`disaster`);
 }
 
 function handlerResetClick() {
@@ -280,5 +290,4 @@ submitVilButton.addEventListener('click', handlerSubmitVilClick);
 submitDisButton.addEventListener('click', handlerSubmitDisClick);
 
 resetButton.addEventListener('click', handlerResetClick);
-
 
