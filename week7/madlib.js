@@ -93,9 +93,9 @@ function marvelUniverseSelect(universe) {
     gothamButton.style.display = `none`;
     metropolisButton.style.display = `none`;
     fawcettButton.style.display = `none`;
-    nyButton.style.display = `block`;
-    asgardButton.style.display = `block`;
-    kamartajButton.style.display = `block`;
+    nyButton.style.display = `inline block`;
+    asgardButton.style.display = `inline block`;
+    kamartajButton.style.display = `inline block`;
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = univ.textcolor;
     universeSection.style.display = `none`;
@@ -109,9 +109,9 @@ function marvelUniverseSelect(universe) {
 
 function dcUniverseSelect(universe) {
     const univ = universeSettings[universe];
-    gothamButton.style.display = `block`;
-    metropolisButton.style.display = `block`;
-    fawcettButton.style.display = `block`;
+    gothamButton.style.display = `inline block`;
+    metropolisButton.style.display = `inline block`;
+    fawcettButton.style.display = `inline block`;
     nyButton.style.display = `none`;
     asgardButton.style.display = `none`;
     kamartajButton.style.display = `none`;
