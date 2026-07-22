@@ -1,4 +1,4 @@
-/* Kate Wise 07/19/2026- Mood Changer Project  */
+/* Kate Wise 07/26/2026 Final Project MadLibs  */
 
 
 /* Allison Hanna provided CSS for Project 7 -- Mood Switcher Project */
@@ -39,7 +39,7 @@ h1
     margin-bottom: 10px;
     }
 
-.kind-button .universe-button 
+.kind-button 
     {
     padding: 14px 24px;
     margin: 8px;
@@ -61,6 +61,23 @@ h1
     border-radius: 12px;
  /*   display: none;    */
     }
+
+section
+    {
+    border-bottom: 4px solid #000;;
+    }
+
+.universe-button 
+    {
+    padding: 14px 24px;
+    margin: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    }
+
 
 section
     {
