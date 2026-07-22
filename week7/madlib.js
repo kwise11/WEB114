@@ -1,4 +1,4 @@
-//Kate Wise 07/19/2026- Mood Changer Project
+//Kate Wise 07/26/2026- Final Project MadLibs
 
 /*
 1. moodSelected = string, html mood title
@@ -30,18 +30,21 @@ Steps-
 
 `use strict`;
 
-//1. Select the elements from the HTML, need the mood, quote and the button div, and each button.
-const moodSelected = document.querySelector(`#you-feel`);
-const quote = document.querySelector(`#mood-quote`);
+//1. Select the elements from the HTML.
 const buttons = document.querySelector(`#buttons`);
-const happyButton = buttons.querySelector(`.mood-button[data-mood='happy']`);
-const excitedButton = buttons.querySelector(`.mood-button[data-mood='excited']`);
-const curiousButton = buttons.querySelector(`.mood-button[data-mood='curious']`);
-const sadButton = buttons.querySelector(`.mood-button[data-mood='sad']`);
-const angryButton = buttons.querySelector(`.mood-button[data-mood='angry']`);
-const hungryButton = buttons.querySelector(`.mood-button[data-mood='hungry']`);
-const tiredButton = buttons.querySelector(`.mood-button[data-mood='tired']`);
-const resetButton = buttons.querySelector(`.mood-button[data-mood='reset']`); 
+const dcButton = buttons.querySelector(`.universe-button[data-uni='dc']`);
+const marvelButton = buttons.querySelector(`.universe-button[data-uni='marvel']`);
+const gothamButton = buttons.querySelector(`.dc-button[data-loc='gotham']`);
+const metropolisButton = buttons.querySelector(`.dc-button[data-loc='metropolis']`);
+const fawcettButton = buttons.querySelector(`.dc-button[data-loc='fawcett']`);
+const nyButton = buttons.querySelector(`.marvel-button[data-loc='ny']`);
+const asgardButton = buttons.querySelector(`.marvel-button[data-loc='asgard']`);
+const kamartajButton = buttons.querySelector(`.marvel-button[data-loc='kamartaj']`);
+const villainButton = buttons.querySelector(`.kind-button[data-theme='villain']`);
+const disasterButton = buttons.querySelector(`.kind-button[data-theme='disaster']`);
+const adventureButton = buttons.querySelector(`.kind-button[data-theme='adventure']`);
+const resetButton = buttons.querySelector(`.reset-button[data-theme='clearall']`);
+
 
 console.log(`===Global Variables===`);
 console.log(`===Mood Title HTML===`);
@@ -68,6 +71,12 @@ console.log(`===Reset Button HTML===`);
 console.log(resetButton);
 
 //2. Create my mood themes; names, colors that contrast and valid quotes.
+const universeSettings = {
+    dc:     {background: `#FF75E4`, textcolor: `#300028`},
+    marvel: {background: `#4E3F60`, textcolor: `#9B9D66`},
+    reset:  {background: `#FFFFFF`, textcolor: `#000000`}
+};
+
 const moods = {
     happy:      { name: `Happy`, background: `#FFFD37`, textcolor: `#A52A2A`, quote: `The Constitution only gives people the right to pursue happiness. You have to catch it yourself. -Benjamin Franklin`},
     excited:    { name: `Excited`, background: `#FF75E4`, textcolor: `#300028`, quote: `People criticised me for using too many exclamation marks and the word "awesome" too much, but that's just me. -Ella Woodward`},
@@ -80,6 +89,43 @@ const moods = {
 };
 
 //3. Create the function that applies the mood's theme.
+function marvelUniverseSelect(universe) {
+    const univ = universeSettings[universe];
+    gothamButton.style.display = `none`;
+    metropolisButton.style.display = `none`;
+    fawcettButton.style.display = `none`;
+    nyButton.style.display = `block`;
+    asgardButton.style.display = `block`;
+    kamartajButton.style.display = `block`;
+    document.body.style.backgroundColor = mood.background;
+    document.body.style.color = mood.textcolor;
+}
+
+function dcUniverseSelect(universe) {
+    const univ = universeSettings[universe];
+    gothamButton.style.display = `block`;
+    metropolisButton.style.display = `block`;
+    fawcettButton.style.display = `block`;
+    nyButton.style.display = `none`;
+    asgardButton.style.display = `none`;
+    kamartajButton.style.display = `none`;
+    document.body.style.backgroundColor = univ.background;
+    document.body.style.color = univ.textcolor;
+}
+
+function resetUniverseSelect(universe) {
+    const univ = universeSettings[universe];
+    gothamButton.style.display = `none`;
+    metropolisButton.style.display = `none`;
+    fawcettButton.style.display = `none`;
+    nyButton.style.display = `none`;
+    asgardButton.style.display = `none`;
+    kamartajButton.style.display = `none`;
+    document.body.style.backgroundColor = univ.background;
+    document.body.style.color = univ.textcolor;
+}
+
+
 function changeMood(moodName) {
     const mood = moods[moodName];
     document.body.style.backgroundColor = mood.background;
@@ -103,52 +149,25 @@ function changeMood(moodName) {
 }
 
 //4. Create an Event Handler (function) for each mood that calls the function to apply theme.
-function handlerHappyClick() {
-    changeMood(`happy`);
+function handlerMarvelClick() {
+    marvelUniverseSelect(`marvel`);
 }
 
-function handlerExcitedClick() {
-    changeMood(`excited`);
-}
-
-function handlerCuriousClick() {
-    changeMood(`curious`);
-}
-
-function handlerSadClick() {
-    changeMood(`sad`);
-}
-
-function handlerAngryClick() {
-    changeMood(`angry`);
-}
-
-function handlerHungryClick() {
-    changeMood(`hungry`);
-}
-
-function handlerTiredClick() {
-    changeMood(`tired`);
+function handlerDCClick() {
+    dcUniverseSelect(`dc`);
 }
 
 function handlerResetClick() {
-    changeMood(`reset`);
+    resetUniverseSelect(`reset`);
 }
 
 //6. Create Event Listeners for each mood that calls the handler upon a click.
-happyButton.addEventListener('click', handlerHappyClick);
+dcButton.addEventListener('click', handlerDCClick);
 
-excitedButton.addEventListener('click', handlerExcitedClick);
-
-curiousButton.addEventListener('click', handlerCuriousClick);
-
-sadButton.addEventListener('click', handlerSadClick);
-
-angryButton.addEventListener('click', handlerAngryClick);
-
-hungryButton.addEventListener('click', handlerHungryClick);
-
-tiredButton.addEventListener('click', handlerTiredClick);
+marvelButton.addEventListener('click', handlerMarvelClick);
 
 resetButton.addEventListener('click', handlerResetClick);
+
+
+
 
