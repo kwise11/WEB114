@@ -82,6 +82,17 @@ h1
     display: none;    
     }
 
+.reset-button 
+    {
+    padding: 14px 24px;
+    margin: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    }
+
 section
     {
     border-bottom: 4px solid #000;;
@@ -118,3 +129,5 @@ section
     border: none;
     border-radius: 12px;
     }
+
+
