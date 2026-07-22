@@ -43,9 +43,9 @@ const kamartajButton = document.querySelector(`.marvel-button[data-loc='kamartaj
 const villainButton = document.querySelector(`.kind-button[data-theme='villain']`);
 const disasterButton = document.querySelector(`.kind-button[data-theme='disaster']`);
 const adventureButton = document.querySelector(`.kind-button[data-theme='adventure']`);
-const submitAdvButton = document.querySelector(`.submit-button[data-ent='adventure']`);
-const submitVilButton = document.querySelector(`.submit-button[data-ent='villain']`);
-const submitDisButton = document.querySelector(`.submit-button[data-ent='disaster']`);
+const submitAdvButton = document.querySelector(`.submit-button[data-ent='sub-adventure']`);
+const submitVilButton = document.querySelector(`.submit-button[data-ent='sub-villain']`);
+const submitDisButton = document.querySelector(`.submit-button[data-ent='sub-disaster']`);
 const resetButton = document.querySelector(`.reset-button[data-start='clearall']`);
 
 const dcOptions = document.querySelector(`#dc-options`);
@@ -269,5 +269,3 @@ submitVilButton.addEventListener('click', handlerSubmitVilClick);
 submitDisButton.addEventListener('click', handlerSubmitDisClick);
 
 resetButton.addEventListener('click', handlerResetClick);
-
-
