@@ -11,6 +11,11 @@ differences in my HTML. Also added some best practice CSS learned from my Web110
 	box-sizing: border-box;
 	}
 
+#adventure-form
+    {
+    display: none;
+    }
+
 #begin-again
     {
     display: none;
@@ -38,6 +43,11 @@ body
     }
 
 #dc-options
+    {
+    display: none;
+    }
+
+#disaster-form
     {
     display: none;
     }
@@ -138,4 +148,7 @@ section
     border-radius: 12px;
     }
 
-
+#villain-form
+    {
+    display: none;
+    }
