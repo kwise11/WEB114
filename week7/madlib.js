@@ -46,7 +46,10 @@ const adventureButton = document.querySelector(`.kind-button[data-theme='adventu
 const submitAdvButton = document.querySelector(`.submit-button[data-ent='adventure']`);
 const submitVilButton = document.querySelector(`.submit-button[data-ent='villain']`);
 const submitDisButton = document.querySelector(`.submit-button[data-ent='disaster']`);
-const resetButton = document.querySelector(`.reset-button[data-theme='clearall']`);
+const resetButton = document.querySelector(`.reset-button[data-start='clearall']`);
+
+const dcOptions = document.querySelector(`#dc-options`);
+const marvelOptions = document.querySelector(`#marvel-options`);
 
 const universeSection = document.querySelector(`#universe`);
 const themeSection = document.querySelector(`#kind-of-story`);
@@ -88,33 +91,13 @@ const locationSettings = {
 }
 
 //3. Create the function that applies the mood's theme.
-function marvelUniverseSelect(universe) {
+function universeSelect(universe) {
     const univ = universeSettings[universe];
-    gothamButton.style.display = `none`;
-    metropolisButton.style.display = `none`;
-    fawcettButton.style.display = `none`;
-    nyButton.style.display = `inline block`;
-    asgardButton.style.display = `inline block`;
-    kamartajButton.style.display = `inline block`;
-    document.body.style.backgroundColor = univ.background;
-    document.body.style.color = univ.textcolor;
-    universeSection.style.display = `none`;
-    themeSection.style.display = `block`;
-    settingSection.style.display = `none`;
-    entriesSection.style.display = `none`;
-    madlibSection.style.display = `none`;
-    resetSection.style.display = `block`;
-    universeChosen = univ.name;
-}
-
-function dcUniverseSelect(universe) {
-    const univ = universeSettings[universe];
-    gothamButton.style.display = `inline block`;
-    metropolisButton.style.display = `inline block`;
-    fawcettButton.style.display = `inline block`;
-    nyButton.style.display = `none`;
-    asgardButton.style.display = `none`;
-    kamartajButton.style.display = `none`;
+    if (universe === `dc`) {
+        dcOptions.style.display = block;
+        } else if (universe === `marvel`) {
+        marvelOptions.style.display = block;
+        }
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = univ.textcolor;
     universeSection.style.display = `none`;
@@ -171,12 +154,8 @@ function resetSelect(universe, theme, location){
     const univ = universeSettings[universe];
     const them = themeSettings[theme];
     const loc = locationSettings[location];
-    gothamButton.style.display = `none`;
-    metropolisButton.style.display = `none`;
-    fawcettButton.style.display = `none`;
-    nyButton.style.display = `none`;
-    asgardButton.style.display = `none`;
-    kamartajButton.style.display = `none`;
+    dcOptions.style.display = `none`;
+    marvelOptions.style.display = `none`;
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = univ.textcolor;
     madlibSection.style.backgroundColor = them.storyBackground;
@@ -197,15 +176,15 @@ function resetSelect(universe, theme, location){
 }
 
 //   quote.textContent = mood.quote;
- //   moodSelected.textContent = mood.name;
+//   moodSelected.textContent = mood.name;
 
 //4. Create an Event Handler (function) for each mood that calls the function to apply theme.
 function handlerMarvelClick() {
-    marvelUniverseSelect(`marvel`);
+    universeSelect(`marvel`);
 }
 
 function handlerDCClick() {
-    dcUniverseSelect(`dc`);
+    universeSelect(`dc`);
 }
 
 function handlerGothamClick() {
