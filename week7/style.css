@@ -11,6 +11,11 @@ differences in my HTML. Also added some best practice CSS learned from my Web110
 	box-sizing: border-box;
 	}
 
+#begin-again
+    {
+    display: none;
+    }
+
 body 
     {
     font-family: Arial, sans-serif;
@@ -30,7 +35,12 @@ body
     cursor: pointer;
     border: none;
     border-radius: 12px;
- /*   display: none;    */
+    display: none;    
+    }
+
+#generated-madlib
+    {
+    display: none;
     }
 
 h1 
@@ -48,7 +58,17 @@ h1
     cursor: pointer;
     border: none;
     border-radius: 12px;
-    }    
+    }   
+    
+#kind-of-story
+    {
+    display: none;
+    }
+
+#madlib-entries
+    {
+    display: none;
+    }
 
 .marvel-button
     {
@@ -59,12 +79,22 @@ h1
     cursor: pointer;
     border: none;
     border-radius: 12px;
- /*   display: none;    */
+    display: none;    
     }
 
 section
     {
     border-bottom: 4px solid #000;;
+    }
+
+#setting
+    {
+    display: none;
+    }
+
+#universe
+    {
+    display: block;
     }
 
 .universe-button 
@@ -78,8 +108,3 @@ section
     border-radius: 12px;
     }
 
-
-section
-    {
-    border-bottom: 4px solid #000;;
-    }
