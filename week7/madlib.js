@@ -77,7 +77,7 @@ const themeSettings = {
     adventure:  {name: `Adventure`, storyBackground: `#FFFD37`, font: `Georgia`},
     villain:    {name: `Villain`, storyBackground: `#E82100`, font: `Monaco`},
     disaster:   {name: `Disaster`, storyBackground: `#4F666A`, font: `Helvetica`},
-    reset:      {name: ``, storyBackground: ``, font: `Arial, sans-serif;`}
+    reset:      {name: ``, storyBackground: ``, font: `Arial, sans-serif`}
 }
 
 const locationSettings = {
@@ -112,7 +112,7 @@ function universeSelect(universe) {
 function themeSelect(theme) {
     const them = themeSettings[theme];
     madlibSection.style.backgroundColor = them.storyBackground;
-    madlibSection.style.fontfamily = them.font;
+    madlibSection.style.fontFamily = them.font;
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `block`;
@@ -159,7 +159,7 @@ function resetSelect(universe, theme, location){
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = univ.textcolor;
     madlibSection.style.backgroundColor = them.storyBackground;
-    madlibSection.style.fontfamily = them.font;
+    madlibSection.style.fontFamily = them.font;
     document.body.style.backgroundImage = loc.cityImg;
     universeSection.style.display = `block`;
     themeSection.style.display = `none`;
