@@ -32,21 +32,21 @@ Steps-
 
 //1. Select the elements from the HTML. Buttons, sections, forms.
 //const buttons = document.querySelector(`#buttons`);
-const dcButton = querySelector(`.universe-button[data-uni='dc']`);
-const marvelButton = querySelector(`.universe-button[data-uni='marvel']`);
-const gothamButton = querySelector(`.dc-button[data-loc='gotham']`);
-const metropolisButton = querySelector(`.dc-button[data-loc='metropolis']`);
-const fawcettButton = querySelector(`.dc-button[data-loc='fawcett']`);
-const nyButton = querySelector(`.marvel-button[data-loc='ny']`);
-const asgardButton = querySelector(`.marvel-button[data-loc='asgard']`);
-const kamartajButton = querySelector(`.marvel-button[data-loc='kamartaj']`);
-const villainButton = querySelector(`.kind-button[data-theme='villain']`);
-const disasterButton = querySelector(`.kind-button[data-theme='disaster']`);
-const adventureButton = querySelector(`.kind-button[data-theme='adventure']`);
-const submitAdvButton = querySelector(`.submit-button[data-ent='adventure']`);
-const submitVilButton = querySelector(`.submit-button[data-ent='villain']`);
-const submitDisButton = querySelector(`.submit-button[data-ent='disaster']`);
-const resetButton = querySelector(`.reset-button[data-theme='clearall']`);
+const dcButton = document.querySelector(`.universe-button[data-uni='dc']`);
+const marvelButton = document.querySelector(`.universe-button[data-uni='marvel']`);
+const gothamButton = document.querySelector(`.dc-button[data-loc='gotham']`);
+const metropolisButton = document.querySelector(`.dc-button[data-loc='metropolis']`);
+const fawcettButton = document.querySelector(`.dc-button[data-loc='fawcett']`);
+const nyButton = document.querySelector(`.marvel-button[data-loc='ny']`);
+const asgardButton = document.querySelector(`.marvel-button[data-loc='asgard']`);
+const kamartajButton = document.querySelector(`.marvel-button[data-loc='kamartaj']`);
+const villainButton = document.querySelector(`.kind-button[data-theme='villain']`);
+const disasterButton = document.querySelector(`.kind-button[data-theme='disaster']`);
+const adventureButton = document.querySelector(`.kind-button[data-theme='adventure']`);
+const submitAdvButton = document.querySelector(`.submit-button[data-ent='adventure']`);
+const submitVilButton = document.querySelector(`.submit-button[data-ent='villain']`);
+const submitDisButton = document.querySelector(`.submit-button[data-ent='disaster']`);
+const resetButton = document.querySelector(`.reset-button[data-theme='clearall']`);
 
 const universeSection = document.querySelector(`#universe`);
 const themeSection = document.querySelector(`#kind-of-story`);
@@ -62,32 +62,6 @@ const adventureForm = document.querySelector(`#adventure-form`);
 let universeChosen;
 let themeChosen;
 let locationChosen;
-
-
-
-console.log(`===Global Variables===`);
-console.log(`===Mood Title HTML===`);
-console.log(moodSelected);
-console.log(`===Mood Quote HTML===`);
-console.log(quote);
-console.log(`===Buttons HTML===`);
-console.log(buttons);
-console.log(`===Happy Button HTML===`);
-console.log(happyButton);
-console.log(`===Excited Button HTML===`);
-console.log(excitedButton);
-console.log(`===Curious Button HTML===`);
-console.log(curiousButton);
-console.log(`===Sad Button HTML===`);
-console.log(sadButton);
-console.log(`===Angry Button HTML===`);
-console.log(angryButton);
-console.log(`===Hungry Button HTML===`);
-console.log(hungryButton);
-console.log(`===Tired Button HTML===`);
-console.log(tiredButton);
-console.log(`===Reset Button HTML===`);
-console.log(resetButton);
 
 //2. Create my mood themes; names, colors that contrast and valid quotes.
 const universeSettings = {
@@ -112,17 +86,6 @@ const locationSettings = {
     kamartaj:       {name: `Kamar-Taj`, cityImg: `Georgia`},
     reset:          {name: ``, cityImg: ``}
 }
-
-const moods = {
-    happy:      { name: `Happy`, background: `#FFFD37`, textcolor: `#A52A2A`, quote: `The Constitution only gives people the right to pursue happiness. You have to catch it yourself. -Benjamin Franklin`},
-    excited:    { name: `Excited`, background: `#FF75E4`, textcolor: `#300028`, quote: `People criticised me for using too many exclamation marks and the word "awesome" too much, but that's just me. -Ella Woodward`},
-    curious:    { name: `Curious`, background: `#3BA3A9`, textcolor: `#A9413B`, quote: `Scientists have become the bearers of the torch of discovery in our quest for knowledge. -Stephen Hawking`},        
-    sad:        { name: `Sad`, background: `#4F666A`, textcolor: `#C86A46`, quote: `For all sad words of tongue and pen, the saddest are these "It might have been". -John Greenleaf Wittier`},
-    angry:      { name: `Angry`, background: `#E82100`, textcolor: `#2100E8`, quote: `When angry count to ten before you speak. If very angry, count to one hundred. -Thomas Jefferson`},
-    hungry:     { name: `Hungry`, background: `#4E3F60`, textcolor: `#9B9D66`, quote: `I think you've got to keep it simple, keep it fresh. Stay away from all that processed stuff, read the labels. -Emeril Lagasse`},
-    tired:      { name: `Tired`, background: `#636150`, textcolor: `#F5F0EB`, quote: `Big jobs usually go to the men who prove their ability to outgrow small ones. -Theodore Roosevelt`},
-    reset:      { name: `Choose Again`, background: `#FFFFFF`, textcolor: `#000000`, quote: `You need a mood to be inspired!`}
-};
 
 //3. Create the function that applies the mood's theme.
 function marvelUniverseSelect(universe) {
@@ -223,29 +186,8 @@ function resetSelect(universe, theme, location){
     locationChosen = loc.name;
 }
 
-
-
-function changeMood(moodName) {
-    const mood = moods[moodName];
-    document.body.style.backgroundColor = mood.background;
-    document.body.style.color = mood.textcolor;
-    quote.textContent = mood.quote;
-    moodSelected.textContent = mood.name;
-
-    console.log(`===Change Mood Function===`);
-    console.log(`===Parameter Fed In===`);
-    console.log(moodName);
-    console.log(`===Mood from Moods Table===`);
-    console.log(mood);
-    console.log(`===Mood Background Color===`);
-    console.log(mood.background);
-    console.log(`===Mood Text Color===`);
-    console.log(mood.textcolor);
-    console.log(`===Mood Quote===`);
-    console.log(mood.quote);
-    console.log(`===Mood Title===`);
-    console.log(mood.name);
-}
+//   quote.textContent = mood.quote;
+ //   moodSelected.textContent = mood.name;
 
 //4. Create an Event Handler (function) for each mood that calls the function to apply theme.
 function handlerMarvelClick() {
@@ -338,4 +280,5 @@ submitVilButton.addEventListener('click', handlerSubmitVilClick);
 submitDisButton.addEventListener('click', handlerSubmitDisClick);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
