@@ -35,134 +35,179 @@
 
 			<h2>Create Your Madlib</h2>
 
-            <p>blah blah here are your choices</p>
+            <p>blah blah here are your choices Remember: 
+                        Verb = Action  
+                        Noun = Person/Place/Thing
+                        Adjective = Describes a Noun.
+                        Adverb = Describes a Verb, usually ends in “ly” (like slowly)</p>
 
 			<p>Click F12 to see the console messages.</p>
 
             <hr>
 
-            <h2 id="universe">Choose Your Universe</h2>
+            <div id="universe">
 
-                <p>Marvel vs DC</p>
+                <h2 id="universe">Choose Your Universe</h2>
 
-                <div id="buttons">
+                    <p>Marvel vs DC</p>
 
-                    <button class="universe-button" data-uni="marvel">Marvel</button>
-                    <button class="universe-button" data-uni="dc">DC</button>
+                    <div id="buttons">
 
-                </div>
+                        <button class="universe-button" data-uni="marvel">Marvel</button>
+                        <button class="universe-button" data-uni="dc">DC</button>
 
-            <h2 id="kind-of-story">What Kind of Story You Want?</h2>
+                    </div>
 
-                <p>Adventure, etc...</p>
+            </div>
 
-                <div id="buttons">
+            <div id="kind-of-story">    
 
-                    <button class="kind-button" data-theme="villain">Fight with a Villain</button>
-                    <button class="kind-button" data-theme="disaster">Help with a Disaster</button>
-                    <button class="kind-button" data-theme="adventure">Go on an Adventure</button>                
+                <h2>What Kind of Story You Want?</h2>
 
-                </div>
+                    <p>Adventure, etc...</p>
 
-            <h2 id="setting">Where Should Your Story Take Place?</h2>
+                    <div id="buttons">
 
-                <p>Adventure, etc...</p>
+                        <button class="kind-button" data-theme="villain">Fight with a Villain</button>
+                        <button class="kind-button" data-theme="disaster">Help with a Disaster</button>
+                        <button class="kind-button" data-theme="adventure">Go on an Adventure</button>                
 
-                <div id="buttons">
+                    </div>
+            
+            </div>
 
-                    <button class="dc-button" data-loc="gotham">Gotham</button>
-                    <button class="dc-button" data-loc="metropolis">Metropolis</button>
-                    <button class="dc-button" data-loc="fawcett">Fawcett City</button>                
-                    <button class="marvel-button" data-loc="ny">New York</button>
-                    <button class="marvel-button" data-loc="asgard">Asgard</button>
-                    <button class="marvel-button" data-loc="kamartaj">Kamar-Taj</button>
+            <div id="setting">
 
-                </div>
+                <h2>Where Should Your Story Take Place?</h2>
 
-            <h2 id="mad-lib-entries">Create the Magic</h2>
+                    <p>Adventure, etc...</p>
 
-                <p>Remember: 
-                    Verb = Action  
-                    Noun = Person/Place/Thing
-                    Adjective = Describes a Noun.
-                    Adverb = Describes a Verb, usually ends in “ly” (like slowly)</p>
+                    <div id="buttons">
 
-                <section class="form">
+                        <button class="dc-button" data-loc="gotham">Gotham</button>
+                        <button class="dc-button" data-loc="metropolis">Metropolis</button>
+                        <button class="dc-button" data-loc="fawcett">Fawcett City</button>                
+                        <button class="marvel-button" data-loc="ny">New York</button>
+                        <button class="marvel-button" data-loc="asgard">Asgard</button>
+                        <button class="marvel-button" data-loc="kamartaj">Kamar-Taj</button>
 
-                    <h3>Fill in the Blanks to Make Your MadLib</h3>
+                    </div>
+            </div>
 
-                    <form id="villain-form">
+            <div id="madlib-entries">
 
-                        <label for="fnameInput">First Name:</label>
-                        <input type="text" id="fnameInput" required><br>
+                <h2>Create the Magic</h2>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                    <p>blah blah blah</p>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                    <section class="form">
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                        <h3>Fill in the Blanks to Make Your MadLib</h3>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                        <form id="villain-form">
 
-                    </form>
+                            <label for="fnameInput">First Name:</label>
+                            <input type="text" id="fnameInput" required><br>
 
-                    <form id="disaster-form">
-                        
-                        <label for="fnameInput">First Name:</label>
-                        <input type="text" id="fnameInput" required><br>
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                            <div id="buttons">
 
-                    </form>
+                                <button class="submit-button" data-ent="sub-villain">Submit</button>
+                            
+                            </div>
 
-                    <form id="romance-form">
-                        
-                        <label for="fnameInput">First Name:</label>
-                        <input type="text" id="fnameInput" required><br>
+                        </form>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                        <form id="disaster-form">
+                            
+                            <label for="fnameInput">First Name:</label>
+                            <input type="text" id="fnameInput" required><br>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
 
-                        <label for="lnameInput">Last Name:</label>
-                        <input type="text" id="lnameInput" required><br>
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
 
-                    </form>
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
 
-                </section>
+                            <div id="buttons">
 
-            <h2 id="generated-madlib">Your Story</h2>
-                
-                <p></p>
+                                <button class="submit-button" data-ent="sub-disaster">Submit</button>
+                            
+                            </div>
 
-            <h2 id="begin-again">Go Back to the Beginning</h2>
+                        </form>
 
-                <p>Want to do it again?</p>
+                        <form id="romance-form">
+                            
+                            <label for="fnameInput">First Name:</label>
+                            <input type="text" id="fnameInput" required><br>
 
-                <div id="buttons">
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
 
-                    <button class="reset-button" data-loc="clearall">Start Over</button>
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
 
-                </div>
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
+
+                            <label for="lnameInput">Last Name:</label>
+                            <input type="text" id="lnameInput" required><br>
+
+                            <div id="buttons">
+
+                                <button class="submit-button" data-ent="sub-adventure">Submit</button>
+                            
+                            </div>
+
+                        </form>
+
+                        <div id="buttons">
+
+                            <button class="dc-button" data-loc="gotham">Gotham</button>
+
+                    </section>
+
+            </div>
+
+            <div id="generated-madlib">
+
+                <h2>Your Story</h2>
+                    
+                    <p></p>
+            
+            </div>
+
+            <div id="begin-again">
+
+                <h2>Go Back to the Beginning</h2>
+
+                    <p>Want to do it again?</p>
+
+                    <div id="buttons">
+
+                        <button class="reset-button" data-loc="clearall">Start Over</button>
+
+                    </div>
+
+            </div>
              
 		</main>
 
