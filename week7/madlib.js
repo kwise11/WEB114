@@ -77,7 +77,7 @@ const themeSettings = {
     adventure:  {name: `Adventure`, storyBackground: `#FFFD37`, font: `Georgia`},
     villain:    {name: `Villain`, storyBackground: `#E82100`, font: `Monaco`},
     disaster:   {name: `Disaster`, storyBackground: `#4F666A`, font: `Helvetica`},
-    reset:      {name: ``, storyBackground: ``, font: `Arial`}
+    reset:      {name: ``, storyBackground: ``, font: `Arial, sans-serif;`}
 }
 
 const locationSettings = {
@@ -94,9 +94,9 @@ const locationSettings = {
 function universeSelect(universe) {
     const univ = universeSettings[universe];
     if (universe === `dc`) {
-        dcOptions.style.display = block;
+        dcOptions.style.display = `block`;
         } else if (universe === `marvel`) {
-        marvelOptions.style.display = block;
+        marvelOptions.style.display = `block`;
         }
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = univ.textcolor;
@@ -112,7 +112,7 @@ function universeSelect(universe) {
 function themeSelect(theme) {
     const them = themeSettings[theme];
     madlibSection.style.backgroundColor = them.storyBackground;
-    madlibSection.style.font = them.font;
+    madlibSection.style.fontfamily = them.font;
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `block`;
@@ -159,7 +159,7 @@ function resetSelect(universe, theme, location){
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = univ.textcolor;
     madlibSection.style.backgroundColor = them.storyBackground;
-    madlibSection.style.font = them.font;
+    madlibSection.style.fontfamily = them.font;
     document.body.style.backgroundImage = loc.cityImg;
     universeSection.style.display = `block`;
     themeSection.style.display = `none`;
@@ -236,7 +236,7 @@ function handlerSubmitDisClick() {
 }
 
 function handlerResetClick() {
-    resetUniverseSelect(`reset`,`reset`,`reset`);
+    resetSelect(`reset`,`reset`,`reset`);
 }
 
 //6. Create Event Listeners for each mood that calls the handler upon a click.
