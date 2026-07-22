@@ -34,8 +34,12 @@ body
     font-weight: bold;
     cursor: pointer;
     border: none;
-    border-radius: 12px;
-    display: none;    
+    border-radius: 12px; 
+    }
+
+#dc-options
+    {
+    display: none;
     }
 
 #generated-madlib
@@ -78,8 +82,12 @@ h1
     font-weight: bold;
     cursor: pointer;
     border: none;
-    border-radius: 12px;
-    display: none;    
+    border-radius: 12px;   
+    }
+
+#dc-options
+    {
+    display: none;
     }
 
 .reset-button 
