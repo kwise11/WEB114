@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<!--Author Kate Wise 07/19/2026 Web 114 JavaScripting-->
+
+	
+	<head>
+
+		<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--These elements are standard for all pages.-->
+
+		<title>Superhero Madlib</title>
+
+		<!--This is searchable and viewable in the URL, but does not show in the web page.-->
+
+		<link rel="stylesheet" href="style.css" type="text/css">
+       
+		<script src="madlib.js" defer></script>
+
+        <!--Connect to CSS and JS files.-->
+		
+    </head>    
+	
+	<body>
+
+		<header>
+
+			<h1>Superhero Madlib</h1>
+
+		</header>
+
+		<main>
+
+			<h2>Create Your Madlib</h2>
+
+            <p>blah blah here are your choices</p>
+
+			<p>Click F12 to see the console messages.</p>
+
+            <hr>
+
+            <h2 id="universe">Choose Your Universe</h2>
+
+                <p>Marvel vs DC</p>
+
+                <div id="buttons">
+
+                    <button class="universe-button" data-uni="marvel">Marvel</button>
+                    <button class="universe-button" data-uni="dc">DC</button>
+
+                </div>
+
+            <h2 id="kind-of-story">What Kind of Story You Want?</h2>
+
+                <p>Adventure, etc...</p>
+
+                <div id="buttons">
+
+                    <button class="kind-button" data-theme="villain">Fight with a Villain</button>
+                    <button class="kind-button" data-theme="disaster">Help with a Disaster</button>
+                    <button class="kind-button" data-theme="romance">Find Love</button>                
+
+                </div>
+
+            <h2 id="setting">Where Should Your Story Take Place?</h2>
+
+                <p>Adventure, etc...</p>
+
+                <div id="buttons">
+
+                    <button class="dc-button" data-loc="gotham">Gotham</button>
+                    <button class="dc-button" data-loc="metropolis">Metropolis</button>
+                    <button class="dc-button" data-loc="fawcett">Fawcett City</button>                
+                    <button class="marvel-button" data-loc="new-york">New York</button>
+                    <button class="marvel-button" data-loc="asgard">Asgard</button>
+                    <button class="marvel-button" data-loc="kamartaj">Kamar-Taj</button>
+
+                </div>
+
+            <h2 id="mad-lib-entries">Create the Magic</h2>
+
+                <p>Remember: 
+                    Verb = Action  
+                    Noun = Person/Place/Thing
+                    Adjective = Describes a Noun.
+                    Adverb = Describes a Verb, usually ends in “ly” (like slowly)</p>
+
+                <section class="form">
+
+                    <h3>Fill in the Blanks to Make Your MadLib</h3>
+
+                    <form id="villain-form">
+
+                        <label for="fnameInput">First Name:</label><br>
+                        <input type="text" id="fnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                    </form>
+
+                    <form id="disaster-form">
+                        
+                        <label for="fnameInput">First Name:</label><br>
+                        <input type="text" id="fnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                    </form>
+
+                    <form id="romance-form">
+                        
+                        <label for="fnameInput">First Name:</label><br>
+                        <input type="text" id="fnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                        <label for="lnameInput">Last Name:</label><br>
+                        <input type="text" id="lnameInput" required><br>
+
+                    </form>
+
+
+                </section>
+                
+		</main>
+
+		<footer>
+
+			<small>Quotes all sourced from <a href="https://www.brainyquote.com/" target="_blank">www.brainyquote.com</a>. </small>
+
+		</footer>
+
+	</body>
+
+</html>
