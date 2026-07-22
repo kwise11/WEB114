@@ -31,22 +31,22 @@ Steps-
 `use strict`;
 
 //1. Select the elements from the HTML. Buttons, sections, forms.
-const buttons = document.querySelector(`#buttons`);
-const dcButton = buttons.querySelector(`.universe-button[data-uni='dc']`);
-const marvelButton = buttons.querySelector(`.universe-button[data-uni='marvel']`);
-const gothamButton = buttons.querySelector(`.dc-button[data-loc='gotham']`);
-const metropolisButton = buttons.querySelector(`.dc-button[data-loc='metropolis']`);
-const fawcettButton = buttons.querySelector(`.dc-button[data-loc='fawcett']`);
-const nyButton = buttons.querySelector(`.marvel-button[data-loc='ny']`);
-const asgardButton = buttons.querySelector(`.marvel-button[data-loc='asgard']`);
-const kamartajButton = buttons.querySelector(`.marvel-button[data-loc='kamartaj']`);
-const villainButton = buttons.querySelector(`.kind-button[data-theme='villain']`);
-const disasterButton = buttons.querySelector(`.kind-button[data-theme='disaster']`);
-const adventureButton = buttons.querySelector(`.kind-button[data-theme='adventure']`);
-const submitAdvButton = buttons.querySelector(`.submit-button[data-ent='adventure']`);
-const submitVilButton = buttons.querySelector(`.submit-button[data-ent='villain']`);
-const submitDisButton = buttons.querySelector(`.submit-button[data-ent='disaster']`);
-const resetButton = buttons.querySelector(`.reset-button[data-theme='clearall']`);
+//const buttons = document.querySelector(`#buttons`);
+const dcButton = querySelector(`.universe-button[data-uni='dc']`);
+const marvelButton = querySelector(`.universe-button[data-uni='marvel']`);
+const gothamButton = querySelector(`.dc-button[data-loc='gotham']`);
+const metropolisButton = querySelector(`.dc-button[data-loc='metropolis']`);
+const fawcettButton = querySelector(`.dc-button[data-loc='fawcett']`);
+const nyButton = querySelector(`.marvel-button[data-loc='ny']`);
+const asgardButton = querySelector(`.marvel-button[data-loc='asgard']`);
+const kamartajButton = querySelector(`.marvel-button[data-loc='kamartaj']`);
+const villainButton = querySelector(`.kind-button[data-theme='villain']`);
+const disasterButton = querySelector(`.kind-button[data-theme='disaster']`);
+const adventureButton = querySelector(`.kind-button[data-theme='adventure']`);
+const submitAdvButton = querySelector(`.submit-button[data-ent='adventure']`);
+const submitVilButton = querySelector(`.submit-button[data-ent='villain']`);
+const submitDisButton = querySelector(`.submit-button[data-ent='disaster']`);
+const resetButton = querySelector(`.reset-button[data-theme='clearall']`);
 
 const universeSection = document.querySelector(`#universe`);
 const themeSection = document.querySelector(`#kind-of-story`);
