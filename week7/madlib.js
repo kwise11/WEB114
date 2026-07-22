@@ -78,12 +78,12 @@ const themeSettings = {
 }
 
 const locationSettings = {
-    gotham:         {name: `Gotham`, cityImg: `Georgia`},
-    metropolis:     {name: `Metropolis`, cityImg: `Georgia`},
-    fawcett:        {name: `Fawcett City`, cityImg: `Georgia`},
-    ny:             {name: `New York`, cityImg: `Georgia`},
-    asgard:         {name: `Asgard`, cityImg: `Georgia`},
-    kamartaj:       {name: `Kamar-Taj`, cityImg: `Georgia`},
+    gotham:         {name: `Gotham`, cityImg: ``},
+    metropolis:     {name: `Metropolis`, cityImg: ``},
+    fawcett:        {name: `Fawcett City`, cityImg: ``},
+    ny:             {name: `New York`, cityImg: ``},
+    asgard:         {name: `Asgard`, cityImg: ``},
+    kamartaj:       {name: `Kamar-Taj`, cityImg: ``},
     reset:          {name: ``, cityImg: ``}
 }
 
@@ -129,7 +129,7 @@ function dcUniverseSelect(universe) {
 function themeSelect(theme) {
     const them = themeSettings[theme];
     madlibSection.style.backgroundColor = them.storyBackground;
-    madlibSection.body.style.font = them.font;
+    madlibSection.style.font = them.font;
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `block`;
@@ -180,7 +180,7 @@ function resetSelect(universe, theme, location){
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = univ.textcolor;
     madlibSection.style.backgroundColor = them.storyBackground;
-    madlibSection.body.style.font = them.font;
+    madlibSection.style.font = them.font;
     document.body.style.backgroundImage = loc.cityImg;
     universeSection.style.display = `block`;
     themeSection.style.display = `none`;
@@ -290,4 +290,5 @@ submitVilButton.addEventListener('click', handlerSubmitVilClick);
 submitDisButton.addEventListener('click', handlerSubmitDisClick);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
