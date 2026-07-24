@@ -1,29 +1,25 @@
 //Kate Wise 07/26/2026- Final Project MadLibs
 
 /*
-1. moodSelected = string, html mood title
-2. quote = string, html mood quote
-3. buttons = ref html div container for all buttons
-4. happyButton = ref html button labeled happy
-5. excitedButton = ref html button labeled excited
-6. curiousButton = ref html button labeled curious
-7. sadButton = ref html button labeled sad
-8. angryButton = ref html button labeled angry
-9. hungryButton = ref html button labeled hungry
-10. tiredButton = ref html button labeled tired
-11. resetButton = ref html button labeled reset
-
-12. moods = table of mood settings
-
-13. changeMood = function to reuse to apply mood settings based on choice
-
-14. Event Handlers (8) = one for each mood, based on listener activation feeds into changeMood function
-
-15. Event Listeners (8) = one for each mood, based on variable button clicked, call handler
+1. 15 Buttons = each ref html button, one is a reset
+2. 6 Sections = each ref html div container
+3. 3 Forms = each ref html form container
+4. 2 Split Locations = each ref html buttons for locations split by universe
+5. 3 Settings = ref for name and appearance changes based on buttons chosen
+6. universeChosen = string
+7. themeChosen = string
+8. locationChosen = string
+9. 5 Functions based on button selections
+10. 15 Handlers = based on listener activation feeds into appropriate function
+11. 15 Event Listeners = based on variable button clicked, call appropriate handler
+12. 
+13. 
+14. 
+15. 
 
 Steps- 
 1. What am I looking for or feeding into in html
-2. Set mood themes
+2. Set themes/ functions /forms
 3. Create listenter and handler function for each mood
 
 */
@@ -31,7 +27,6 @@ Steps-
 `use strict`;
 
 //1. Select the elements from the HTML. Buttons, sections, forms.
-//const buttons = document.querySelector(`#buttons`);
 const dcButton = document.querySelector(`.universe-button[data-uni='dc']`);
 const marvelButton = document.querySelector(`.universe-button[data-uni='marvel']`);
 const gothamButton = document.querySelector(`.dc-button[data-loc='gotham']`);
@@ -62,9 +57,17 @@ const villainForm = document.querySelector(`#villain-form`);
 const disasterForm = document.querySelector(`#disaster-form`);
 const adventureForm = document.querySelector(`#adventure-form`);
 
+
+
 let universeChosen;
 let themeChosen;
 let locationChosen;
+
+let adventureFulfilled;
+let villainFulfilled;
+let disasterFulfilled;
+
+let myMadlibTitle;
 
 //2. Create my mood themes; names, colors that contrast and valid quotes.
 const universeSettings = {
@@ -90,7 +93,47 @@ const locationSettings = {
     reset:          {name: ``, cityImg: ``}
 }
 
-//3. Create the function that applies the mood's theme.
+//3. Collect Form Data
+let adventure = {
+    place: placeWatchInput.value,
+    transitional: transitionalInput.value,
+    hero1: nameSuperhero2Input.value,
+    transportation: vehicle2Input.value,
+    ecosystem: ecosystemInput.value,
+    plant: plantInput.value,
+    creature: creatureInput.value,
+    hero2: nameSuperhero3Input.value,
+    number1: number1Input.value,
+    number2: number2Input.value,
+    time: timeInput.value,
+    junior: jrTeamInput.value
+}
+
+let villain = {
+    civHero: cnameHeroInput.value,
+    hobby: hobbyInput.value,
+    restaurant: restaurantInput.value,
+    civVillain: cnameVillainInput.value,
+    adverbly: sighAdverbInput.value,
+    villain: nameVillain1Input.value,
+    room: roomInput.value,
+    fightVerb: fightMoveInput.value
+}
+
+let disaster = {
+    season: seasonInput.value,
+    disaster: disasterInput.value,
+    location: location1Input.value,
+    hero: nameSuperhero1Input.value,
+    vehicle: vehicle1Input.value,
+    sidekick: sidekickInput.value,
+    historicIndividual: historicPersonInput.value,
+    leader: leaderInput.value,
+    gift: giftInput.value
+}
+
+
+//4. Create the functions that apply the themes and content.
 function universeSelect(universe) {
     const univ = universeSettings[universe];
     if (universe === `dc`) {
@@ -148,6 +191,54 @@ function submitSelect(formSubmitted) {
     entriesSection.style.display = `none`;
     madlibSection.style.display = `block`;
     resetSection.style.display = `block`;
+    if (formSubmitted === `disaster`) {
+        myMadlibTitle = `Deal with a ${themeChosen} in ${universeChosen}`;
+        disasterFulfilled = `It was an early ${disaster.season} day when the alarm went off on the ${locationChosen} Monitors.  
+            A ${disaster.disaster} was occurring in ${disaster.location}.  ${disaster.hero} jumped into action!  
+            They raced to the hanger and jumped in their trusty ${disaster.vehicle}.  In no time at all they had 
+            reached ${disaster.location}. With the assistance of their true blue friend ${disaster.sidekick} they 
+            swiftly began to rescue the civilians and even managed to save a statue of ${disaster.historicIndividual} 
+            that was the pride and joy of the locals. As the heroes did a final check to make sure everyone was ok the 
+            ${disaster.leader}  presented ${disaster.hero}  with a thank you gift of ${disaster.gift}. The heroes 
+            proudly returned to base knowing they had saved the day once again!`;
+    } else if (formSubmitted === `villain`) {
+        myMadlibTitle = `Fight with a ${themeChosen} in ${universeChosen}`;
+        villainFulfilled = `${villain.civHero} was taking a rare day off, but unfortunately were not enjoying it as much 
+            as they should.  They could be at home ${villain.hobby} or at a nice restaurant like ${villain.restaurant}.  
+            Instead they had been invited to a party in ${locationChosen} thrown by ${villain.civVillain}. Ordinarily this 
+            would be a chance to investigate what ${villain.civVillain} might be up to but their most recent scheme had been 
+            foiled and they were still constructing their next plot.  This party was a complete waste of time.  Just as they 
+            were about to ${villain.adverbly} sigh, a glint outside the window caught their eye- it was ${villain.villain} and
+            their henchmen about to rob the party goers!  Trying not to be noticed ${villain.civHero} quickly snuck into 
+            ${villain.civVillain}'s ${villain.room} to change into their costume.  As they swiftly circled back to the party 
+            they heard ${villain.villain}'s men break in and ask for everyone's valuables.  With no time to spare they 
+            dramatically burst into the party and ${villain.fightVerb} ${villain.villain}.  While the fight was short it 
+            broken ${villain.civHero}'s boredom.  Bonus Win- they got to go home as soon as the police showed up.`
+    } else if (formSubmitted === `adventure`) {
+        myMadlibTitle = `Go on an ${themeChosen} in ${universeChosen}`;
+        adventureFulfilled = `It was a calm day in ${locationChosen} when suddenly a beep came from the computer, 
+            ${adventure.place} monitors had gone off- a new ${adventure.transitional} had been found leading to an unknown 
+            area.  Locals were cautious about entering, after all ${adventure.place} could be a dangerous place- obviously 
+            this is a job for ${adventure.hero1}!  They quickly travelled via ${adventure.transportation} and were soon 
+            standing in the ${adventure.transitional} leading to an unexplored ${adventure.ecosystem}.  Carefully they 
+            entered and began to take readings of the nearest ${adventure.plant}.  Suddenly a ${adventure.creature} raced 
+            toward them!  With barely a second to spare they dived out of the way!  They quickly used their communicator to 
+            call in ${adventure.hero2} for backup.  Luckily it seemed the ${adventure.creature} was just hungry and more 
+            interested in the ${adventure.plant}  than the heroes. Since they were already both there they decided to work 
+            together; ${adventure.hero1} managed to map ${adventure.number1} miles and ${adventure.hero2} ${adventure.number2} 
+            miles in just ${adventure.time} - covering a total of ${parseFloat(adventure.number1) + parseFloat(adventure.number2)} 
+            miles of ${adventure.ecosystem} without angering the local wildlife.  Cataloging all the new plants and animals will 
+            obviously take a lot longer… maybe this would be a good job for the ${adventure.junior}, a learning experience at the 
+            least!  After all it is not everyday you see a ${adventure.creature}.`
+    }
+    document.querySelector(`#my-madlib-title`).textContent = myMadlibTitle;
+    if (formSubmitted === `disaster`) {
+        document.querySelector(`#my-madlib-text`).textContent = disasterFulfilled;  
+    } else if (formSubmitted === `villain`) {
+        document.querySelector(`#my-madlib-text`).textContent = villainFulfilled;    
+    } else if (formSubmitted === `adventure`) { 
+        document.querySelector(`#my-madlib-text`).textContent = adventureFulfilled;
+    }        
 }
 
 function resetSelect(universe, theme, location){
@@ -173,12 +264,16 @@ function resetSelect(universe, theme, location){
     universeChosen = univ.name;
     themeChosen = them.name;
     locationChosen = loc.name;
+    madLibTitle = ``;
+    adventureFulfilled = ``;
+    villainFulfilled = ``;
+    disasterFulfilled = ``;
 }
 
 //   quote.textContent = mood.quote;
 //   moodSelected.textContent = mood.name;
 
-//4. Create an Event Handler (function) for each mood that calls the function to apply theme.
+//5. Create an Event Handler (function) for each mood that calls the function to apply theme.
 function handlerMarvelClick() {
     universeSelect(`marvel`);
 }
@@ -269,3 +364,4 @@ submitVilButton.addEventListener('click', handlerSubmitVilClick);
 submitDisButton.addEventListener('click', handlerSubmitDisClick);
 
 resetButton.addEventListener('click', handlerResetClick);
+
