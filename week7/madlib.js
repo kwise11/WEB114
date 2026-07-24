@@ -38,7 +38,9 @@ const kamartajButton = document.querySelector(`.marvel-button[data-loc='kamartaj
 const villainButton = document.querySelector(`.kind-button[data-theme='villain']`);
 const disasterButton = document.querySelector(`.kind-button[data-theme='disaster']`);
 const adventureButton = document.querySelector(`.kind-button[data-theme='adventure']`);
-const submitFormButton = document.querySelector(`.submit-button[data-ent='sub-entry']`);
+const submitAdvFormButton = document.querySelector(`.submit-button[data-ent='sub-adventure']`);
+const submitVilFormButton = document.querySelector(`.submit-button[data-ent='sub-villain']`);
+const submitDisFormButton = document.querySelector(`.submit-button[data-ent='sub-disaster']`);
 const resetButton = document.querySelector(`.reset-button[data-start='clearall']`);
 
 const dcOptions = document.querySelector(`#dc-options`);
@@ -302,7 +304,18 @@ function handlerAdventureClick() {
     themeSelect(`adventure`);
 }
 
-function handlerSubmitClick() {
+function handlerSubmitAdvClick(event) {
+    event.preventDefault();
+    submitSelect();
+}
+
+function handlerSubmitVilClick(event) {
+    event.preventDefault();
+    submitSelect();
+}
+
+function handlerSubmitDisClick(event) {
+    event.preventDefault();
     submitSelect();
 }
 
@@ -333,10 +346,13 @@ villainButton.addEventListener('click', handlerVillainClick);
 
 disasterButton.addEventListener('click', handlerDisasterClick);
 
-submitFormButton.addEventListener('click', handlerSubmitClick);
+submitAdvFormButton.addEventListener('submit', handlerSubmitAdvClick);
+
+submitVilFormButton.addEventListener('submit', handlerSubmitVilClick);
+
+submitDisFormButton.addEventListener('submit', handlerSubmitDisClick);
 
 resetButton.addEventListener('click', handlerResetClick);
-
 
 
 
