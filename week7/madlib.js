@@ -93,47 +93,7 @@ const locationSettings = {
     reset:          {name: ``, cityImg: ``}
 }
 
-//3. Collect Form Data
-let adventure = {
-    place: placeWatchInput.value,
-    transitional: transitionalInput.value,
-    hero1: nameSuperhero2Input.value,
-    transportation: vehicle2Input.value,
-    ecosystem: ecosystemInput.value,
-    plant: plantInput.value,
-    creature: creatureInput.value,
-    hero2: nameSuperhero3Input.value,
-    number1: number1Input.value,
-    number2: number2Input.value,
-    time: timeInput.value,
-    junior: jrTeamInput.value
-}
-
-let villain = {
-    civHero: cnameHeroInput.value,
-    hobby: hobbyInput.value,
-    restaurant: restaurantInput.value,
-    civVillain: cnameVillainInput.value,
-    adverbly: sighAdverbInput.value,
-    villain: nameVillain1Input.value,
-    room: roomInput.value,
-    fightVerb: fightMoveInput.value
-}
-
-let disaster = {
-    season: seasonInput.value,
-    disaster: disasterInput.value,
-    location: location1Input.value,
-    hero: nameSuperhero1Input.value,
-    vehicle: vehicle1Input.value,
-    sidekick: sidekickInput.value,
-    historicIndividual: historicPersonInput.value,
-    leader: leaderInput.value,
-    gift: giftInput.value
-}
-
-
-//4. Create the functions that apply the themes and content.
+//3. Create the functions that apply the themes and content.
 function universeSelect(universe) {
     const univ = universeSettings[universe];
     if (universe === `dc`) {
@@ -192,6 +152,17 @@ function submitSelect(formSubmitted) {
     madlibSection.style.display = `block`;
     resetSection.style.display = `block`;
     if (formSubmitted === `disaster`) {
+        let disaster = {
+            season: seasonInput.value,
+            disaster: disasterInput.value,
+            location: location1Input.value,
+            hero: nameSuperhero1Input.value,
+            vehicle: vehicle1Input.value,
+            sidekick: sidekickInput.value,
+            historicIndividual: historicPersonInput.value,
+            leader: leaderInput.value,
+            gift: giftInput.value
+        };
         myMadlibTitle = `Deal with a ${themeChosen} in ${universeChosen}`;
         disasterFulfilled = `It was an early ${disaster.season} day when the alarm went off on the ${locationChosen} Monitors.  
             A ${disaster.disaster} was occurring in ${disaster.location}.  ${disaster.hero} jumped into action!  
@@ -202,6 +173,16 @@ function submitSelect(formSubmitted) {
             ${disaster.leader}  presented ${disaster.hero}  with a thank you gift of ${disaster.gift}. The heroes 
             proudly returned to base knowing they had saved the day once again!`;
     } else if (formSubmitted === `villain`) {
+        let villain = {
+            civHero: cnameHeroInput.value,
+            hobby: hobbyInput.value,
+            restaurant: restaurantInput.value,
+            civVillain: cnameVillainInput.value,
+            adverbly: sighAdverbInput.value,
+            villain: nameVillain1Input.value,
+            room: roomInput.value,
+            fightVerb: fightMoveInput.value
+        };
         myMadlibTitle = `Fight with a ${themeChosen} in ${universeChosen}`;
         villainFulfilled = `${villain.civHero} was taking a rare day off, but unfortunately were not enjoying it as much 
             as they should.  They could be at home ${villain.hobby} or at a nice restaurant like ${villain.restaurant}.  
@@ -215,6 +196,20 @@ function submitSelect(formSubmitted) {
             dramatically burst into the party and ${villain.fightVerb} ${villain.villain}.  While the fight was short it 
             broken ${villain.civHero}'s boredom.  Bonus Win- they got to go home as soon as the police showed up.`
     } else if (formSubmitted === `adventure`) {
+        let adventure = {
+            place: placeWatchInput.value,
+            transitional: transitionalInput.value,
+            hero1: nameSuperhero2Input.value,
+            transportation: vehicle2Input.value,
+            ecosystem: ecosystemInput.value,
+            plant: plantInput.value,
+            creature: creatureInput.value,
+            hero2: nameSuperhero3Input.value,
+            number1: number1Input.value,
+            number2: number2Input.value,
+            time: timeInput.value,
+            junior: jrTeamInput.value
+        };
         myMadlibTitle = `Go on an ${themeChosen} in ${universeChosen}`;
         adventureFulfilled = `It was a calm day in ${locationChosen} when suddenly a beep came from the computer, 
             ${adventure.place} monitors had gone off- a new ${adventure.transitional} had been found leading to an unknown 
@@ -273,7 +268,7 @@ function resetSelect(universe, theme, location){
 //   quote.textContent = mood.quote;
 //   moodSelected.textContent = mood.name;
 
-//5. Create an Event Handler (function) for each mood that calls the function to apply theme.
+//4. Create an Event Handler (function) for each mood that calls the function to apply theme.
 function handlerMarvelClick() {
     universeSelect(`marvel`);
 }
@@ -334,7 +329,7 @@ function handlerResetClick() {
     resetSelect(`reset`,`reset`,`reset`);
 }
 
-//6. Create Event Listeners for each mood that calls the handler upon a click.
+//5. Create Event Listeners for each mood that calls the handler upon a click.
 dcButton.addEventListener('click', handlerDCClick);
 
 marvelButton.addEventListener('click', handlerMarvelClick);
@@ -364,4 +359,5 @@ submitVilButton.addEventListener('click', handlerSubmitVilClick);
 submitDisButton.addEventListener('click', handlerSubmitDisClick);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
