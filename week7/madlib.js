@@ -38,9 +38,7 @@ const kamartajButton = document.querySelector(`.marvel-button[data-loc='kamartaj
 const villainButton = document.querySelector(`.kind-button[data-theme='villain']`);
 const disasterButton = document.querySelector(`.kind-button[data-theme='disaster']`);
 const adventureButton = document.querySelector(`.kind-button[data-theme='adventure']`);
-const submitAdvFormButton = document.querySelector(`.submit-button[data-ent='sub-adventure']`);
-const submitVilFormButton = document.querySelector(`.submit-button[data-ent='sub-villain']`);
-const submitDisFormButton = document.querySelector(`.submit-button[data-ent='sub-disaster']`);
+
 const resetButton = document.querySelector(`.reset-button[data-start='clearall']`);
 
 const dcOptions = document.querySelector(`#dc-options`);
@@ -141,14 +139,14 @@ function locationSelect(location) {
     locationChosen = loc.name;
 }
 
-function submitSelect() {
+function submitSelect(formCompleted) {
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `none`;
     entriesSection.style.display = `none`;
     madlibSection.style.display = `block`;
     resetSection.style.display = `block`;
-    if (themeChosen === `Disaster`) {
+    if (formCompleted === `disaster`) {
         let disaster = {
             season: seasonInput.value,
             disaster: disasterInput.value,
@@ -169,7 +167,7 @@ function submitSelect() {
             that was the pride and joy of the locals. As the heroes did a final check to make sure everyone was ok the 
             ${disaster.leader}  presented ${disaster.hero}  with a thank you gift of ${disaster.gift}. The heroes 
             proudly returned to base knowing they had saved the day once again!`;
-    } else if (themeChosen === `Villain`) {
+    } else if (formCompleted === `villain`) {
         let villain = {
             civHero: cnameHeroInput.value,
             hobby: hobbyInput.value,
@@ -192,7 +190,7 @@ function submitSelect() {
             they heard ${villain.villain}'s men break in and ask for everyone's valuables.  With no time to spare they 
             dramatically burst into the party and ${villain.fightVerb} ${villain.villain}.  While the fight was short it 
             broken ${villain.civHero}'s boredom.  Bonus Win- they got to go home as soon as the police showed up.`
-    } else if (themeChosen === `Adventure`) {
+    } else if (formCompleted === `adventure`) {
         let adventure = {
             place: placeWatchInput.value,
             transitional: transitionalInput.value,
@@ -304,19 +302,19 @@ function handlerAdventureClick() {
     themeSelect(`adventure`);
 }
 
-function handlerSubmitAdvClick(event) {
+function handlerSubmitAdv(event) {
     event.preventDefault();
-    submitSelect();
+    submitSelect(`adventure`);
 }
 
-function handlerSubmitVilClick(event) {
+function handlerSubmitVil(event) {
     event.preventDefault();
-    submitSelect();
+    submitSelect(`villain`);
 }
 
-function handlerSubmitDisClick(event) {
+function handlerSubmitDis(event) {
     event.preventDefault();
-    submitSelect();
+    submitSelect(`disaster`);
 }
 
 function handlerResetClick() {
@@ -346,13 +344,14 @@ villainButton.addEventListener('click', handlerVillainClick);
 
 disasterButton.addEventListener('click', handlerDisasterClick);
 
-submitAdvFormButton.addEventListener('submit', handlerSubmitAdvClick);
+adventureForm.addEventListener('submit', handlerSubmitAdv);
 
-submitVilFormButton.addEventListener('submit', handlerSubmitVilClick);
+villainForm.addEventListener('submit', handlerSubmitVil);
 
-submitDisFormButton.addEventListener('submit', handlerSubmitDisClick);
+disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
 
 
