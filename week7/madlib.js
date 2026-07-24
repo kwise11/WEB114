@@ -98,8 +98,10 @@ function universeSelect(universe) {
     const univ = universeSettings[universe];
     if (universe === `dc`) {
         dcOptions.style.display = `block`;
+        marvelOptions.style.display = `none`;
         } else if (universe === `marvel`) {
         marvelOptions.style.display = `block`;
+        dcOptions.style.display = `none`;
         }
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = univ.textcolor;
@@ -359,5 +361,6 @@ submitVilButton.addEventListener('click', handlerSubmitVilClick);
 submitDisButton.addEventListener('click', handlerSubmitDisClick);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
 
