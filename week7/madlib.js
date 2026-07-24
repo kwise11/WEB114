@@ -38,9 +38,7 @@ const kamartajButton = document.querySelector(`.marvel-button[data-loc='kamartaj
 const villainButton = document.querySelector(`.kind-button[data-theme='villain']`);
 const disasterButton = document.querySelector(`.kind-button[data-theme='disaster']`);
 const adventureButton = document.querySelector(`.kind-button[data-theme='adventure']`);
-const submitAdvButton = document.querySelector(`.submit-button[data-ent='sub-adventure']`);
-const submitVilButton = document.querySelector(`.submit-button[data-ent='sub-villain']`);
-const submitDisButton = document.querySelector(`.submit-button[data-ent='sub-disaster']`);
+const submitFormButton = document.querySelector(`.submit-button[data-ent='sub-entry']`);
 const resetButton = document.querySelector(`.reset-button[data-start='clearall']`);
 
 const dcOptions = document.querySelector(`#dc-options`);
@@ -57,16 +55,11 @@ const villainForm = document.querySelector(`#villain-form`);
 const disasterForm = document.querySelector(`#disaster-form`);
 const adventureForm = document.querySelector(`#adventure-form`);
 
-
-
 let universeChosen;
 let themeChosen;
 let locationChosen;
 
-let adventureFulfilled;
-let villainFulfilled;
-let disasterFulfilled;
-
+let myMadlibFulfilled;
 let myMadlibTitle;
 
 //2. Create my mood themes; names, colors that contrast and valid quotes.
@@ -146,14 +139,14 @@ function locationSelect(location) {
     locationChosen = loc.name;
 }
 
-function submitSelect(formSubmitted) {
+function submitSelect() {
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `none`;
     entriesSection.style.display = `none`;
     madlibSection.style.display = `block`;
     resetSection.style.display = `block`;
-    if (formSubmitted === `disaster`) {
+    if (themeChosen === `Disaster`) {
         let disaster = {
             season: seasonInput.value,
             disaster: disasterInput.value,
@@ -166,7 +159,7 @@ function submitSelect(formSubmitted) {
             gift: giftInput.value
         };
         myMadlibTitle = `Deal with a ${themeChosen} in ${universeChosen}`;
-        disasterFulfilled = `It was an early ${disaster.season} day when the alarm went off on the ${locationChosen} Monitors.  
+        myMadlibFulfilled = `It was an early ${disaster.season} day when the alarm went off on the ${locationChosen} Monitors.  
             A ${disaster.disaster} was occurring in ${disaster.location}.  ${disaster.hero} jumped into action!  
             They raced to the hanger and jumped in their trusty ${disaster.vehicle}.  In no time at all they had 
             reached ${disaster.location}. With the assistance of their true blue friend ${disaster.sidekick} they 
@@ -174,7 +167,7 @@ function submitSelect(formSubmitted) {
             that was the pride and joy of the locals. As the heroes did a final check to make sure everyone was ok the 
             ${disaster.leader}  presented ${disaster.hero}  with a thank you gift of ${disaster.gift}. The heroes 
             proudly returned to base knowing they had saved the day once again!`;
-    } else if (formSubmitted === `villain`) {
+    } else if (themeChosen === `Villain`) {
         let villain = {
             civHero: cnameHeroInput.value,
             hobby: hobbyInput.value,
@@ -186,7 +179,7 @@ function submitSelect(formSubmitted) {
             fightVerb: fightMoveInput.value
         };
         myMadlibTitle = `Fight with a ${themeChosen} in ${universeChosen}`;
-        villainFulfilled = `${villain.civHero} was taking a rare day off, but unfortunately were not enjoying it as much 
+        myMadlibFulfilled = `${villain.civHero} was taking a rare day off, but unfortunately were not enjoying it as much 
             as they should.  They could be at home ${villain.hobby} or at a nice restaurant like ${villain.restaurant}.  
             Instead they had been invited to a party in ${locationChosen} thrown by ${villain.civVillain}. Ordinarily this 
             would be a chance to investigate what ${villain.civVillain} might be up to but their most recent scheme had been 
@@ -197,7 +190,7 @@ function submitSelect(formSubmitted) {
             they heard ${villain.villain}'s men break in and ask for everyone's valuables.  With no time to spare they 
             dramatically burst into the party and ${villain.fightVerb} ${villain.villain}.  While the fight was short it 
             broken ${villain.civHero}'s boredom.  Bonus Win- they got to go home as soon as the police showed up.`
-    } else if (formSubmitted === `adventure`) {
+    } else if (themeChosen === `Adventure`) {
         let adventure = {
             place: placeWatchInput.value,
             transitional: transitionalInput.value,
@@ -213,7 +206,7 @@ function submitSelect(formSubmitted) {
             junior: jrTeamInput.value
         };
         myMadlibTitle = `Go on an ${themeChosen} in ${universeChosen}`;
-        adventureFulfilled = `It was a calm day in ${locationChosen} when suddenly a beep came from the computer, 
+        myMadlibFulfilled = `It was a calm day in ${locationChosen} when suddenly a beep came from the computer, 
             ${adventure.place} monitors had gone off- a new ${adventure.transitional} had been found leading to an unknown 
             area.  Locals were cautious about entering, after all ${adventure.place} could be a dangerous place- obviously 
             this is a job for ${adventure.hero1}!  They quickly travelled via ${adventure.transportation} and were soon 
@@ -229,13 +222,7 @@ function submitSelect(formSubmitted) {
             least!  After all it is not everyday you see a ${adventure.creature}.`
     }
     document.querySelector(`#my-madlib-title`).textContent = myMadlibTitle;
-    if (formSubmitted === `disaster`) {
-        document.querySelector(`#my-madlib-text`).textContent = disasterFulfilled;  
-    } else if (formSubmitted === `villain`) {
-        document.querySelector(`#my-madlib-text`).textContent = villainFulfilled;    
-    } else if (formSubmitted === `adventure`) { 
-        document.querySelector(`#my-madlib-text`).textContent = adventureFulfilled;
-    }        
+    document.querySelector(`#my-madlib-text`).textContent = myMadlibFulfilled;          
 }
 
 function resetSelect(universe, theme, location){
@@ -315,16 +302,8 @@ function handlerAdventureClick() {
     themeSelect(`adventure`);
 }
 
-function handlerSubmitAdvClick() {
-    submitSelect(`adventure`);
-}
-
-function handlerSubmitVilClick() {
-    submitSelect(`villain`);
-}
-
-function handlerSubmitDisClick() {
-    submitSelect(`disaster`);
+function handlerSubmitClick() {
+    submitSelect();
 }
 
 function handlerResetClick() {
@@ -354,13 +333,10 @@ villainButton.addEventListener('click', handlerVillainClick);
 
 disasterButton.addEventListener('click', handlerDisasterClick);
 
-submitAdvButton.addEventListener('click', handlerSubmitAdvClick);
-
-submitVilButton.addEventListener('click', handlerSubmitVilClick);
-
-submitDisButton.addEventListener('click', handlerSubmitDisClick);
+submitFormButton.addEventListener('click', handlerSubmitClick);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
 
 
