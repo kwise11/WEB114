@@ -51,6 +51,9 @@ const entriesSection = document.querySelector(`#madlib-entries`);
 const madlibSection = document.querySelector(`#generated-madlib`);
 const resetSection = document.querySelector(`#begin-again`);
 
+const backgroundChosen = document.querySelector(`#set-background-img`);
+const footerChosen = document.querySelector(`#wallpaper-source`);
+
 const villainForm = document.querySelector(`#villain-form`);
 const disasterForm = document.querySelector(`#disaster-form`);
 const adventureForm = document.querySelector(`#adventure-form`);
@@ -77,13 +80,13 @@ const themeSettings = {
 }
 
 const locationSettings = {
-    gotham:         {name: `Gotham`, cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.img`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    metropolis:     {name: `Metropolis`, cityDesc: `Metropolis Background Image`,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    fawcett:        {name: `Fawcett City`, cityDesc: `Fawcett City Background Image`,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    ny:             {name: `New York`, cityDesc: `New York Background Image`,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    asgard:         {name: `Asgard`, cityDesc: `Asgard Background Image`,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    kamartaj:       {name: `Kamar-Taj`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    reset:          {name: ``, cityDesc: ``,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``}
+    gotham:         {name: `Gotham`, cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    metropolis:     {name: `Metropolis`, cityDesc: `Metropolis Background Image`,cityImgLg: `images/metropolis.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    fawcett:        {name: `Fawcett City`, cityDesc: `Fawcett City Background Image`,cityImgLg: `images/Fawcett.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    ny:             {name: `New York`, cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    asgard:         {name: `Asgard`, cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    kamartaj:       {name: `Kamar-Taj`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartag.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    reset:          {name: ``, cityDesc: `empty placeholder`,cityImgLg: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgMd: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgSm: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, imgSource: ``}
 }
 
 //3. Create the functions that apply the themes and content.
@@ -129,7 +132,10 @@ function themeSelect(theme) {
 
 function locationSelect(location) {
     const loc = locationSettings[location];
-    document.body.style.backgroundImage = loc.cityImg;
+    footerChosen.textContent = loc.imgSource;
+    backgroundChosen.src = loc.cityImgLg;
+    backgroundChosen.alt = loc.cityDesc; 
+    document.body.style.background;
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `none`;
@@ -252,6 +258,9 @@ function resetSelect(universe, theme, location){
     adventureFulfilled = ``;
     villainFulfilled = ``;
     disasterFulfilled = ``;
+    footerChosen.textContent = loc.imgSource;
+    backgroundChosen.src = loc.cityImgLg;
+    backgroundChosen.alt = loc.cityDesc; 
 }
 
 //   quote.textContent = mood.quote;
@@ -351,6 +360,7 @@ villainForm.addEventListener('submit', handlerSubmitVil);
 disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
 
 
