@@ -77,13 +77,13 @@ const themeSettings = {
 }
 
 const locationSettings = {
-    gotham:         {name: `Gotham`, cityImg: ``},
-    metropolis:     {name: `Metropolis`, cityImg: ``},
-    fawcett:        {name: `Fawcett City`, cityImg: ``},
-    ny:             {name: `New York`, cityImg: ``},
-    asgard:         {name: `Asgard`, cityImg: ``},
-    kamartaj:       {name: `Kamar-Taj`, cityImg: ``},
-    reset:          {name: ``, cityImg: ``}
+    gotham:         {name: `Gotham`, cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.img`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    metropolis:     {name: `Metropolis`, cityDesc: `Metropolis Background Image`,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    fawcett:        {name: `Fawcett City`, cityDesc: `Fawcett City Background Image`,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    ny:             {name: `New York`, cityDesc: `New York Background Image`,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    asgard:         {name: `Asgard`, cityDesc: `Asgard Background Image`,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    kamartaj:       {name: `Kamar-Taj`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    reset:          {name: ``, cityDesc: ``,cityImgLg: ``, cityImgMd: ``, cityImgSm: ``, imgSource: ``}
 }
 
 //3. Create the functions that apply the themes and content.
