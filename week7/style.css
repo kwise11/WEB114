@@ -42,7 +42,7 @@ body
     margin: 0;
     border-radius: 6px;
     overflow: hidden;
-    z-index: 2;
+    z-index: 1;
     }
 
 .dc-button 
@@ -86,7 +86,8 @@ footer
     height: auto;
     object-fit: contain;
     display: block;
-    z-index: 2;
+    position: absolute;
+    z-index: 1;
     }    
 
 h1 
@@ -198,6 +199,7 @@ section
     display: none;
     border-radius: 18px;
     }
+
 
 
 
