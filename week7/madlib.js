@@ -61,6 +61,7 @@ const adventureForm = document.querySelector(`#adventure-form`);
 let universeChosen;
 let themeChosen;
 let locationChosen;
+let deviceSize;
 
 let myMadlibFulfilled;
 let myMadlibTitle;
@@ -80,12 +81,12 @@ const themeSettings = {
 }
 
 const locationSettings = {
-    gotham:         {name: `Gotham`, cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    metropolis:     {name: `Metropolis`, cityDesc: `Metropolis Background Image`,cityImgLg: `images/metropolis.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    fawcett:        {name: `Fawcett City`, cityDesc: `Fawcett City Background Image`,cityImgLg: `images/Fawcett.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    ny:             {name: `New York`, cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    asgard:         {name: `Asgard`, cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    kamartaj:       {name: `Kamar-Taj`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartaj.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    gotham:         {name: `Gotham`, cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.jpg`, cityImgMd: `images/gothammd.jpg`, cityImgSm: `images/gothamsm.jpg`, imgSource: ``},
+    metropolis:     {name: `Metropolis`, cityDesc: `Metropolis Background Image`,cityImgLg: `images/metropolis.jpg`, cityImgMd: `images/metropolismd.jpg`, cityImgSm: `images/metropolissm.jpg`, imgSource: ``},
+    fawcett:        {name: `Fawcett City`, cityDesc: `Fawcett City Background Image`,cityImgLg: `images/Fawcett.jpg`, cityImgMd: `images/Fawcettmd.jpg`, cityImgSm: `images/Fawcettsm.jpg`, imgSource: ``},
+    ny:             {name: `New York`, cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: `images/nymd.jpg`, cityImgSm: ``, imgSource: `images/nysm.jpg`},
+    asgard:         {name: `Asgard`, cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: `images/asgardmd.jpg`, cityImgSm: `images/asgardsm.jpg`, imgSource: ``},
+    kamartaj:       {name: `Kamar-Taj`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartaj.jpg`, cityImgMd: `images/kamartajmd.jpg`, cityImgSm: `images/kamartajsm.jpg`, imgSource: ``},
     reset:          {name: ``, cityDesc: `empty placeholder`,cityImgLg: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgMd: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgSm: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, imgSource: ``}
 }
 
@@ -133,16 +134,29 @@ function themeSelect(theme) {
 function locationSelect(location) {
     const loc = locationSettings[location];
     footerChosen.textContent = loc.imgSource;
-    backgroundChosen.src = loc.cityImgLg;
     backgroundChosen.alt = loc.cityDesc; 
     document.body.style.background;
+    if (window.matchMedia("(max-width:600px)")) {
+        deviceSize = `small`;
+    } else if (window.matchMedia("(min-width:600px)") && window.matchMedia("(max-width:1024px)")) {
+        deviceSize = `medium`;
+    } else {
+        deviceSize = `large`;
+    }
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `none`;
     entriesSection.style.display = `block`;
     madlibSection.style.display = `none`;
     resetSection.style.display = `block`;
-    locationChosen = loc.name;
+    locationChosen = loc.name
+    if (deviceSize ===`small`) {
+        backgroundChosen.src = loc.cityImgSm;
+    } else if (deviceSize === `medium`) {
+        backgroundChosen.src = loc.cityImgMd;
+    } else if (deviceSize === `large`) {
+        backgroundChosen.src = loc.cityImgLg;
+    }
 }
 
 function submitSelect(formCompleted) {
@@ -360,7 +374,6 @@ villainForm.addEventListener('submit', handlerSubmitVil);
 disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
-
 
 
 
