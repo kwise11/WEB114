@@ -85,7 +85,7 @@ const locationSettings = {
     fawcett:        {name: `Fawcett City`, cityDesc: `Fawcett City Background Image`,cityImgLg: `images/Fawcett.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
     ny:             {name: `New York`, cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
     asgard:         {name: `Asgard`, cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
-    kamartaj:       {name: `Kamar-Taj`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartag.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
+    kamartaj:       {name: `Kamar-Taj`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartaj.jpg`, cityImgMd: ``, cityImgSm: ``, imgSource: ``},
     reset:          {name: ``, cityDesc: `empty placeholder`,cityImgLg: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgMd: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgSm: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, imgSource: ``}
 }
 
@@ -360,7 +360,6 @@ villainForm.addEventListener('submit', handlerSubmitVil);
 disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
-
 
 
 
