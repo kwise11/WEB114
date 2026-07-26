@@ -15,6 +15,8 @@ differences in my HTML. Also added some best practice CSS learned from my Web110
     {
     display: none;
     border-radius: 18px;
+    gap: 2rem;
+    max-width: 50vw;
     transition: all 0.9s ease;
     margin: 0 auto;
     }
@@ -70,6 +72,8 @@ body
     {
     display: none;
     border-radius: 18px;
+    gap: 2rem;
+    max-width: 50vw;
     transition: all 0.9s ease;
     margin: 0 auto;
     }
@@ -216,13 +220,14 @@ main
 
 #villain-form
     {
-
     display: none;
     border-radius: 18px;
-    gap: 1rem;
+    gap: 2rem;
     max-width: 50vw;
     transition: all 0.9s ease;
     margin: 0 auto;
     }
+
+
 
 
