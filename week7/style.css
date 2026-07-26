@@ -14,21 +14,34 @@ differences in my HTML. Also added some best practice CSS learned from my Web110
 #adventure-form
     {
     display: none;
+    border-radius: 18px;
     }
 
 #begin-again
     {
     display: none;
+    border-radius: 18px;
     }
 
 body 
     {
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
     transition: all 0.6s ease;
     min-height: 100vh;
     margin: 0;
+    }
+
+#container-background-img
+    {
+    position: relative;
+    width: 85vw;
+    margin: 0;
+    border-radius: 6px;
+    overflow: hidden;
     }
 
 .dc-button 
@@ -45,22 +58,40 @@ body
 #dc-options
     {
     display: none;
+    border-radius: 18px;
     }
 
 #disaster-form
     {
     display: none;
+    border-radius: 18px;
+    }
+
+footer
+    {
+    position: absolute;
     }
 
 #generated-madlib
     {
     display: none;
+    border-radius: 18px;
     }
+
+#set-background-img
+    {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    }    
 
 h1 
     {
     font-size: 3rem;
     margin-bottom: 10px;
+    border-radius: 18px;
+    position: absolute;
     }
 
 .kind-button 
@@ -77,13 +108,19 @@ h1
 #kind-of-story
     {
     display: none;
+    border-radius: 18px;
     }
 
 #madlib-entries
     {
     display: none;
+    border-radius: 18px;
     }
 
+main
+    {
+    position: absolute;
+    }
 .marvel-button
     {
     padding: 14px 24px;
@@ -98,6 +135,7 @@ h1
 #dc-options
     {
     display: none;
+    border-radius: 18px;
     }
 
 .reset-button 
@@ -113,12 +151,13 @@ h1
 
 section
     {
-    border-bottom: 4px solid #000;;
+    border-bottom: 4px solid #000;
     }
 
 #setting
     {
     display: none;
+    border-radius: 18px;
     }
 
 .submit-button 
@@ -135,6 +174,7 @@ section
 #universe
     {
     display: block;
+    border-radius: 18px;
     }
 
 .universe-button 
@@ -151,5 +191,7 @@ section
 #villain-form
     {
     display: none;
+    border-radius: 18px;
     }
+
 
