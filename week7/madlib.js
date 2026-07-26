@@ -81,12 +81,12 @@ const themeSettings = {
 }
 
 const locationSettings = {
-    gotham:         {name: `Gotham`, cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.jpg`, cityImgMd: `images/gothammd.jpg`, cityImgSm: `images/gothamsm.jpg`, imgSource: ``},
-    metropolis:     {name: `Metropolis`, cityDesc: `Metropolis Background Image`,cityImgLg: `images/metropolis.jpg`, cityImgMd: `images/metropolismd.jpg`, cityImgSm: `images/metropolissm.jpg`, imgSource: ``},
-    fawcett:        {name: `Fawcett City`, cityDesc: `Fawcett City Background Image`,cityImgLg: `images/Fawcett.jpg`, cityImgMd: `images/Fawcettmd.jpg`, cityImgSm: `images/Fawcettsm.jpg`, imgSource: ``},
-    ny:             {name: `New York`, cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: `images/nymd.jpg`, cityImgSm: ``, imgSource: `images/nysm.jpg`},
-    asgard:         {name: `Asgard`, cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: `images/asgardmd.jpg`, cityImgSm: `images/asgardsm.jpg`, imgSource: ``},
-    kamartaj:       {name: `Kamar-Taj`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartaj.jpg`, cityImgMd: `images/kamartajmd.jpg`, cityImgSm: `images/kamartajsm.jpg`, imgSource: ``},
+    gotham:         {name: `Gotham`, cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.jpg`, cityImgMd: `images/gothammd.jpg`, cityImgSm: `images/gothamsm.jpg`, imgSource: `Image sourced from https://www.wallpaperflare.com/`},
+    metropolis:     {name: `Metropolis`, cityDesc: `Metropolis Background Image`,cityImgLg: `images/metropolis.jpg`, cityImgMd: `images/metropolismd.jpg`, cityImgSm: `images/metropolissm.jpg`, imgSource: `Image sourced from https://wallpapercave.com/`},
+    fawcett:        {name: `Fawcett City`, cityDesc: `Fawcett City Background Image`,cityImgLg: `images/Fawcett.jpg`, cityImgMd: `images/Fawcettmd.jpg`, cityImgSm: `images/Fawcettsm.jpg`, imgSource: `Image sourced from https://dcheroesrpg.fandom.com/`},
+    ny:             {name: `New York`, cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: `images/nymd.jpg`, cityImgSm: `images/nysm.jpg`, imgSource: `Image sourced from https://www.reddit.com/r/wallpaper/`},
+    asgard:         {name: `Asgard`, cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: `images/asgardmd.jpg`, cityImgSm: `images/asgardsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
+    kamartaj:       {name: `Kamar-Taj`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartaj.jpg`, cityImgMd: `images/kamartajmd.jpg`, cityImgSm: `images/kamartajsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
     reset:          {name: ``, cityDesc: `empty placeholder`,cityImgLg: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgMd: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgSm: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, imgSource: ``}
 }
 
@@ -275,6 +275,7 @@ function resetSelect(universe, theme, location){
     footerChosen.textContent = loc.imgSource;
     backgroundChosen.src = loc.cityImgLg;
     backgroundChosen.alt = loc.cityDesc; 
+    deviceSize = ``;
 }
 
 //   quote.textContent = mood.quote;
