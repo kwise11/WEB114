@@ -146,7 +146,7 @@ function locationSelect(location) {
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `none`;
-    entriesSection.style.display = `flex`;
+    entriesSection.style.display = `block`;
     madlibSection.style.display = `none`;
     resetSection.style.display = `block`;
     locationChosen = loc.name
