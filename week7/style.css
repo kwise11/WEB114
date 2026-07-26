@@ -87,6 +87,7 @@ footer
     height: auto;
     object-fit: contain;
     display: block;
+    z-index: 1;
     }    
 
 h1 
@@ -197,6 +198,7 @@ section
     display: none;
     border-radius: 18px;
     }
+
 
 
 
