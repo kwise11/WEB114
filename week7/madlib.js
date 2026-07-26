@@ -136,9 +136,9 @@ function locationSelect(location) {
     footerChosen.textContent = loc.imgSource;
     backgroundChosen.alt = loc.cityDesc; 
     document.body.style.background;
-    if (window.matchMedia("(max-width:600px)")) {
+    if (window.matchMedia("(max-width:600px)").matches) {
         deviceSize = `small`;
-    } else if (window.matchMedia("(min-width:600px)") && window.matchMedia("(max-width:1024px)")) {
+    } else if (window.matchMedia("(min-width:600px)").matches && window.matchMedia("(max-width:1024px)").matches) {
         deviceSize = `medium`;
     } else {
         deviceSize = `large`;
@@ -375,6 +375,7 @@ villainForm.addEventListener('submit', handlerSubmitVil);
 disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
 
 
