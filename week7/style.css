@@ -78,16 +78,6 @@ footer
     border-radius: 18px;
     }
 
-#set-background-img
-    {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    position: absolute;
-    z-index: -1;
-    }    
-
 h1 
     {
     font-size: 3rem;
@@ -123,7 +113,7 @@ main
     {
     z-index: 3;
     }
-    
+
 .marvel-button
     {
     padding: 14px 24px;
@@ -135,7 +125,7 @@ main
     border-radius: 12px;   
     }
 
-#dc-options
+#marvel-options
     {
     display: none;
     border-radius: 18px;
@@ -152,10 +142,15 @@ main
     border-radius: 12px;
     }
 
-section
+#set-background-img
     {
-    border-bottom: 4px solid #000;
-    }
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    }  
 
 #setting
     {
@@ -196,9 +191,6 @@ section
     display: none;
     border-radius: 18px;
     }
-
-
-
 
 
 
