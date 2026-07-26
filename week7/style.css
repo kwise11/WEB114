@@ -16,6 +16,7 @@ differences in my HTML. Also added some best practice CSS learned from my Web110
     display: none;
     border-radius: 18px;
     transition: all 0.9s ease;
+    margin: 0 auto;
     }
 
 #begin-again
@@ -32,7 +33,7 @@ body
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
-    transition: all 0.6s ease;
+    transition: all 0.9s ease;
     min-height: 100vh;
     margin: 0;
     }
@@ -41,10 +42,10 @@ body
     {
     position: relative;
     width: 85vw;
-    margin: 0;
     border-radius: 6px;
     overflow: hidden;
     transition: all 1.2s ease;
+    margin: 0 auto;
     }
 
 .dc-button 
@@ -70,6 +71,7 @@ body
     display: none;
     border-radius: 18px;
     transition: all 0.9s ease;
+    margin: 0 auto;
     }
 
 footer
@@ -79,11 +81,13 @@ footer
     }
 
 form {
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     max-width: 400px;
     transition: all 0.9s ease;
+    margin: 0 auto;
     }        
 
 #generated-madlib
@@ -91,6 +95,7 @@ form {
     display: none;
     border-radius: 18px;
     transition: all 1.2s ease;
+    margin: 0 auto;
     }
 
 h1 
@@ -131,6 +136,7 @@ main
     max-width: 70vw;
     z-index: 3;
     transition: all 0.9s ease;
+    margin: 0 auto;
     }
 
 .marvel-button
@@ -170,7 +176,6 @@ main
     display: block;
     position: absolute;
     z-index: -1;
-    transition: all 0.9s ease;
     }  
 
 #setting
@@ -211,11 +216,13 @@ main
 
 #villain-form
     {
+
     display: none;
     border-radius: 18px;
     gap: 1rem;
     max-width: 50vw;
     transition: all 0.9s ease;
+    margin: 0 auto;
     }
 
 
