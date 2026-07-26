@@ -146,7 +146,7 @@ function locationSelect(location) {
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `none`;
-    entriesSection.style.display = `block`;
+    entriesSection.style.display = `flex`;
     madlibSection.style.display = `none`;
     resetSection.style.display = `block`;
     locationChosen = loc.name
@@ -375,6 +375,7 @@ villainForm.addEventListener('submit', handlerSubmitVil);
 disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
 
 
