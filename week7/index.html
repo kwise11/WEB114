@@ -17,11 +17,15 @@
 
 		<link rel="stylesheet" href="style.css" type="text/css">
 
+        <!--Connect the style sheet file.-->
+
         <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Kurale&family=Pangolin&display=swap" rel="stylesheet">
        
+        <!--Connect to google for additional fonts.-->
+
 		<script src="madlib.js" defer></script>
 
-        <!--Connect to CSS and JS files.-->
+        <!--Connect to JS file.-->
 		
     </head>    
 	
@@ -37,12 +41,16 @@
 
             </header>
 
+            <!--Header section, contains title only.-->
+
             <main>
 
                 <p>Make a story to remember!  Follow the prompt instructions and enter fun or off the wall answers to find the creative author in you! 
                     Remember: Verb = Action     Noun = Person/Place/Thing     Adjective = Describes a Noun     Adverb = Describes a Verb, usually ends in “ly” (like slowly)</p>
 
                 <p>Click F12 to see the console messages.</p>
+
+                <!--Primary instruction and info text.-->
 
                 <div id="universe">
 
@@ -55,6 +63,8 @@
 
                 </div>
 
+                <!--Choose the 'universe' section, first to appear and hidden once answered.-->
+
                 <div id="kind-of-story">    
 
                     <h2>What Kind of Story You Want?</h2>
@@ -66,6 +76,8 @@
                             <button class="kind-button" data-theme="adventure">Go on an Adventure</button>                
                 
                 </div>
+
+                <!--Choose the 'kind of story' section, second to appear and hidden once answered.-->
 
                 <div id="setting">
 
@@ -91,12 +103,16 @@
 
                 </div>
 
+                <!--Choose the 'starting location' section, third to appear and hidden once answered.
+                Location options visible are different based on previously selected universe.-->
+
                 <div id="madlib-entries">
 
                     <h2>Create the Magic</h2>
 
-                        <!--<p>blah blah blah</p> -->
-
+                    <!--Madlib Entry section, no additional instructions as original instructions higher up
+                    are still visible.-->               
+                     
                         <section class="form">
 
                             <h3>Fill in the Blanks to Make Your MadLib</h3>
@@ -131,6 +147,8 @@
                                 
                             </form>
 
+                            <!--Villain form, only appears based on answer to kind of story question-->
+
                             <form id="disaster-form">
                                 
                                 <label for="seasonInput">A season (fall, spring):</label>
@@ -163,6 +181,8 @@
                                 <button class="submit-button" data-ent="sub-disaster">Submit</button>
                                 
                             </form>
+
+                            <!--Disaster form, only appears based on answer to kind of story question-->
 
                             <form id="adventure-form">
                                 
@@ -206,6 +226,8 @@
                             
                             </form>
 
+                            <!--Adventure form, only appears based on answer to kind of story question-->
+
                         </section>
 
                 </div>
@@ -218,6 +240,8 @@
                 
                 </div>
 
+                <!--Generated madlib, only appears after entries to one of the forms above are submitted.-->
+
                 <div id="begin-again">
 
                     <h2>Go Back to the Beginning</h2>
@@ -227,6 +251,8 @@
                         <button class="reset-button" data-start="clearall">Start Over</button>
 
                 </div>
+
+                <!--Start over, visible throughout once passed the first choice.-->
                 
             </main>
 
@@ -235,6 +261,8 @@
                 <small id="wallpaper-source"></small>
 
             </footer>
+
+            <!--Populated with the source of the wallpaper background image.-->
 
         </div>    
 
