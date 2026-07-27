@@ -1,0 +1,2 @@
+This is a madlib project based on comic book locations and themes. I enjoyed choosing pictures and fonts that
+I felt reflected the stories. This was a chance to use buttons to change the appearance of the project.
