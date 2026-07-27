@@ -248,6 +248,11 @@ main
     transition: all 1.2s ease;
     }
 
+/* I chose as many settings as possible in my CSS to be applied on a variety of devices in an attempt to prevent
+having to create multiple CSS files.  I applied a variety of formatting settings here with a focus on readability
+and on making this adaptable to the size of the device that was used.  I strongly focused on centering on the screen
+and spacing of text.*/
+
 
 
 
