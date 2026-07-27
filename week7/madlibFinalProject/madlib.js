@@ -333,8 +333,8 @@ function resetSelect(universe, theme, location){
     universeChosen = univ.name;
     themeChosen = them.name;
     locationChosen = loc.name;
-    madLibTitle = ``;
-    madLibFulfilled = ``;
+    myMadlibTitle = ``;
+    myMadlibFulfilled = ``;
     footerChosen.textContent = loc.imgSource;
     backgroundChosen.src = loc.cityImgLg;
     backgroundChosen.alt = loc.cityDesc; 
