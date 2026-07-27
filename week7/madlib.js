@@ -1,32 +1,29 @@
 //Kate Wise 07/26/2026- Final Project MadLibs
 
 /*
-1. 15 Buttons = each ref html button, one is a reset
+1. 12 Buttons = each ref html button, one is a reset
 2. 6 Sections = each ref html div container
 3. 3 Forms = each ref html form container
 4. 2 Split Locations = each ref html buttons for locations split by universe
-5. 3 Settings = ref for name and appearance changes based on buttons chosen
-6. universeChosen = string
-7. themeChosen = string
-8. locationChosen = string
-9. 5 Functions based on button selections
-10. 15 Handlers = based on listener activation feeds into appropriate function
-11. 15 Event Listeners = based on variable button clicked, call appropriate handler
-12. 
-13. 
-14. 
-15. 
+5. 2 Image References = each ref locations where image data will be fed
+6. 1 Madlib Body Reference = ref location for the bulk of MadLib Text
+6. 6 Holders for Selections Made throughout process
+7. 3 Const Settings = ref for name and appearance changes based on buttons chosen
+8. 5 Functions based on button selections
+9. 15 Handlers = based on listener activation feeds into appropriate function
+10. 15 Event Listeners = based on variable button clicked, call appropriate handler
+
 
 Steps- 
 1. What am I looking for or feeding into in html
+   Variables to hold choices or settings collected
 2. Set themes/ functions /forms
-3. Create listenter and handler function for each mood
-
+3. Create listenter and handler function for each button/form
 */
 
 `use strict`;
 
-//1. Select the elements from the HTML. Buttons, sections, forms.
+//1. Select the elements from the HTML. Buttons, sections, forms, variables.
 const dcButton = document.querySelector(`.universe-button[data-uni='dc']`);
 const marvelButton = document.querySelector(`.universe-button[data-uni='marvel']`);
 const gothamButton = document.querySelector(`.dc-button[data-loc='gotham']`);
@@ -58,6 +55,8 @@ const villainForm = document.querySelector(`#villain-form`);
 const disasterForm = document.querySelector(`#disaster-form`);
 const adventureForm = document.querySelector(`#adventure-form`);
 
+const madlibStory = document.querySelector(`#generated-madlib`);
+
 let universeChosen;
 let themeChosen;
 let locationChosen;
@@ -66,7 +65,7 @@ let deviceSize;
 let myMadlibFulfilled;
 let myMadlibTitle;
 
-//2. Create my mood themes; names, colors that contrast and valid quotes.
+//2. Create my madlib references to make changes based on the buttons people push..
 const universeSettings = {
     dc:     {name: `DC`, background: `#9CAF88`},
     marvel: {name: `Marvel`, background: `#4E3F60`},
@@ -74,10 +73,10 @@ const universeSettings = {
 };
 
 const themeSettings = {
-    adventure:  {name: `Adventure`, font: `Kurale, sans-serif, "Times New Roman"`},
-    villain:    {name: `Villain`, font: `Pangolin, sans-serif, "Times New Roman"`},
-    disaster:   {name: `Disaster`, font: `Gelasio, sans-serif, "Times New Roman"`},
-    reset:      {name: ``, font: `Arial, sans-serif, "Times New Roman"`}
+    adventure:  {name: `Adventure`, font: `Kurale, sans-serif, "Times New Roman"`, fontSize: `18px`},
+    villain:    {name: `Villain`, font: `Pangolin, sans-serif, "Times New Roman"`, fontSize: `18px`},
+    disaster:   {name: `Disaster`, font: `Gelasio, sans-serif, "Times New Roman"`, fontSize: `16px`},
+    reset:      {name: ``, font: `Arial, sans-serif, "Times New Roman"`, fontSize:`16px`}
 }
 
 const locationSettings = {
@@ -108,11 +107,23 @@ function universeSelect(universe) {
     madlibSection.style.display = `none`;
     resetSection.style.display = `block`;
     universeChosen = univ.name;
+
+console.log(`===Universe Select Function===`);
+console.log(`===Univ Ref===`);
+console.log(univ);
+console.log(`===Location Select Button Display Marvel then DC===`);
+console.log(marvelOptions.style.display);
+console.log(dcOptions.style.display);
+console.log(`===Background Color Selected===`);
+console.log(univ.background);
+console.log(`===Universe Name===`);
+console.log(univ.name);
 }
 
 function themeSelect(theme) {
     const them = themeSettings[theme];
     madlibSection.style.fontFamily = them.font;
+    madlibStory.style.fontSize = them.fontSize;
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
     settingSection.style.display = `block`;
@@ -127,6 +138,17 @@ function themeSelect(theme) {
     } else if (theme === `disaster`) {
         disasterForm.style.display = `block`;
     }
+
+console.log(`===Theme Select Function===`);
+console.log(`===Theme Ref===`);
+console.log(them);
+console.log(`===Theme Font/Font Size===`);
+console.log(them.font);
+console.log(them.fontSize);
+console.log(`===Form Displays Adventure/Disaster/Villain===`);
+console.log(adventureForm.style.display);
+console.log(disasterForm.style.display);
+console.log(villainForm.style.display);
 }
 
 function locationSelect(location) {
@@ -157,6 +179,25 @@ function locationSelect(location) {
     } else if (deviceSize === `large`) {
         backgroundChosen.src = loc.cityImgLg;
     }
+
+console.log(`===Location Select Function===`);
+console.log(`===Loc Ref===`);
+console.log(loc);
+console.log(`===Image Source, Desc===`);
+console.log(loc.imgSource);
+console.log(loc.cityDesc);
+console.log(`===Device Size, small md lg evals===`);
+console.log(deviceSize);
+console.log(window.matchMedia("(max-width:600px)").matches);
+console.log(window.matchMedia("(min-width:600px)").matches && window.matchMedia("(max-width:1024px)").matches);
+console.log(window.matchMedia("(min-width:1025px)").matches);
+console.log(`===Image Selected===`);
+console.log(backgroundChosen.src);
+console.log(`===Location Name===`);
+console.log(locationChosen);
+console.log(`===Text Color and Background Color===`);
+console.log(loc.textcolor);
+console.log(loc.storyBackground);
 }
 
 function submitSelect(formCompleted) {
@@ -242,7 +283,15 @@ function submitSelect(formCompleted) {
             least!  After all it is not everyday you see a ${adventure.creature}.`
     }
     document.querySelector(`#my-madlib-title`).textContent = myMadlibTitle;
-    document.querySelector(`#my-madlib-text`).textContent = myMadlibFulfilled;          
+    document.querySelector(`#my-madlib-text`).textContent = myMadlibFulfilled;
+
+console.log(`===Submit Form===`);
+console.log(`===Which Form===`);
+console.log(formCompleted);
+console.log(`===MadLib Title===`);
+console.log(madLibTitle);
+console.log(`===MadLib Text===`);
+console.log(myMadlibFulfilled);
 }
 
 function resetSelect(universe, theme, location){
@@ -269,6 +318,7 @@ function resetSelect(universe, theme, location){
     themeChosen = them.name;
     locationChosen = loc.name;
     madLibTitle = ``;
+    madLibFulfilled = ``;
     adventureFulfilled = ``;
     villainFulfilled = ``;
     disasterFulfilled = ``;
@@ -276,12 +326,31 @@ function resetSelect(universe, theme, location){
     backgroundChosen.src = loc.cityImgLg;
     backgroundChosen.alt = loc.cityDesc; 
     deviceSize = ``;
+
+console.log(`===Start Over===`);
+console.log(`===Device Size===`);
+console.log(deviceSize);
+console.log(`===City Desc/Source===`);
+console.log(loc.cityDesc);
+console.log(loc.imgSource);
+console.log(`===City Image===`);
+console.log(loc.cityImgLg);
+console.log(`===Clear MadLib===`);
+console.log(madLibTitle);
+console.log(madLibFulfilled);
+console.log(`===Clear Forms===`);
+console.log(adventureFulfilled);
+console.log(disasterFulfilled);
+console.log(villainFulfilled);
+console.log(`===Clear Location/Theme/Universe===`);
+console.log(locationChosen);
+console.log(themeChosen);
+console.log(universeChosen);
 }
 
-//   quote.textContent = mood.quote;
-//   moodSelected.textContent = mood.name;
-
 //4. Create an Event Handler (function) for each mood that calls the function to apply theme.
+// Include 3 stop events for form submissions to stop the pages from refreshing after the 
+// submit button, which goes back to the start right as madlib is made.
 function handlerMarvelClick() {
     universeSelect(`marvel`);
 }
@@ -346,6 +415,7 @@ function handlerResetClick() {
 }
 
 //5. Create Event Listeners for each mood that calls the handler upon a click.
+// Use Click for buttons and Submit for forms.
 dcButton.addEventListener('click', handlerDCClick);
 
 marvelButton.addEventListener('click', handlerMarvelClick);
