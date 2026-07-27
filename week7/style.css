@@ -157,8 +157,8 @@ main
     transition: all 0.9s ease;
     margin: 0 auto;
     text-shadow: 
-        0 4px 6px #000000cc, 
-        0 6px 14px #00ffff99;
+        0 0 6px #000000cc, 
+        0 0 14px #00ffff99;
     }
 
 .marvel-button
