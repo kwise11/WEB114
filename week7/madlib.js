@@ -68,9 +68,9 @@ let myMadlibTitle;
 
 //2. Create my mood themes; names, colors that contrast and valid quotes.
 const universeSettings = {
-    dc:     {name: `DC`, background: `#FF75E4`, textcolor: `#300028`},
-    marvel: {name: `Marvel`, background: `#4E3F60`, textcolor: `#9B9D66`},
-    reset:  {name: ``, background: `#FFFFFF`, textcolor: `#000000`}
+    dc:     {name: `DC`, background: `#9CAF88`},
+    marvel: {name: `Marvel`, background: `#4E3F60`},
+    reset:  {name: ``, background: `#FFFFFF`}
 };
 
 const themeSettings = {
@@ -81,12 +81,12 @@ const themeSettings = {
 }
 
 const locationSettings = {
-    gotham:         {name: `Gotham`, cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.jpg`, cityImgMd: `images/gothammd.jpg`, cityImgSm: `images/gothamsm.jpg`, imgSource: `Image sourced from https://www.wallpaperflare.com/`},
-    metropolis:     {name: `Metropolis`, cityDesc: `Metropolis Background Image`,cityImgLg: `images/metropolis.jpg`, cityImgMd: `images/metropolismd.jpg`, cityImgSm: `images/metropolissm.jpg`, imgSource: `Image sourced from https://wallpapercave.com/`},
-    fawcett:        {name: `Fawcett City`, cityDesc: `Fawcett City Background Image`,cityImgLg: `images/Fawcett.jpg`, cityImgMd: `images/Fawcettmd.jpg`, cityImgSm: `images/Fawcettsm.jpg`, imgSource: `Image sourced from https://dcheroesrpg.fandom.com/`},
-    ny:             {name: `New York`, cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: `images/nymd.jpg`, cityImgSm: `images/nysm.jpg`, imgSource: `Image sourced from https://www.reddit.com/r/wallpaper/`},
-    asgard:         {name: `Asgard`, cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: `images/asgardmd.jpg`, cityImgSm: `images/asgardsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
-    kamartaj:       {name: `Kamar-Taj`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartaj.jpg`, cityImgMd: `images/kamartajmd.jpg`, cityImgSm: `images/kamartajsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
+    gotham:         {name: `Gotham`, textcolor: `#FFFDD0`, cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.jpg`, cityImgMd: `images/gothammd.jpg`, cityImgSm: `images/gothamsm.jpg`, imgSource: `Image sourced from https://www.wallpaperflare.com/`},
+    metropolis:     {name: `Metropolis`, textcolor: `#3D2817`, cityDesc: `Metropolis Background Image`,cityImgLg: `images/metropolis.jpg`, cityImgMd: `images/metropolismd.jpg`, cityImgSm: `images/metropolissm.jpg`, imgSource: `Image sourced from https://wallpapercave.com/`},
+    fawcett:        {name: `Fawcett City`, textcolor: `#F5F5DC`, cityDesc: `Fawcett City Background Image`,cityImgLg: `images/Fawcett.jpg`, cityImgMd: `images/Fawcettmd.jpg`, cityImgSm: `images/Fawcettsm.jpg`, imgSource: `Image sourced from https://dcheroesrpg.fandom.com/`},
+    ny:             {name: `New York`, textcolor: `#1B3B2B`, cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: `images/nymd.jpg`, cityImgSm: `images/nysm.jpg`, imgSource: `Image sourced from https://www.reddit.com/r/wallpaper/`},
+    asgard:         {name: `Asgard`, textcolor: `#35063E`, cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: `images/asgardmd.jpg`, cityImgSm: `images/asgardsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
+    kamartaj:       {name: `Kamar-Taj`, textcolor: `#363032`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartaj.jpg`, cityImgMd: `images/kamartajmd.jpg`, cityImgSm: `images/kamartajsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
     reset:          {name: ``, cityDesc: `empty placeholder`,cityImgLg: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgMd: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgSm: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, imgSource: ``}
 }
 
@@ -101,7 +101,6 @@ function universeSelect(universe) {
         dcOptions.style.display = `none`;
         }
     document.body.style.backgroundColor = univ.background;
-    document.body.style.color = univ.textcolor;
     universeSection.style.display = `none`;
     themeSection.style.display = `block`;
     settingSection.style.display = `none`;
@@ -133,6 +132,7 @@ function themeSelect(theme) {
 
 function locationSelect(location) {
     const loc = locationSettings[location];
+    document.body.style.color = loc.textcolor;
     footerChosen.textContent = loc.imgSource;
     backgroundChosen.alt = loc.cityDesc; 
     document.body.style.background;
@@ -375,6 +375,7 @@ villainForm.addEventListener('submit', handlerSubmitVil);
 disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
 
 
