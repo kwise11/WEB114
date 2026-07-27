@@ -101,7 +101,7 @@ form
     
 .form-row 
     {
-    margin-bottom: 1rem;
+    margin-bottom: .8rem;
     }
 
 #generated-madlib
@@ -157,8 +157,8 @@ main
     transition: all 0.9s ease;
     margin: 0 auto;
     text-shadow: 
-        0 4px 6px #00000099, 
-        0 6px 14px #00ffff66;
+        0 4px 6px #000000cc, 
+        0 6px 14px #00ffff99;
     }
 
 .marvel-button
