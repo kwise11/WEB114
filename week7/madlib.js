@@ -74,20 +74,20 @@ const universeSettings = {
 };
 
 const themeSettings = {
-    adventure:  {name: `Adventure`, storyBackground: `#FFFD37`, font: `Georgia`},
-    villain:    {name: `Villain`, storyBackground: `#E82100`, font: `Monaco`},
-    disaster:   {name: `Disaster`, storyBackground: `#4F666A`, font: `Helvetica`},
-    reset:      {name: ``, storyBackground: ``, font: `Arial, sans-serif`}
+    adventure:  {name: `Adventure`, font: `Kurale, sans-serif, "Times New Roman"`},
+    villain:    {name: `Villain`, font: `Pangolin, sans-serif, "Times New Roman"`},
+    disaster:   {name: `Disaster`, font: `Gelasio, sans-serif, "Times New Roman"`},
+    reset:      {name: ``, font: `Arial, sans-serif, "Times New Roman"`}
 }
 
 const locationSettings = {
-    gotham:         {name: `Gotham`, textcolor: `#FFFDD0`, cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.jpg`, cityImgMd: `images/gothammd.jpg`, cityImgSm: `images/gothamsm.jpg`, imgSource: `Image sourced from https://www.wallpaperflare.com/`},
-    metropolis:     {name: `Metropolis`, textcolor: `#1E140B`, cityDesc: `Metropolis Background Image`,cityImgLg: `images/metropolis.jpg`, cityImgMd: `images/metropolismd.jpg`, cityImgSm: `images/metropolissm.jpg`, imgSource: `Image sourced from https://wallpapercave.com/`},
-    fawcett:        {name: `Fawcett City`, textcolor: `#F5F5DC`, cityDesc: `Fawcett City Background Image`,cityImgLg: `images/Fawcett.jpg`, cityImgMd: `images/Fawcettmd.jpg`, cityImgSm: `images/Fawcettsm.jpg`, imgSource: `Image sourced from https://dcheroesrpg.fandom.com/`},
-    ny:             {name: `New York`, textcolor: `#FFEA00`, cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: `images/nymd.jpg`, cityImgSm: `images/nysm.jpg`, imgSource: `Image sourced from https://www.reddit.com/r/wallpaper/`},
-    asgard:         {name: `Asgard`, textcolor: `#FFCC00`, cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: `images/asgardmd.jpg`, cityImgSm: `images/asgardsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
-    kamartaj:       {name: `Kamar-Taj`, textcolor: `#00E5FF`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartaj.jpg`, cityImgMd: `images/kamartajmd.jpg`, cityImgSm: `images/kamartajsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
-    reset:          {name: ``, textcolor: `#000000`, cityDesc: `empty placeholder`,cityImgLg: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgMd: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgSm: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, imgSource: ``}
+    gotham:         {name: `Gotham`, textcolor: `#FFFDD0`, storyBackground: `#A81C51`,cityDesc: `Gotham Background Image`, cityImgLg: `images/gotham.jpg`, cityImgMd: `images/gothammd.jpg`, cityImgSm: `images/gothamsm.jpg`, imgSource: `Image sourced from https://www.wallpaperflare.com/`},
+    metropolis:     {name: `Metropolis`, textcolor: `#1E140B`, storyBackground: `#FF5F1F`,cityDesc: `Metropolis Background Image`,cityImgLg: `images/metropolis.jpg`, cityImgMd: `images/metropolismd.jpg`, cityImgSm: `images/metropolissm.jpg`, imgSource: `Image sourced from https://wallpapercave.com/`},
+    fawcett:        {name: `Fawcett City`, textcolor: `#F5F5DC`, storyBackground: `#E0115F`,cityDesc: `Fawcett City Background Image`,cityImgLg: `images/Fawcett.jpg`, cityImgMd: `images/Fawcettmd.jpg`, cityImgSm: `images/Fawcettsm.jpg`, imgSource: `Image sourced from https://dcheroesrpg.fandom.com/`},
+    ny:             {name: `New York`, textcolor: `#FFEA00`, storyBackground: `#013220`,cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: `images/nymd.jpg`, cityImgSm: `images/nysm.jpg`, imgSource: `Image sourced from https://www.reddit.com/r/wallpaper/`},
+    asgard:         {name: `Asgard`, textcolor: `#00FF66`, storyBackground: `#0E162F`,cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: `images/asgardmd.jpg`, cityImgSm: `images/asgardsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
+    kamartaj:       {name: `Kamar-Taj`, textcolor: `#00E5FF`, storyBackground: `#1A002C`,cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartaj.jpg`, cityImgMd: `images/kamartajmd.jpg`, cityImgSm: `images/kamartajsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
+    reset:          {name: ``, textcolor: `#000000`, storyBackground: ``,cityDesc: `empty placeholder`,cityImgLg: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgMd: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgSm: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, imgSource: ``}
 }
 
 //3. Create the functions that apply the themes and content.
@@ -112,7 +112,6 @@ function universeSelect(universe) {
 
 function themeSelect(theme) {
     const them = themeSettings[theme];
-    madlibSection.style.backgroundColor = them.storyBackground;
     madlibSection.style.fontFamily = them.font;
     universeSection.style.display = `none`;
     themeSection.style.display = `none`;
@@ -134,7 +133,8 @@ function locationSelect(location) {
     const loc = locationSettings[location];
     document.body.style.color = loc.textcolor;
     footerChosen.textContent = loc.imgSource;
-    backgroundChosen.alt = loc.cityDesc; 
+    backgroundChosen.alt = loc.cityDesc;
+    madlibSection.style.backgroundColor = loc.storyBackground; 
     document.body.style.background;
     if (window.matchMedia("(max-width:600px)").matches) {
         deviceSize = `small`;
@@ -253,7 +253,7 @@ function resetSelect(universe, theme, location){
     marvelOptions.style.display = `none`;
     document.body.style.backgroundColor = univ.background;
     document.body.style.color = loc.textcolor;
-    madlibSection.style.backgroundColor = them.storyBackground;
+    madlibSection.style.backgroundColor = loc.storyBackground;
     madlibSection.style.fontFamily = them.font;
     document.body.style.backgroundImage = loc.cityImg;
     universeSection.style.display = `block`;
@@ -375,6 +375,7 @@ villainForm.addEventListener('submit', handlerSubmitVil);
 disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
 
 
