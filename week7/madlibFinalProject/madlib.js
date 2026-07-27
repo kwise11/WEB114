@@ -351,6 +351,9 @@ console.log(loc.cityImgLg);
 console.log(`===Clear MadLib===`);
 console.log(myMadlibTitle);
 console.log(myMadlibFulfilled);
+console.log(`===Clear Location Buttons===`);
+console.log(marvelOptions.style.display);
+console.log(dcOptions.style.display);
 console.log(`===Clear Location/Theme/Universe===`);
 console.log(locationChosen);
 console.log(themeChosen);
@@ -461,4 +464,12 @@ villainForm.addEventListener('submit', handlerSubmitVil);
 disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
+
+/* I created a map of how I wanted my page to work and then steadily worked thru the developement of JS to support
+that.  First with the options to be selected (supported by buttons, functions, handlers and event listeners), then
+with variables that contain options that update on the pages based on those choices (color, pictures, font). The 
+most difficult part for me was figuring out how to make the words pop more than they did originally and how to work
+with the form as originally I tried to treat the submit button like I did the other clickable buttons.  I tried to 
+chose colors and images associated with the emotion of the madlib or the setting involved (bright for adventure,
+more business font for disaster, etc...) */
 
