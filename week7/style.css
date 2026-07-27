@@ -120,8 +120,8 @@ h1
     border-radius: 18px;
     z-index: 4;
     text-shadow: 
-        0 4px 6px #00000099, 
-        0 6px 14px #00ffff66;
+        0 0 6px #000000cc, 
+        0 0 14px #00ffff99;
     }
 
 .kind-button 
@@ -245,6 +245,7 @@ main
     transition: all 0.9s ease;
     margin: 0 auto;
     }
+
 
 
 
