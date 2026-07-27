@@ -97,7 +97,7 @@ form
     
 .form-row 
     {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     }
 
 #generated-madlib
@@ -115,8 +115,8 @@ h1
     border-radius: 18px;
     z-index: 4;
     text-shadow: 
-        0 2px 4px rgba(00, FF, FF, 0.6), 
-        0 4px 12px rgba(0, 0, 0, 0.4);
+        0 2px 4px rgba(#00FFFF, 0.6), 
+        0 4px 12px rgba(#000000, 0.4);
     }
 
 .kind-button 
@@ -236,6 +236,8 @@ main
     transition: all 0.9s ease;
     margin: 0 auto;
     }
+
+
 
 
 
