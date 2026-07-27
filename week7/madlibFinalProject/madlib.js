@@ -335,9 +335,6 @@ function resetSelect(universe, theme, location){
     locationChosen = loc.name;
     madLibTitle = ``;
     madLibFulfilled = ``;
-    adventureFulfilled = ``;
-    villainFulfilled = ``;
-    disasterFulfilled = ``;
     footerChosen.textContent = loc.imgSource;
     backgroundChosen.src = loc.cityImgLg;
     backgroundChosen.alt = loc.cityDesc; 
@@ -352,12 +349,8 @@ console.log(loc.imgSource);
 console.log(`===City Image===`);
 console.log(loc.cityImgLg);
 console.log(`===Clear MadLib===`);
-console.log(madLibTitle);
-console.log(madLibFulfilled);
-console.log(`===Clear Forms===`);
-console.log(adventureFulfilled);
-console.log(disasterFulfilled);
-console.log(villainFulfilled);
+console.log(myMadlibTitle);
+console.log(myMadlibFulfilled);
 console.log(`===Clear Location/Theme/Universe===`);
 console.log(locationChosen);
 console.log(themeChosen);
@@ -468,3 +461,4 @@ villainForm.addEventListener('submit', handlerSubmitVil);
 disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
+
