@@ -1,0 +1,250 @@
+/* Kate Wise 07/26/2026 Final Project MadLibs  */
+
+/* Some standard settings applied to all web pages.  Formatting for buttons pulled forward from a previous
+project.  Primary settings for text appearance, transitioning as formats are applied, better appearance and
+spacing, and dividing up the htmls so that they can hide and be shown as people click buttons and enter data. 
+Image settings to have them appear once centered as best as possible on the page.*/
+
+* 
+	{
+	box-sizing: border-box;
+	}
+
+#adventure-form
+    {
+    border-radius: 18px;
+    display: none;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 50vw;
+    transition: all 1.2s ease;
+    }
+
+#begin-again
+    {
+    border-radius: 18px;
+    display: none;
+    transition: all 1.2s ease;
+    }
+
+body 
+    {
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    padding: 50px;
+    text-align: center;
+    transition: all 1.2s ease;
+    }
+
+#container-background-img
+    {
+    border-radius: 6px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    transition: all 1.2s ease;
+    width: 85vw;
+    }
+
+.dc-button 
+    {
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 8px;
+    padding: 14px 24px; 
+    }
+
+#dc-options
+    {
+    border-radius: 18px;        
+    display: none;
+    transition: all 1.2s ease;
+    }
+
+#disaster-form
+    {
+    border-radius: 18px;        
+    display: none;
+    gap: 2rem;
+    margin: 0 auto;    
+    max-width: 50vw;
+    transition: all 0.9s ease;
+    }
+
+footer
+    {
+    font-weight: bold;        
+    text-shadow: 
+        0 4px 6px #00000099, 
+        0 6px 14px #00ffff66;
+    transition: all 0.9s ease;
+    z-index: 4;
+    }
+
+form 
+    {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 400px;
+    transition: all 0.9s ease;
+    }
+    
+.form-row 
+    {
+    margin-bottom: .8rem;
+    }
+
+#generated-madlib
+    {
+    border-radius: 18px;        
+    display: none;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 1rem;
+    transition: all 1.2s ease;
+    }
+
+h1 
+    {
+    border-radius: 18px;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 
+        0 0 6px #000000cc, 
+        0 0 14px #00ffff99;
+    z-index: 4;
+    }
+
+.kind-button 
+    {
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 8px;    
+    padding: 14px 24px;
+    }   
+    
+#kind-of-story
+    {
+    border-radius: 18px;        
+    display: none;
+    transition: all 1.2s ease;
+    }
+
+#madlib-entries
+    {
+    border-radius: 18px;        
+    display: none;
+    font-weight: bold;
+    transition: all 1.2s ease;
+    }
+
+main
+    {
+    font-weight: bold;
+    margin: 0 auto;
+    max-width: 70vw;
+    text-shadow: 
+        0 0 6px #000000cc, 
+        0 0 14px #00ffff99;
+    transition: all 1.2s ease;
+    z-index: 3;
+    }
+
+.marvel-button
+    {
+    border: none;
+    border-radius: 12px;   
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;    
+    margin: 8px;
+    padding: 14px 24px;
+    }
+
+#marvel-options
+    {
+    border-radius: 18px;        
+    display: none;
+    transition: all 1.2s ease;
+    }
+
+.reset-button 
+    {
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 8px;        
+    padding: 14px 24px;
+    }
+
+#set-background-img
+    {
+    display: block;
+    height: auto;
+    object-fit: contain;
+    position: absolute;    
+    width: 100%;
+    z-index: -1;
+    }  
+
+#setting
+    {
+    border-radius: 18px;        
+    display: none;
+    transition: all 1.2s ease;
+    }
+
+.submit-button 
+    {
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 8px;    
+    padding: 14px 24px;
+    }
+
+#universe
+    {
+    border-radius: 18px;        
+    display: block;
+    transition: all 0.9s ease;
+    }
+
+.universe-button 
+    {
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 8px;
+    padding: 14px 24px;
+    }
+
+#villain-form
+    {
+    border-radius: 18px;        
+    display: none;
+    gap: 2rem;
+    margin: 0 auto;    
+    max-width: 50vw;
+    transition: all 1.2s ease;
+    }
+
