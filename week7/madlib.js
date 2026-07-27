@@ -118,6 +118,10 @@ console.log(`===Background Color Selected===`);
 console.log(univ.background);
 console.log(`===Universe Name===`);
 console.log(univ.name);
+console.log(`===Hide Universe/Show Theme/Show Reset===`);
+console.log(universeSection.style.display);
+console.log(themeSection.style.display);
+console.log(resetSection.style.display);
 }
 
 function themeSelect(theme) {
@@ -149,6 +153,10 @@ console.log(`===Form Displays Adventure/Disaster/Villain===`);
 console.log(adventureForm.style.display);
 console.log(disasterForm.style.display);
 console.log(villainForm.style.display);
+console.log(`===Hide Theme/Show Location/Show Reset===`);
+console.log(themeSection.style.display);
+console.log(settingSection.style.display);
+console.log(resetSection.style.display);
 }
 
 function locationSelect(location) {
@@ -198,6 +206,10 @@ console.log(locationChosen);
 console.log(`===Text Color and Background Color===`);
 console.log(loc.textcolor);
 console.log(loc.storyBackground);
+console.log(`===Hide Location/Show Form/Show Reset===`);
+console.log(settingSection.style.display);
+console.log(entriesSection.style.display);
+console.log(resetSection.style.display);
 }
 
 function submitSelect(formCompleted) {
@@ -289,9 +301,13 @@ console.log(`===Submit Form===`);
 console.log(`===Which Form===`);
 console.log(formCompleted);
 console.log(`===MadLib Title===`);
-console.log(madLibTitle);
+console.log(myMadlibTitle);
 console.log(`===MadLib Text===`);
 console.log(myMadlibFulfilled);
+console.log(`===Hide Entries/Show Madlib/Show Reset===`);
+console.log(entriesSection.style.display);
+console.log(madlibSection.style.display);
+console.log(resetSection.style.display);
 }
 
 function resetSelect(universe, theme, location){
@@ -336,8 +352,8 @@ console.log(loc.imgSource);
 console.log(`===City Image===`);
 console.log(loc.cityImgLg);
 console.log(`===Clear MadLib===`);
-console.log(madLibTitle);
-console.log(madLibFulfilled);
+console.log(myMadlibTitle);
+console.log(myMadlibFulfilled);
 console.log(`===Clear Forms===`);
 console.log(adventureFulfilled);
 console.log(disasterFulfilled);
@@ -346,6 +362,13 @@ console.log(`===Clear Location/Theme/Universe===`);
 console.log(locationChosen);
 console.log(themeChosen);
 console.log(universeChosen);
+console.log(`===Hide Theme/Hide Location/Hide Entries/Hide Madlib/Hide Reset/Show Universe===`);
+console.log(themeSection.style.display);
+console.log(settingSection.style.display);
+console.log(entriesSection.style.display);
+console.log(madlibSection.style.display);
+console.log(resetSection.style.display);
+console.log(universeSection.style.display);
 }
 
 //4. Create an Event Handler (function) for each mood that calls the function to apply theme.
