@@ -87,7 +87,7 @@ const locationSettings = {
     ny:             {name: `New York`, textcolor: `#1B3B2B`, cityDesc: `New York Background Image`,cityImgLg: `images/NY.jpg`, cityImgMd: `images/nymd.jpg`, cityImgSm: `images/nysm.jpg`, imgSource: `Image sourced from https://www.reddit.com/r/wallpaper/`},
     asgard:         {name: `Asgard`, textcolor: `#35063E`, cityDesc: `Asgard Background Image`,cityImgLg: `images/asgard.jpg`, cityImgMd: `images/asgardmd.jpg`, cityImgSm: `images/asgardsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
     kamartaj:       {name: `Kamar-Taj`, textcolor: `#363032`, cityDesc: `Kamar-Taj Background Image`,cityImgLg: `images/kamartaj.jpg`, cityImgMd: `images/kamartajmd.jpg`, cityImgSm: `images/kamartajsm.jpg`, imgSource: `Image sourced from https://marvelcinematicuniverse.fandom.com/`},
-    reset:          {name: ``, cityDesc: `empty placeholder`,cityImgLg: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgMd: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgSm: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, imgSource: ``}
+    reset:          {name: ``, textcolor: `#000000`, cityDesc: `empty placeholder`,cityImgLg: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgMd: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, cityImgSm: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=`, imgSource: ``}
 }
 
 //3. Create the functions that apply the themes and content.
@@ -252,7 +252,7 @@ function resetSelect(universe, theme, location){
     dcOptions.style.display = `none`;
     marvelOptions.style.display = `none`;
     document.body.style.backgroundColor = univ.background;
-    document.body.style.color = univ.textcolor;
+    document.body.style.color = loc.textcolor;
     madlibSection.style.backgroundColor = them.storyBackground;
     madlibSection.style.fontFamily = them.font;
     document.body.style.backgroundImage = loc.cityImg;
@@ -375,6 +375,7 @@ villainForm.addEventListener('submit', handlerSubmitVil);
 disasterForm.addEventListener('submit', handlerSubmitDis);
 
 resetButton.addEventListener('click', handlerResetClick);
+
 
 
 
