@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<!--Author Kate Wise 07/26/2026 Web 114 JavaScripting-->
+	
+	<head>
+
+		<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--These elements are standard for all pages.-->
+
+		<title>Superhero Madlib</title>
+
+		<!--This is searchable and viewable in the URL, but does not show in the web page.-->
+
+		<link rel="stylesheet" href="style.css" type="text/css">
+
+        <!--Connect the style sheet file.-->
+
+        <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Kurale&family=Pangolin&display=swap" rel="stylesheet">
+       
+        <!--Connect to google for additional fonts.-->
+
+		<script src="madlib.js" defer></script>
+
+        <!--Connect to JS file.-->
+		
+    </head>    
+	
+	<body>
+
+        <div id="container-background-img">
+
+            <img id="set-background-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="empty placeholder">
+
+            <header>
+
+                <h1>Superhero Madlib</h1>
+
+            </header>
+
+            <!--Header section, contains title only.-->
+
+            <main>
+
+                <p>Make a story to remember!  Follow the prompt instructions and enter fun or off the wall answers to find the creative author in you! 
+                    Remember: Verb = Action     Noun = Person/Place/Thing     Adjective = Describes a Noun     Adverb = Describes a Verb, usually ends in “ly” (like slowly)</p>
+
+                <p>Click F12 to see the console messages.</p>
+
+                <!--Primary instruction and info text.-->
+
+                <div id="universe">
+
+                    <h2>Choose Your Universe</h2>
+
+                        <p>Marvel vs DC... the enternal question.</p>
+
+                            <button class="universe-button" data-uni="marvel">Marvel</button>
+                            <button class="universe-button" data-uni="dc">DC</button>
+
+                </div>
+
+                <!--Choose the 'universe' section, first to appear and hidden once answered.-->
+
+                <div id="kind-of-story">    
+
+                    <h2>What Kind of Story You Want?</h2>
+
+                        <p>Try the one that calls you most, feel free to start over to try another!</p>
+
+                            <button class="kind-button" data-theme="villain">Fight with a Villain</button>
+                            <button class="kind-button" data-theme="disaster">Help with a Disaster</button>
+                            <button class="kind-button" data-theme="adventure">Go on an Adventure</button>                
+                
+                </div>
+
+                <!--Choose the 'kind of story' section, second to appear and hidden once answered.-->
+
+                <div id="setting">
+
+                    <h2>Where Should Your Story Take Place?</h2>
+
+                        <p>You may not stay there, but where you start is just as important as the journey.</p>
+
+                            <div id="dc-options">
+
+                                <button class="dc-button" data-loc="gotham">Gotham</button>
+                                <button class="dc-button" data-loc="metropolis">Metropolis</button>
+                                <button class="dc-button" data-loc="fawcett">Fawcett City</button>  
+                            
+                            </div>
+
+                            <div id="marvel-options">
+
+                                <button class="marvel-button" data-loc="ny">New York</button>
+                                <button class="marvel-button" data-loc="asgard">Asgard</button>
+                                <button class="marvel-button" data-loc="kamartaj">Kamar-Taj</button>
+
+                            </div>
+
+                </div>
+
+                <!--Choose the 'starting location' section, third to appear and hidden once answered.
+                Location options visible are different based on previously selected universe.-->
+
+                <div id="madlib-entries">
+
+                    <h2>Create the Magic</h2>
+
+                    <!--Madlib Entry section, no additional instructions as original instructions higher up
+                    are still visible.-->               
+                     
+                        <section class="form">
+
+                            <h3>Fill in the Blanks to Make Your MadLib</h3>
+
+                            <form id="villain-form">
+
+                                <label for="cnameHeroInput">The Civilian Name of a Hero (Bruce Wayne, Tony Stark):</label>
+                                <input type="text" id="cnameHeroInput" class="form-row" required><br>
+
+                                <label for="hobbyInput">Hobby ending in -ing:</label>
+                                <input type="text" id="hobbyInput" class="form-row" required><br>
+
+                                <label for="restaurantInput">Name of a restaurant:</label>
+                                <input type="text" id="restaurantInput" class="form-row" required><br>
+
+                                <label for="cnameVillainInput">The Civilian Name of a Villain (Victor von Doom, Harvey Dent):</label>
+                                <input type="text" id="cnameVillainInput" class="form-row" required><br>
+
+                                <label for="sighAdverbInput">Adverb ending in -ly (happily, sadly):</label>
+                                <input type="text" id="sighAdverbInput" class="form-row" required><br>
+
+                                <label for="nameVillainInput">The Name of a Villain (Green Goblin, Galactus):</label>
+                                <input type="text" id="nameVillain1Input" class="form-row" required><br>
+
+                                <label for="roomInput">Name of a room in a building (kitchen, office):</label>
+                                <input type="text" id="roomInput" class="form-row" required><br>
+
+                                <label for="fightMoveInput">A move you would use in a fight ending in -ed:</label>
+                                <input type="text" id="fightMoveInput" class="form-row" required><br>
+                    
+                                <button class="submit-button" data-ent="sub-villain">Submit</button> 
+                                
+                            </form>
+
+                            <!--Villain form, only appears based on answer to kind of story question-->
+
+                            <form id="disaster-form">
+                                
+                                <label for="seasonInput">A season (fall, spring):</label>
+                                <input type="text" id="seasonInput" class="form-row" required><br>
+
+                                <label for="DisasterInput">A natural disaster:</label>
+                                <input type="text" id="disasterInput" class="form-row" required><br>
+
+                                <label for="locationInput">Location:</label>
+                                <input type="text" id="location1Input" class="form-row" required><br>
+
+                                <label for="nameSuperheroInput">The Name of a Superhero (Iron Man, Green Lantern):</label>
+                                <input type="text" id="nameSuperhero1Input" class="form-row" required><br>
+
+                                <label for="vehicleInput">A vehicle (plane, train):</label>
+                                <input type="text" id="vehicle1Input" class="form-row" required><br>
+
+                                <label for="sidekickInput">The Name of a Sidekick or Pet (Kid Flash, Goose the Flerken):</label>
+                                <input type="text" id="sidekickInput" class="form-row" required><br>
+
+                                <label for="historicPersonInput">The Name of a Historic Person:</label>
+                                <input type="text" id="historicPersonInput" class="form-row" required><br>
+
+                                <label for="leaderInput">The Title of a Leader of People:</label>
+                                <input type="text" id="leaderInput" class="form-row" required><br>
+
+                                <label for="giftInput">Something you give as a Gift:</label>
+                                <input type="text" id="giftInput" class="form-row" required><br>   
+                                
+                                <button class="submit-button" data-ent="sub-disaster">Submit</button>
+                                
+                            </form>
+
+                            <!--Disaster form, only appears based on answer to kind of story question-->
+
+                            <form id="adventure-form">
+                                
+                                <label for="placeWatchInput">A Place you might keep an eye on:</label>
+                                <input type="text" id="placeWatchInput" class="form-row" required><br>
+
+                                <label for="tranitionalInput">Transitional Space (doorway, hallway):</label>
+                                <input type="text" id="transitionalInput" class="form-row" required><br>
+
+                                <label for="nameSuperhero1Input">The Name of a Superhero (Black Panther, Superman):</label>
+                                <input type="text" id="nameSuperhero2Input" class="form-row" required><br>
+
+                                <label for="vehicleInput">A vehicle (plane, train):</label>
+                                <input type="text" id="vehicle2Input" class="form-row" required><br>
+
+                                <label for="ecosystemInput">A type of Ecosystem (rainforest, ocean):</label>
+                                <input type="text" id="ecosystemInput" class="form-row" required><br>
+
+                                <label for="plantInput">A Plant:</label>
+                                <input type="text" id="plantInput" class="form-row" required><br>
+
+                                <label for="creatureInput">An Extinct or Mythological Creature:</label>
+                                <input type="text" id="creatureInput" class="form-row" required><br>
+
+                                <label for="nameSuperhero2Input">The Name of a Different Superhero (Shazam, Captain America):</label>
+                                <input type="text" id="nameSuperhero3Input" class="form-row" required><br>    
+
+                                <label for="number1Input">A number in numeric form (75, 3):</label>
+                                <input type="number" id="number1Input" class="form-row" required><br>
+
+                                <label for="number2Input">Another number in numeric form (637, 4):</label>
+                                <input type="number" id="number2Input" class="form-row" required><br>
+
+                                <label for="timeInput">A Measure of Time ending in -s (minutes, hours):</label>
+                                <input type="text" id="timeInput" class="form-row" required><br>
+
+                                <label for="jrTeamInput">Name a Junior Superhero Team (Teen Titans, Young Avengers):</label>
+                                <input type="text" id="jrTeamInput" class="form-row" required><br>  
+
+                                <button class="submit-button" data-ent="sub-adventure">Submit</button>
+                            
+                            </form>
+
+                            <!--Adventure form, only appears based on answer to kind of story question-->
+
+                        </section>
+
+                </div>
+
+                <div id="generated-madlib">
+
+                    <h2 id="my-madlib-title"></h2>
+                        
+                        <p id="my-madlib-text"></p>
+                
+                </div>
+
+                <!--Generated madlib, only appears after entries to one of the forms above are submitted.-->
+
+                <div id="begin-again">
+
+                    <h2>Go Back to the Beginning</h2>
+
+                        <p>Want to do it again?</p>
+
+                        <button class="reset-button" data-start="clearall">Start Over</button>
+
+                </div>
+
+                <!--Start over, visible throughout once passed the first choice.-->
+                
+            </main>
+
+            <footer>
+
+                <small id="wallpaper-source"></small>
+
+            </footer>
+
+            <!--Populated with the source of the wallpaper background image.-->
+
+        </div>    
+
+	</body>
+
+</html>
