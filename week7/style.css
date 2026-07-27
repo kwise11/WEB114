@@ -84,7 +84,8 @@ footer
     transition: all 0.9s ease;
     }
 
-form {
+form 
+    {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -92,7 +93,12 @@ form {
     max-width: 400px;
     transition: all 0.9s ease;
     margin: 0 auto;
-    }        
+    }
+    
+.form-row 
+    {
+    margin-bottom: 2rem;
+    }
 
 #generated-madlib
     {
@@ -227,6 +233,8 @@ main
     transition: all 0.9s ease;
     margin: 0 auto;
     }
+
+
 
 
 
